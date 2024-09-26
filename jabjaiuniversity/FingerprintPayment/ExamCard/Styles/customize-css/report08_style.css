@@ -1,0 +1,58 @@
+﻿.report08-container {
+
+}
+
+.report08-container .adjust-col-padding {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.report08-container .report-dropdown {
+    width: 100%;
+}
+
+@media (max-width: 999px) {
+    .report08-container {
+        font-size: 20px;
+    }
+
+    .report08-container .product-label-clear {
+        clear:both;
+    }
+
+    .report08-container .row-minus {
+        margin-top: -6px;
+    }
+
+    .report08-container .report-row-space {
+        margin-bottom: 12px;
+    }
+
+    .report08-container .global-btn {
+        font-size: 20px;
+        width: 130px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .report08-container {
+        font-size: 22px;
+    }
+
+    .report08-container .global-btn {
+        font-size: 22px;
+        width: 130px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .report08-container {
+        font-size: 26px;
+    }
+
+    .report08-container .global-btn {
+        font-size: 26px;
+        width: 150px;
+    }
+}

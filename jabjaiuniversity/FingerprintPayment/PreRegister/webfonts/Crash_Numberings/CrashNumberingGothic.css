@@ -1,0 +1,7 @@
+﻿@font-face {
+    font-family: 'CrashNumberingGothic';
+    src: url('CrashNumberingGothic.woff2') format('woff2'), url('CrashNumberingGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

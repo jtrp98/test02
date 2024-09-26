@@ -1,0 +1,194 @@
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 12pt "Tahoma";
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 10mm 12mm 10mm 16mm;
+    margin: 10mm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /*background: #FFEAEA;*/
+}
+
+.subpage {
+    /*padding: 1cm;*/
+    border: 0px #ccc solid;
+    height: 275mm;
+    /*outline: 2cm #FFEAEA solid;*/
+    background: white;
+    position: relative;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+    }
+
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+
+    .no-print-me {
+        display: none;
+    }
+
+    .table-fixed {
+        table-layout: fixed;
+    }
+        .table-fixed td {
+            white-space: nowrap;
+        }
+}
+
+.school-logo {
+    float: left;
+    position: absolute;
+}
+
+    .school-logo.small-card {
+        margin: 9px;
+    }
+
+.student {
+    float: right;
+    position: absolute;
+    right: -30px;
+    margin-top: -25px;
+}
+
+.photo {
+    float: right;
+    position: absolute;
+    border: 1px dashed #ccc;
+    width: 85px;
+    height: 100px;
+    right: 0px;
+    text-align: center;
+    /*padding-top: 5px;*/
+}
+
+    .photo.small-card {
+        width: 65px;
+        height: 85px;
+        margin: 9px 15px 9px 9px;
+    }
+
+.photo-text {
+    position: relative;
+    top: 26%;
+    font-size: 11px;
+    color: #707070;
+}
+
+    .photo-text.small-card {
+        top: 23%;
+        font-size: 9px;
+    }
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-label {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.text-data {
+    text-align: left;
+    padding-left: 5px;
+}
+
+    .text-data.text-center {
+        text-align: center;
+    }
+
+.div-title {
+    border-radius: 10px;
+    padding: 5px 5px 5px 15px;
+    background-color: #e6e6e6;
+    margin-top: 5px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45);
+}
+
+.header-title {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.no-border table, .no-border th, .no-border td {
+    border: 0px solid black;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+    table.small-card, th.small-card, td.small-card {
+        border: 1px dashed #ccc;
+    }
+
+    table tr th {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    table tr td {
+        font-size: 12px;
+    }
+
+.tab-2 {
+    padding-left: 30px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 115.5%;
+    height: 14rem;
+    margin: 0px 0px 0px -60px;
+}

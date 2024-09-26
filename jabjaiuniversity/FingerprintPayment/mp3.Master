@@ -1,0 +1,918 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/mp3.Master.cs" Inherits="FingerprintPayment.mp3" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" id="Header1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="images/School Bright logo only.png" sizes="16x16 32x32" type="image/png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>School Bright</title>
+
+    <script src="/Scripts/jquery-1.10-2.min.js" type="text/javascript"></script>
+    <%--<script src="/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>--%>
+    <script src="/Scripts/jscommon.js" type="text/javascript"></script>
+    <%--<script type="text/javascript" src="/Scripts/blockUI/jquery.blockUI.js"></script>
+    <script type='text/javascript' src="/Scripts/ui.core.js"></script>--%>
+    <%-- JQuery Alert Box--%>
+    <%--  <script type="text/javascript" src="/Scripts/alertBox/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/Scripts/alertBox/sexyalertbox.v1.2.jquery.js"></script>
+    <script type="text/javascript" src="/Scripts/alertBox/alertBox.js"></script>
+    <link rel="stylesheet" type="text/css" href="Scripts/alertBox/sexyalertbox.css" />--%>
+    <%--End JQuery Alert Box--%>
+    <%--<link href="Styles/css.css" rel="stylesheet" type="text/css" />--%>
+    <%--JQuery Calendar--%>
+    <link href="/Scripts/ui-1.8.10_V1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Scripts/jquery.ui.1.8.10.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.bpopup.min.js"></script>
+    <script src="/javascript/shortcut.js" type="text/javascript"></script>
+    <link href="/Styles/style.css" rel="stylesheet" type="text/css" />
+    <%-- End Clock Picker --%>
+    <%--<link rel="stylesheet" type="text/css" href="Styles/style_mobile.css" />--%>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+
+    <%--<link href="/bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />--%>
+    <%--<script src="/bootstrap/js/bootstrap.js" type="text/javascript"></script>--%>
+    <!-- Bootstrap Core CSS -->
+    <link href="/bootstrap SB2/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <!-- MetisMenu CSS -->
+    <link href="/bootstrap SB2/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet" />
+    <!-- Timeline CSS -->
+    <link href="/bootstrap SB2/dist/css/timeline.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="/bootstrap SB2/dist/css/sb-admin-2.css" rel="stylesheet" />
+    <!-- Morris Charts CSS -->
+    <link href="/bootstrap SB2/bower_components/morrisjs/morris.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link href="/bootstrap SB2/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/bootstrap SB2/bower_components/morrisjs/morris.css" rel="stylesheet" />
+
+    <!-- Custom CSS Style Sheet To Fixed Responsive Problem -->
+    <link href="/Styles/customize-css/global_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/admin_main_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/product_detail_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/stock_add_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/user_add_money_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/pagesellproduct_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/pagecashsales_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/pageeditsellproduct_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/report08_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/yearsetting_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/holidaysettings_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/timeiosettings_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/levelsetting_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/leveladd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/sublevelsetting_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/subleveladdtable_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/roomadd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/planelist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/planeadd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/periodlist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/periodadd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans-term_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans-room_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans_schedule_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans_schedule_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans-scheduledetail_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/report01_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/employeeslist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/employeesadd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/userlist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/useradd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/leavelist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/maclist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/companyedit_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/smssettings_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/smsadd_style.css" rel="Stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="/bootstrap SB2/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/bootstrap SB2/bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/bootstrap SB2/bower_components/metisMenu/dist/metisMenu.js" type="text/javascript"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="/bootstrap SB2/bower_components/raphael/raphael-min.js" type="text/javascript"></script>
+    <script src="/bootstrap SB2/bower_components/morrisjs/morris.js" type="text/javascript"></script>
+
+    <link href="/bootstrap/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+    <script src="/bootstrap/js/bootstrap-clockpicker.min.js" type="text/javascript"></script>
+    <link href="/bootstrap/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="/bootstrap/js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+    <script src="/bootstrap SB2/dist/js/sb-admin-2.js" type="text/javascript"></script>
+    <script src="/Scripts/mustache.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-89416874-3"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-89416874-3');
+    </script>
+    <script language="Javascript" type="text/javascript">
+        $(document).unbind('keydown').bind('keydown', function (event) {
+            var doPrevent = false;
+            if (event.keyCode === 8) {
+                var d = event.srcElement || event.target;
+                if ((d.tagName.toUpperCase() === 'INPUT' &&
+                    (
+                        d.type.toUpperCase() === 'TEXT' ||
+                        d.type.toUpperCase() === 'PASSWORD' ||
+                        d.type.toUpperCase() === 'FILE' ||
+                        d.type.toUpperCase() === 'SEARCH' ||
+                        d.type.toUpperCase() === 'EMAIL' ||
+                        d.type.toUpperCase() === 'NUMBER' ||
+                        d.type.toUpperCase() === 'DATE')
+                ) ||
+                    d.tagName.toUpperCase() === 'TEXTAREA') {
+                    doPrevent = d.readOnly || d.disabled;
+                }
+                else {
+                    doPrevent = true;
+                }
+            }
+
+            if (doPrevent) {
+                event.preventDefault();
+            }
+        });
+
+        var tmpFuncSuccess = null;
+        var tmpFuncCancel = null;
+
+        function clearTmpFunc() {
+            console.log("call clear");
+            tmpFuncSuccess = null;
+            tmpFuncCancel = null;
+        }
+        function closeModalOnKey(e) {
+            if (e.which == 27 || e.which == 13) {
+                if (!$('#modalAlert').hasClass('in'))
+                    return;
+                e.preventDefault();
+                e.stopPropagation();
+                document.removeEventListener("keydown", closeModalOnKey);
+                if (typeof tmpFuncCancel !== "function") {
+                    tmpFuncSuccess = "";
+                }
+                else {
+                    tmpFuncCancel();
+                }
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            }
+        }
+
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+
+        var _ctrname;
+        function formatDate(obj) {
+            return obj.getDate() + '/' + (obj.getMonth() + 1) + '/' + obj.getFullYear();
+        }
+        function notification_count() {
+            $.ajax({
+                type: "POST",
+                url: "/App_Logic/dataReportGeneric.ashx?mode=NotificationLsit_count&status=0",
+                cache: false,
+                contentType: 'application/json;',
+                success: function (obj) {
+
+                }
+            }).done(function (obj) {
+                $('#notification_count').html(obj);
+            });
+        }
+
+        $(document).ready(function () {
+            var dt = new Date();
+            var date = dt.getDate() + "/" + dt.getMonth() + "/" + dt.getFullYear();
+
+            $('#notification_count').css("display", "");
+
+            //setInterval(function () { notification_count(); }, 10000);
+
+            $("#tasks").click(function () {
+                $("#TasksContainer").fadeToggle(300);
+                //$("#notification_count").fadeOut("slow");
+            })
+
+            //unblockPage();
+            $("#bell").click(function () {
+                $("#notificationContainer").fadeToggle(300);
+                $("#notification_count").fadeOut("slow");
+
+                $.ajax({
+                    type: "POST",
+                    url: "/App_Logic/dataReportGeneric.ashx?mode=NotificationLsit&status=1",
+                    cache: false,
+                    contentType: 'application/json;',
+                    success: function (obj) {
+
+                    }
+                }).done(function (obj) {
+                    var _sHtml = '';
+                    $.each(obj, function (index) {
+                        var dLeaveStart = new Date(parseInt(obj[index].dLeaveStart.substr(6)));
+                        var dLeaveEnd = new Date(parseInt(obj[index].dLeaveStart.substr(6)));
+                        //_sHtml += '<div class="row notificationsrow">'
+                        //_sHtml += '<div class="row">'
+                        //_sHtml += '<div class="col-lg-5 text-right" style="margin: 0px;">ชื่อ - นามสกุล :</div>'
+                        //_sHtml += '<div class="col-lg-7">' + obj[index].sName + '</div>'
+                        //_sHtml += '</div>'
+                        //_sHtml += '<div class="rows">'
+                        //_sHtml += '<div class="col-lg-5 text-right" style="margin: 0px;">ประเภทการลา :</div>'
+                        //_sHtml += '<div class="col-lg-7">' + (obj[index].LeaveStatus == '0' ? "ลาป่วย" : "ลากิจ") + '</div>'
+                        //_sHtml += '</div>'
+                        //_sHtml += '<div class="rows">'
+                        //_sHtml += '<div class="col-lg-5 text-right" style="margin: 0px;">วันที่ลา :</div>'
+                        //_sHtml += '<div class="col-lg-7">' + formatDate(dLeaveStart) + ' - ' + formatDate(dLeaveEnd) + '</div>'
+                        //_sHtml += '</div>'
+                        //_sHtml += '</div>'
+
+                        _sHtml += "<a href='#' class='list-group-item' style='color: #000; background-color:skyBlue'>"
+                        //_sHtml += "     <i class='fa fa-twitter fa-fw'></i>3 New Followers"
+                        //_sHtml += "     <span class='pull-right text-muted small'>"
+                        //_sHtml += "         <em>12 minutes ago</em>"
+                        //_sHtml += "     </span>"
+                        _sHtml += "ชื่อ - นามสกุล : " + obj[index].sName + "<BR>";
+                        _sHtml += "ประเภทการลา :  " + (obj[index].LeaveStatus == '0' ? "ลาป่วย" : "ลากิจ") + "<BR>";
+                        _sHtml += "วันที่ลา :       " + formatDate(dLeaveStart) + ' - ' + formatDate(dLeaveEnd);
+                        _sHtml += "</a>"
+                    });
+                    $('#notificationsBody').html(_sHtml);
+                    //if (readCookie("notification") != date) {
+                    //$('#notification_count').html(obj.length);
+                    //$('#notification_count').css("display", "");
+                    //}
+                    $().scrollParent
+                });
+
+                createCookie("notification", date, 1000);
+                return false;
+            });
+
+            //Document Click
+            $(document).click(function () {
+                $("#notificationContainer").hide();
+                $('#notification_count').css("display", "");
+                //$("#TasksContainer").hide();
+                //$('#notification_count').css("display", "");
+            });
+            //Popup Click
+            $("#notificationContainer").click(function () {
+                //return false;
+            });
+
+            $('#modalconfirm-confirm').click(function () {
+                javascript: __doPostBack(_ctrname, '')
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+            $('#modalAlert #modal-confirm').on('click', function (e) {
+                if (typeof tmpFuncSuccess === "function")
+                    tmpFuncSuccess = "";
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            });
+            $('#modalAlert #modal-cancel').on('click', function (e) {
+                if (typeof tmpFuncCancel !== "function") {
+                    tmpFuncSuccess = "";
+                }
+                else {
+                    tmpFuncCancel();
+                }
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            });
+            $('#modalAlert #modal-close').on('click', function (e) {
+                if (typeof tmpFuncCancel !== "function") {
+                    tmpFuncSuccess = "";
+                }
+                else {
+                    tmpFuncCancel();
+                }
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            });
+            SetMenu();
+        });
+
+        function SetMenu() {
+            var menulv1 = $("#side-menu li");
+            $.each(menulv1, function (indexlv1, objlv1) {
+                var checkmenu = false;
+                var menulv2 = $(menulv1).children("li");
+                //$.each(menulv2, function (indexlv2, objlv2) {
+                if ($(objlv1).attr('class') == "active") {
+                    $(objlv1).children('a').attr('class', 'doubleTapToGo');
+                    $(objlv1).attr('class', 'active');
+                    console.log(objlv1);
+                }
+                //    var menulv3 = $(objlv2).children("li");
+                //$.each(menulv3, function (indexlv3, objlv3) {
+                //    if ($(objlv3) != "li") {
+                //        console.log(objlv3);
+                //    }
+                //})
+                //})
+            });
+        }
+        var emptFunc = function () { };
+        function showModal() {
+            var header = arguments[0];
+            var msg = arguments[1];
+            if (typeof arguments[2] === "boolean") {
+                //show confirm footer
+                tmpFuncSuccess = arguments[3];
+                document.getElementsByClassName("modal-footer")[0].style.display = "block";
+                if (typeof arguments[4] === "function")
+                    tmpFuncCancel = arguments[4];
+                else
+                    tmpFuncCancel = emptFunc;
+            }
+            else if (typeof arguments[2] === "function") {
+                document.getElementsByClassName("modal-footer")[0].style.display = "none";
+                tmpFuncSuccess = arguments[2];
+            }
+            else {
+                document.getElementsByClassName("modal-footer")[0].style.display = "none";
+            }
+
+            $('#modalAlert #modal-header').text(header);
+            $('#modalAlert #modal-content').html(msg);
+            document.addEventListener("keydown", closeModalOnKey);
+            $('#modalAlert').modal('show');
+        }
+        function showModalConfirm() {
+            var header = arguments[0];
+            var msg = arguments[1];
+            _ctrname = arguments[2];
+
+            $('#modalconfirm #modal-header').text(header);
+            $('#modalconfirm #modalconfirm-content').html(msg);
+            document.addEventListener("keydown", closeModalOnKey);
+            $('#modalconfirm').modal('show');
+        }
+
+        /*showModal("test",fucntion(){
+                
+        });*/
+        function j_infomainLed(header, msg, _total, _collect) {
+            return;
+            setTimeout(function () { ShowDisplyLed(_collect + " 2") }, 500);
+            ShowDisplyLed(_total + " 3");
+            showModal(header, msg, function () {
+                setTimeout(fnCapture, 500);
+            });
+        }
+        function ShowDisplyLed(strArry) {
+            return;
+            var sID = strArry;
+            $.ajax({
+                type: "POST",
+                url: "ShowDisplyLed.ashx",
+                cache: false,
+                dataType: "html",
+                data: { ID: sID },
+                success: function (response) {
+                }
+            });
+        }
+        var aaa = 0;
+        function blockUI() {
+            $.blockUI({ message: '<h1 ><img src="Scripts/blockUI/searching_progress.gif" /><div style="font-size: 45px !important; font-family: THSarabun;">กำลังบันทึกข้อมูล</div></h1>' });
+        }
+        function blockUImessage(_message) {
+            $.blockUI({ message: _message });
+        }
+        function blockPage() {
+            $.blockUI({
+                message: '<img src="Scripts/blockUI/searching_progress.gif" /><h1> Loading...</h1>',
+                css: {
+                    border: 'none',
+                    padding: '15px',
+                    '-webkit-border-radius': '10px',
+                    '-moz-border-radius': '10px',
+                    'border-radius': '10px',
+                    opacity: .9
+                }
+            });
+            return false;
+        }
+        //function to unblock the page  
+        function unblockPage() {
+            $.unblockUI();
+        }
+    </script>
+    <style type="text/css">
+        .menulink {
+            padding-left: 15px;
+        }
+
+        #nav {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+            #nav li {
+                margin-right: 20px;
+                font-size: 14px;
+                font-weight: bold;
+                display: inline;
+            }
+
+        @media (max-width: 1023px) {
+            #nav li a {
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #nav li a {
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+            }
+        }
+
+
+        #nav li a:hover {
+            color: #006699;
+            text-decoration: none;
+        }
+
+        #notification_li {
+            position: relative;
+        }
+
+        #notificationContainer {
+            border: 1px solid rgba(100, 100, 100, .4);
+            -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+            overflow: visible;
+            position: absolute;
+            width: 384px;
+            top: 45px;
+            margin-left: -175px;
+            /*width: 400px;*/
+            z-index: 1000;
+            display: none;
+        }
+
+            #notificationContainer:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                color: transparent;
+                border: 10px solid black;
+                border-color: transparent transparent white;
+                margin-top: -20px;
+                margin-left: 188px;
+                z-index: 1000;
+            }
+
+        #notificationTitle {
+            z-index: 1000;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 13px;
+            background-color: #ffffff;
+            width: 384px;
+            border-bottom: 1px solid #dddddd;
+            color: #000;
+            font-size: 25px;
+        }
+
+        #notificationsBody {
+            padding: 0px 0px 0px 0px !important;
+            max-height: 400px;
+            font-size: 20px;
+            color: #000;
+            vertical-align: text-top;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            margin: 10px 10px;
+        }
+
+        #notificationFooter {
+            text-align: center;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 12px;
+            border-top: 1px solid #dddddd;
+        }
+
+        #Tasks_li {
+            position: relative;
+        }
+
+        #TasksContainer {
+            background-color: #fff;
+            border: 1px solid rgba(100, 100, 100, .4);
+            -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+            overflow: visible;
+            position: absolute;
+            width: 384px;
+            top: 45px;
+            margin-left: -175px;
+            z-index: 1000;
+            display: none;
+        }
+
+            #TasksContainer:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                color: transparent;
+                border: 10px solid black;
+                border-color: transparent transparent white;
+                margin-top: -20px;
+                margin-left: 188px;
+                z-index: 1000;
+            }
+
+        #TasksTitle {
+            z-index: 1000;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 13px;
+            background-color: #ffffff;
+            width: 384px;
+            border-bottom: 1px solid #dddddd;
+            color: #000;
+            font-size: 25px;
+        }
+
+        #TasksBody {
+            padding: 0px 0px 0px 0px !important;
+            max-height: 400px;
+            font-size: 20px;
+            color: #000;
+            vertical-align: text-top;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        #TasksFooter {
+            background-color: #cc0000;
+            text-align: center;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 12px;
+            border-top: 1px solid #dddddd;
+            color: #fff;
+        }
+
+        #notification_count {
+            padding: 3px;
+            behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+            background: #FFF;
+            color: #d31e1e;
+            font: 14px QuarkNew, sans-serif;
+            border-radius: 50%;
+            text-align: center;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            margin-top: -11px;
+            font-size: 11px;
+            z-index: 10;
+        }
+
+        .notificationsrow:hover {
+            background-color: #e9eaed;
+            /*border-bottom-width: thick;*/
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .notificationsrow {
+            border-bottom-color: black;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .numberCircle {
+            border-radius: 50%;
+            behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+            width: 22px;
+            height: 22px;
+            padding: 3px;
+            background: #FFF;
+            border: 0px solid #666;
+            color: #d31e1e;
+            text-align: center;
+            font: 14px QuarkNew, sans-serif;
+            position: absolute;
+            display: block;
+            float: right;
+            z-index: 10;
+            margin-left: 25px;
+        }
+
+        .wrap_content-body {
+            padding: 0 0;
+            background-color: #F9F9F9;
+            width: 100%;
+            position: relative;
+        }
+
+        .manuicon {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 7px;
+            color: #fff;
+            border: 1px solid white;
+            border-radius: 100%;
+            z-index: 0;
+            font-size: 20px;
+        }
+
+            .manuicon:hover {
+                background-color: white;
+                color: #23527c;
+                display: inline-block;
+                margin: 0 5px;
+                padding: 7px;
+                border-radius: 100%;
+                border: 1px solid white;
+                z-index: 0;
+            }
+
+        .progress-nav {
+            width: 20%;
+            font-size: 28px;
+        }
+
+        @media (max-width: 999px) {
+            .main-nav {
+                width: 36%;
+                padding-top: 1px;
+                padding-left: 15px;
+                font-size: 25px !important;
+                font-family: THSarabun;
+            }
+
+            .progress-nav > div {
+                margin-left: 10px;
+            }
+
+            #nav li {
+                margin-right: 0px;
+            }
+
+            #notificationContainer {
+                width: 200px;
+                margin-left: -26px;
+            }
+
+                #notificationContainer:before {
+                    margin-top: -20px;
+                    margin-left: 90px;
+                }
+
+            #notificationTitle {
+                width: 200px;
+            }
+        }
+
+        @media (min-width: 1000px) and (max-width: 1199px) {
+            .main-nav {
+                width: 46%;
+                padding-top: 1px;
+                padding-left: 15px;
+                font-size: 25px !important;
+                font-family: THSarabun;
+            }
+
+            .progress-nav > div {
+                margin-left: 10px;
+            }
+
+            #nav li {
+                margin-right: 0px;
+            }
+
+            #notificationContainer {
+                width: 200px;
+                margin-left: -26px;
+            }
+
+                #notificationContainer:before {
+                    margin-top: -20px;
+                    margin-left: 90px;
+                }
+
+            #notificationTitle {
+                width: 200px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .main-nav {
+                width: 50%;
+                padding-top: 1px;
+                font-size: 25px !important;
+                font-family: THSarabun;
+            }
+        }
+    </style>
+</head>
+<body id="from2" runat="server" style="background-color: #F9F9F9;">
+    <%--   <div id="content-overlay" class="content-overlay">
+        ระบบอยู่ในระหว่างการทดลอง
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="onOverlayCloseClick();"><span aria-hidden="true">×</span></button>
+    </div>--%>
+    <form id="from1" runat="server" role="form" data-toggle="validator">
+
+        <div class="content-header hidden">
+            <div class="welcome-msg">
+            </div>
+            <div class="logout-btn">
+                <asp:LinkButton ID="lkbLogout" runat="server" PostBackUrl="/logout.aspx" class="btn btn-danger">ออกจากระบบ</asp:LinkButton>
+            </div>
+            <div class="group--btn--header">
+                <span style="font-size: 25px; color: White;">HOTLINE: 091-8233139 </span>
+                <%--  <img alt="logo_facebook" src="/images/logo_facebook.png" />
+            <!--img alt="logo_image" src="images/youtube_logo.png" /-->
+            <img alt="logo_image" src="/images/logo_email.png" />--%>
+            </div>
+        </div>
+        <div class="content-breadcrumb">
+            <table width="100%">
+                <tr>
+                    <td style="font-size: 25px !important; font-family: THSarabun; width: 5%;">
+                        <img src="/images/School Bright logo 1 storke222.png" style="width: 100%;" alt="logo" />
+                        <%--    <i class="glyphicon glyphicon-tags" style="margin-right: 15px; vertical-align: middle;"></i>--%>
+                        <asp:Literal ID="ltrAutoComplete" runat="server" />
+                    </td>
+                    <td class="main-nav">
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" StartingNodeUrl="~/Web.config" />
+                        <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="menulink">
+                        </asp:SiteMapPath>
+                    </td>
+                    <td class="progress-nav">
+                        <div class="progress vertical-mid">
+                            <div class="progress-bar-success progress-bar" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                70%
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <ul id="nav" style="list-style: none;">
+                            <%-- <li class="Tasks_li">
+                                <span class="fa fa-tasks manuicon" id="tasks"></span>
+                                <div id=" ">
+                                    <div id="TasksTitle">รายการแจ้งเตือน</div>
+                                    <div id="TasksBody" class="notifications">
+                                    </div>
+                                    <div id="TasksFooter">
+                                        <a href="/Modules/TimeAttendance/leavelist.aspx?lsittoday=1">ดูทั้งหมด</a>
+                                    </div>
+                                </div>
+                            </li>--%>
+                            <li>
+                                <a href="/Modules/TimeAttendance/smssettings.aspx" id="Message" class="fa fa-comments-o manuicon"></a>
+                            </li>
+                            <li id="notification_li">
+                                <span id="notification_count" style="display: none;">0</span>
+                                <span id="bell" class="glyphicon glyphicon-bell manuicon"></span>
+                                <div class="panel panel-default" id="notificationContainer">
+                                    <div class="panel-heading" id="notificationTitle">
+                                        <i class="fa fa-bell fa-fw"></i>รายการแจ้งเตือน
+                                    </div>
+                                    <div id="notificationsBody" class="panel-body">
+                                    </div>
+                                    <div id="notificationFooter">
+                                        <a href="/Modules/TimeAttendance/leavelist.aspx?lsittoday=1"
+                                            class="btn btn-default btn-block danger" style="color: black;">ดูทั้งหมด</a>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/logout.aspx" id="Message" class="glyphicon glyphicon-off manuicon"></a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="wrapper" style="background-color: #d9534f;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRQlOEf26LiWyBDakCtlDNEYOyZ84vMDqaUmd_naxj9wYhfQ/viewform" target="_blank">
+                <img src="/images/แจ้งปัญหา.jpg" style="position: fixed; z-index: 2; bottom: 16%; right: -100px; border-radius: 5px; -webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -o-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg);"></img>
+                <%--<img id="ribbonbottom" src="images/fbmessage.png"  />--%>
+            </a>
+            <div id="page-wrapper" style="margin: 0 0 0 0px;">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                <asp:ContentPlaceHolder ID="CPH3" runat="server" />
+            </div>
+        </div>
+        <div id="modalAlert" class="modal fade alertBoxInfo" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog" style="top: 150px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" id="modal-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h2 style="text-align: center; font-weight: bold" class="modal-title" id="modal-header">Modal title</h2>
+                    </div>
+                    <div class="modal-body" id="modal-content" style="padding: 40px 10px; text-align: center; font-size: 25px;">
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                        <button type="button" id="modal-cancel" class="btn btn-default" style="font-size: 16px !important"
+                            data-dismiss="modal">
+                            Cancel</button>
+                        <button type="button" id="modal-confirm" class="btn btn-primary" style="font-size: 16px !important">
+                            Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalconfirm" class="modal fade alertBoxInfo global-modal-confirm global-dialog" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md" style="top: 150px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" id="modalconfirm-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h3 style="text-align: center; font-weight: bold" class="modal-title" id="modal-header">Modal title</h3>
+                    </div>
+                    <div class="modal-body" id="modalconfirm-content" style="padding: 40px 10px; text-align: center;">
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                        <button type="button" id="modalconfirm-confirm" class="btn btn-primary global-btn">
+                            ตกลง</button>
+                        <button type="button" id="modalconfirm-cancel" class="btn btn-danger global-btn"
+                            data-dismiss="modal">
+                            ยกเลิก</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/javascript/highcharts.js" type="text/javascript"></script>
+        <script src="/javascript/exporting.js" type="text/javascript"></script>
+        <div id="modalpopupdata" class="modal fade alertBoxInfo" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog global-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <%--    <button type="button" id="modalpopupdata-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 style="font-size: 20px; text-align: center; font-weight: bold" class="modal-title"
+                            id="modalpopupdata-header">Modal title</h4>--%>
+                    </div>
+                    <div class="modal-body" id="modalpopupdata-content" style="padding: 40px 10px; text-align: center; font-size: 19px;">
+                        <img src="/images/loader-128x/Preloader_2.gif" />
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalpopupdatabig" class="modal fade alertBoxInfo" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-md" style="top: 50px;">
+                <div class="modal-content" style="max-width: 900px;">
+                    <div class="modal-header">
+                        <%--    <button type="button" id="modalpopupdata-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 style="font-size: 20px; text-align: center; font-weight: bold" class="modal-title"
+                            id="modalpopupdata-header">Modal title</h4>--%>
+                    </div>
+                    <div class="modal-body" id="modalpopupdata-content" style="padding: 40px 10px; text-align: center; font-size: 19px;">
+                        <img src="/images/loader-128x/Preloader_2.gif" />
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

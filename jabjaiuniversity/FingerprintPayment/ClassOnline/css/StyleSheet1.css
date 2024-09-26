@@ -1,0 +1,287 @@
+﻿/*body {
+}
+
+.video-container {
+    width: 49%;
+    float: left;
+}
+
+    .video-container + .video-container {
+        margin-left: 2%;
+    }*/
+
+.kv-file-upload {
+    display: none;
+}
+
+.modal-header .modal-title, .file-drag-handle {
+    display: none !important;
+}
+
+.file-preview-thumbnails .file-details-cell {
+    max-width: 150px;
+    display: table-cell !important;
+}
+
+    .file-preview-thumbnails .file-details-cell .explorer-caption {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+
+.file-preview-thumbnails .file-actions-cell {
+    display: table-cell !important;
+    min-width: 140px;
+}
+
+.file-preview-thumbnails .kv-file-content {
+    display: none !important;
+}
+
+.file-preview-thumbnails .file-footer-buttons {
+    width: auto;
+}
+
+.kv-zoom-title {
+    font-size: 24px;
+}
+
+label.error {
+    color: red !important;
+    font-size: 0.8rem !important;
+    /*position: absolute;
+    bottom: -24px;*/
+}
+
+/*.chosen-wrap-here label.error {
+    position: relative;
+    bottom: -24px;
+}*/
+
+/*label.error + .chosen-container {
+        position: relative;
+        bottom: -24px;
+    }
+
+.chosen-container ~ label.error {
+    position: relative;
+    bottom: -24px;
+}*/
+
+/* DatetimePicker */
+.bootstrap-datetimepicker-widget table td, .bootstrap-datetimepicker-widget table td span, .bootstrap-datetimepicker-widget table th.picker-switch {
+    font-size: 20px;
+}
+
+    .bootstrap-datetimepicker-widget table td span {
+        font-size: 18px;
+    }
+
+.bootstrap-datetimepicker-widget table td {
+    width: 30px;
+    height: 30px;
+}
+
+
+#divDStart .dropdown-menu {
+    font-size: inherit;
+}
+
+.bootstrap-datetimepicker-widget {
+    width: 300px !important;
+}
+/* Datepicker Style */
+/*.icon-arrow-left {
+    background-position: -240px -96px;
+}
+
+.icon-arrow-right {
+    background-position: -264px -96px;
+}*/
+
+
+.chosen-rtl .chosen-drop {
+    left: -9000px;
+}
+
+.selectallSection .left {
+    float: left
+}
+
+.selectallSection {
+    border-bottom: 1px solid #ddd;
+    padding: 0 5px;
+    min-height: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+    .selectallSection > span {
+        float: right;
+        cursor: pointer
+    }
+
+.chosen-results {
+    clear: both
+}
+
+    .chosen-results .checkBox {
+        margin-right: 8px;
+    }
+
+        .chosen-results .checkBox.result-selected {
+            display: inline-block !important;
+        }
+
+    .chosen-results .result-selected {
+        display: block !important;
+        cursor: pointer;
+    }
+
+
+textarea.resizeable {
+    display: block;
+    box-sizing: padding-box;
+    overflow: hidden;
+    /* padding: 10px;
+    width: 250px;*/
+}
+
+.chosen-container {
+    font-size: 16px !important;
+}
+
+.file-input input[type=file] {
+    z-index: auto !important;
+}
+
+.file-input .btn-file {
+    padding: 10px !important;
+}
+
+.bg-chat1 .file-input .btn-file {
+    padding: 0px !important;
+}
+
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+    background-color: transparent !important;
+}
+
+.bootstrap-datetimepicker-widget table td.day:hover, .bootstrap-datetimepicker-widget table td.hour:hover, .bootstrap-datetimepicker-widget table td.minute:hover, .bootstrap-datetimepicker-widget table td.second:hover {
+    background: transparent;
+}
+
+/**WORKADD & EDIT*/
+.vert-line {
+    border-right: 2px solid black;
+    padding-right: 40px;
+    margin-right: 40px;
+}
+
+.ui-datepicker-div {
+    z-index: 9;
+}
+
+.fileUpload1 {
+    width: 100%;
+}
+
+.file-caption-main .btn {
+    padding: 0 6px;
+}
+
+.kv-file-content {
+    display: none;
+}
+
+.file-details-cell samp {
+    font-size: 14px;
+}
+
+.file-actions-cell {
+    width: 60px;
+}
+
+.file-input .glyphicon {
+    font-size: 14px;
+}
+
+.chosen-container-multi .chosen-choices .search-choice .search-choice-close {
+    background-size: 440%; /*WTF this*/
+}
+
+/*.kv-file-remove,.file-caption-icon{
+            display:none !important;
+        }*/
+
+
+.-custom-fix {
+    display: block !important;
+    width: 0 !important;
+    height: 0 !important;
+    border: 1px solid #fff;
+    position: relative;
+    top: 35px;
+    /*left: 80px;*/
+    margin: 0 auto;
+}
+
+.file-caption-icon {
+    display: none !important;
+}
+
+.topic__spinner {
+    position: absolute;
+    top: 45px;
+    right: -20px;
+}
+
+#link-wrapper .linkrow {
+    margin-bottom: 5px;
+}
+
+#thumb, .pretty-embed {
+    padding: 0;
+}
+
+
+.form-group .bmd-label-static {
+    top: -15px !important;
+    color:black;
+}
+#attachlink label {
+    color: black;
+    /*  padding-top:20px;*/
+}
+/*END WORKADD & EDIT*/
+.-w100 {
+    width: 100% !important;
+}
+
+form .form-group {
+    margin: 20px 0;
+}
+
+.full-card {
+    padding: 0 12px;
+}
+
+table.dataTable tbody tr:last-child td,
+table.dataTable thead tr th {
+    border-bottom: 1px solid #000;
+}
+
+.linkrow .rownum {
+    margin-left: 8px;
+}
+
+.file-input .file-caption-name {
+    line-height: 2;
+}
+
+.file-input .btn.btn-sm {
+    padding: 0.40625rem 0.6rem;
+}

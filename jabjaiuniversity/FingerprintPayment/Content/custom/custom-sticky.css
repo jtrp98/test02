@@ -1,0 +1,231 @@
+﻿.jabjai-sticky-toolbar {
+    width: 80px;
+    position: fixed;
+    top: 30%;
+    right: 0;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    z-index: 50;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+    box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-radius: 3px 0 0 3px;
+}
+
+    .jabjai-sticky-toolbar .jabjai-sticky-toolbar__item {
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+    }
+
+
+.jabjai-right-panel {
+    display: block !important;
+    z-index: 1001;
+    position: fixed;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    width: 350px !important;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    right: -370px;
+}
+
+.jabjai-right-panel.jabjai-panel--on {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    right: 0;
+}
+
+.jabjai-right-panel {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.13);
+    box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.13);
+    padding: 2.5rem;
+}
+
+.jabjai-right-panel .jabjai-panel__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+    .jabjai-right-panel .jabjai-panel__head .jabjai-panel__title {
+        /*font-size: 1.4rem;*/
+        font-weight: 500;
+        color: #3d4465;
+        margin: 0;
+        padding: 0;
+    }
+
+    .jabjai-right-panel .jabjai-panel__head .jabjai-panel__close {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        background-color: #f7f8fa;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        border-radius: 4px;
+    }
+
+.jabjai-right-panel .jabjai-panel__body {
+    position: relative;
+}
+.jabjai-panel__close {
+    color:gray;
+}
+
+.jabjai-panel__close:hover{
+    color: red;
+    text-decoration:unset;
+}
+    .jabjai-toolbar-link, .jabjai-toolbar-link:focus,.jabjai-toolbar-link:hover, .jabjai-toolbar-link:active, .jabjai-panel__close:focus, .jabjai-panel__close:active {
+        text-decoration: unset;
+    }
+.jabjai-scroll {
+    position: relative;
+    overflow: hidden;
+}
+
+
+@media (min-width: 1025px) {
+    .jabjai-right-panel .jabjai-panel__body {
+        padding-right: 1.5rem;
+        margin-right: -1.5rem;
+    }
+}
+
+
+/*@charset "UTF-8";
+
+.ps {
+    overflow: hidden !important;
+    overflow-anchor: none;
+    -ms-overflow-style: none;
+    touch-action: auto;
+    -ms-touch-action: auto;
+}
+.ps__rail-x {
+    display: none;
+    opacity: 0;
+    transition: background-color .2s linear, opacity .2s linear;
+    -webkit-transition: background-color .2s linear, opacity .2s linear;
+    height: 15px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.ps__rail-y {
+    display: none;
+    opacity: 0;
+    transition: background-color .2s linear, opacity .2s linear;
+    -webkit-transition: background-color .2s linear, opacity .2s linear;
+    width: 15px;
+    right: 0;
+    position: absolute;
+}
+
+.ps--active-x > .ps__rail-x,
+.ps--active-y > .ps__rail-y {
+    display: block;
+    background-color: transparent;
+}
+
+.ps:hover > .ps__rail-x,
+.ps:hover > .ps__rail-y,
+.ps--focus > .ps__rail-x,
+.ps--focus > .ps__rail-y,
+.ps--scrolling-x > .ps__rail-x,
+.ps--scrolling-y > .ps__rail-y {
+    opacity: 0.6;
+}
+
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y:hover,
+.ps .ps__rail-x:focus,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-x.ps--clicking,
+.ps .ps__rail-y.ps--clicking {
+    background-color: #eee;
+    opacity: 0.9;
+}
+
+.ps__thumb-x {
+    background-color: #aaa;
+    border-radius: 6px;
+    transition: background-color .2s linear, height .2s ease-in-out;
+    -webkit-transition: background-color .2s linear, height .2s ease-in-out;
+    height: 6px;
+    bottom: 2px;
+    position: absolute;
+}
+
+.ps__thumb-y {
+    background-color: #aaa;
+    border-radius: 6px;
+    transition: background-color .2s linear, width .2s ease-in-out;
+    -webkit-transition: background-color .2s linear, width .2s ease-in-out;
+    width: 6px;
+    right: 2px;
+    position: absolute;
+}
+
+.ps__rail-x:hover > .ps__thumb-x,
+.ps__rail-x:focus > .ps__thumb-x,
+.ps__rail-x.ps--clicking .ps__thumb-x {
+    background-color: #999;
+    height: 11px;
+}
+
+.ps__rail-y:hover > .ps__thumb-y,
+.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y.ps--clicking .ps__thumb-y {
+    background-color: #999;
+    width: 11px;
+}
+
+@supports (-ms-overflow-style: none) {
+    .ps {
+        overflow: auto !important;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .ps {
+        overflow: auto !important;
+    }
+}*/

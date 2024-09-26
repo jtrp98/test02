@@ -1,0 +1,61 @@
+﻿.smsadd-container {
+
+}
+
+.smsadd-container textarea {
+    width: 100%;
+    border-radius: 4px;
+}
+
+@media (max-width: 999px) {
+    .smsadd-container {
+        font-size: 20px;
+    }
+
+    .smsadd-container input[type=checkbox] {
+        width: 15px;
+        height: 15px;
+        margin-top: 10px;
+    }
+
+    .smsadd-container .global-btn {
+        font-size: 20px;
+        width: 120px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .smsadd-container {
+        font-size: 22px;
+    }
+
+    .smsadd-container input[type=checkbox] {
+        width: 16px;
+        height: 16px;
+        margin-top: 10px;
+    }
+
+    .smsadd-container .global-btn {
+        font-size: 22px;
+        width: 120px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .smsadd-container {
+        font-size: 26px;
+    }
+
+    .smsadd-container input[type=checkbox] {
+        width: 18px;
+        height: 18px;
+        margin-top: 13px;
+    }
+
+    .smsadd-container .global-btn {
+        font-size: 26px;
+        width: 120px;
+    }
+}

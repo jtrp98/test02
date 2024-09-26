@@ -1,0 +1,81 @@
+﻿.pagesellproduct-container {
+
+}
+
+.page-sell-product-animate-container {
+}
+
+.pagesellproduct-container .pagesellproduct-button-segment {
+    text-align: center;
+}
+
+@media (max-width: 899px) {
+    .page-sell-product-animate-container img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .pagesellproduct-container {
+        font-size: 20px;
+    }
+
+    .pagesellproduct-container .table-section {
+        padding-top: 30px;
+    }
+
+    .pagesellproduct-container .input-section input[type=text] {
+        text-align: right;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+    .page-sell-product-animate-container img {
+        width: 600px;
+        height: 600px;
+    }
+
+    .pagesellproduct-container {
+        font-size: 20px;
+    }
+
+    .pagesellproduct-container .global-btn {
+        font-size: 20px;
+    }
+
+    .pagesellproduct-container .table-section {
+        padding-top: 30px;
+    }
+
+    .pagesellproduct-container .input-section input[type=text] {
+        text-align: right;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .pagesellproduct-container {
+        font-size: 22px;
+    }
+
+    .pagesellproduct-container .global-btn {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pagesellproduct-container {
+        font-size: 26px;
+    }
+
+    .pagesellproduct-container .global-btn {
+        font-size: 26px;
+    }
+}
+
+/*special media screen size for button of pagesellproduct*/
+@media (max-width: 1100px) {
+    .pagesellproduct-container .global-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

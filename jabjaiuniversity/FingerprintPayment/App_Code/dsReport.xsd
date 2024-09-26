@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReport" targetNamespace="http://tempuri.org/dsReport.xsd" xmlns:mstns="http://tempuri.org/dsReport.xsd" xmlns="http://tempuri.org/dsReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="FingerPaymentConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FingerPaymentConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.FingerPaymentConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtReport02TableAdapter" GeneratorDataComponentClassName="dtReport02TableAdapter" Name="dtReport02" UserDataComponentName="dtReport02TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FingerPaymentConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TB2.sName + ' ' + TB2.sLastname AS SNAME, TB1.dSell, TB4.sProduct, TB3.nNumber, TB3.nNumber * TB4.nPrice AS NTOTAL, TB4.sBarCode, TB4.nPrice, 
+                         'รายงานการซื้อสินค้าในระบบ' AS SREPORTNAME, (TB4.nPrice - TB4.nCost) * TB3.nNumber AS Lucre, TB5.sName + ' ' + TB5.sLastname AS sNameEmp, 
+                         '' AS sReportHeader
+FROM            TSell AS TB1 INNER JOIN
+                         TUser AS TB2 ON TB1.sID = TB2.sID INNER JOIN
+                         TSell_Detail AS TB3 ON TB1.sSellID = TB3.nSell INNER JOIN
+                         TProduct AS TB4 ON TB3.nProduct = TB4.nProductID INNER JOIN
+                         TEmployees AS TB5 ON TB1.nEmp = TB5.sEmp
+WHERE        (1 = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SNAME" DataSetColumn="SNAME" />
+              <Mapping SourceColumn="NTOTAL" DataSetColumn="NTOTAL" />
+              <Mapping SourceColumn="SREPORTNAME" DataSetColumn="SREPORTNAME" />
+              <Mapping SourceColumn="Lucre" DataSetColumn="Lucre" />
+              <Mapping SourceColumn="sNameEmp" DataSetColumn="sNameEmp" />
+              <Mapping SourceColumn="sReportHeader" DataSetColumn="sReportHeader" />
+              <Mapping SourceColumn="dSell" DataSetColumn="dSell" />
+              <Mapping SourceColumn="sProduct" DataSetColumn="sProduct" />
+              <Mapping SourceColumn="nNumber" DataSetColumn="nNumber" />
+              <Mapping SourceColumn="sBarCode" DataSetColumn="sBarCode" />
+              <Mapping SourceColumn="nPrice" DataSetColumn="nPrice" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FingerPaymentConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TB2.SNAME + ' ' + TB2.SLASTNAME AS SNAME,DSELL,SPRODUCT,TB3.NNUMBER
+,TB3.NNUMBER * TB4.NPRICE AS NPEICE,SBARCODE
+FROM TSELL TB1 INNER JOIN TUSER TB2 ON TB1.SID = TB2.SID
+INNER JOIN TSELL_DETAIL TB3 ON TB1.SSELLID = TB3.NSELL
+INNER JOIN TPRODUCT TB4 ON TB3.NPRODUCT = TB4.NPRODUCTID
+INNER JOIN TEMPLOYEES TB5 ON TB1.NEMP = TB5.SEMP</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TProductTableAdapter" GeneratorDataComponentClassName="TProductTableAdapter" Name="TProduct" UserDataComponentName="TProductTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FingerPaymentConnectionString (Web.config)" DbObjectName="FingerPayment2.dbo.TProduct" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [TProduct] WHERE (([nProductID] = @Original_nProductID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_nProductID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nProductID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [TProduct] ([nProductID], [sProduct], [sBarCode], [nNumber], [nCost], [nPrice], [nBalance], [nType]) VALUES (@nProductID, @sProduct, @sBarCode, @nNumber, @nCost, @nPrice, @nBalance, @nType)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nProductID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nProductID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@sProduct" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sProduct" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@sBarCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sBarCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nCost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nBalance" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nBalance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TProducts.*
+FROM            TProduct</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [TProduct] SET [nProductID] = @nProductID, [sProduct] = @sProduct, [sBarCode] = @sBarCode, [nNumber] = @nNumber, [nCost] = @nCost, [nPrice] = @nPrice, [nBalance] = @nBalance, [nType] = @nType WHERE (([nProductID] = @Original_nProductID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nProductID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nProductID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@sProduct" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sProduct" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@sBarCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sBarCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nCost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nBalance" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nBalance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@nType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_nProductID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nProductID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nProductID" DataSetColumn="nProductID" />
+              <Mapping SourceColumn="sProduct" DataSetColumn="sProduct" />
+              <Mapping SourceColumn="sBarCode" DataSetColumn="sBarCode" />
+              <Mapping SourceColumn="nNumber" DataSetColumn="nNumber" />
+              <Mapping SourceColumn="nCost" DataSetColumn="nCost" />
+              <Mapping SourceColumn="nPrice" DataSetColumn="nPrice" />
+              <Mapping SourceColumn="nBalance" DataSetColumn="nBalance" />
+              <Mapping SourceColumn="nType" DataSetColumn="nType" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReport" msprop:Generator_UserDSName="dsReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtReport02" msprop:Generator_TableClassName="dtReport02DataTable" msprop:Generator_TableVarName="tabledtReport02" msprop:Generator_RowChangedName="dtReport02RowChanged" msprop:Generator_TablePropName="dtReport02" msprop:Generator_RowDeletingName="dtReport02RowDeleting" msprop:Generator_RowChangingName="dtReport02RowChanging" msprop:Generator_RowEvHandlerName="dtReport02RowChangeEventHandler" msprop:Generator_RowDeletedName="dtReport02RowDeleted" msprop:Generator_RowClassName="dtReport02Row" msprop:Generator_UserTableName="dtReport02" msprop:Generator_RowEvArgName="dtReport02RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SNAME" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSNAME" msprop:Generator_ColumnPropNameInRow="SNAME" msprop:Generator_ColumnPropNameInTable="SNAMEColumn" msprop:Generator_UserColumnName="SNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="513" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NTOTAL" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNTOTAL" msprop:Generator_ColumnPropNameInRow="NTOTAL" msprop:Generator_ColumnPropNameInTable="NTOTALColumn" msprop:Generator_UserColumnName="NTOTAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SREPORTNAME" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSREPORTNAME" msprop:Generator_ColumnPropNameInRow="SREPORTNAME" msprop:Generator_ColumnPropNameInTable="SREPORTNAMEColumn" msprop:Generator_UserColumnName="SREPORTNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lucre" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLucre" msprop:Generator_ColumnPropNameInRow="Lucre" msprop:Generator_ColumnPropNameInTable="LucreColumn" msprop:Generator_UserColumnName="Lucre" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sNameEmp" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsNameEmp" msprop:Generator_ColumnPropNameInRow="sNameEmp" msprop:Generator_ColumnPropNameInTable="sNameEmpColumn" msprop:Generator_UserColumnName="sNameEmp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="513" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sReportHeader" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsReportHeader" msprop:Generator_ColumnPropNameInRow="sReportHeader" msprop:Generator_ColumnPropNameInTable="sReportHeaderColumn" msprop:Generator_UserColumnName="sReportHeader" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dSell" msprop:Generator_ColumnVarNameInTable="columndSell" msprop:Generator_ColumnPropNameInRow="dSell" msprop:Generator_ColumnPropNameInTable="dSellColumn" msprop:Generator_UserColumnName="dSell" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sProduct" msprop:Generator_ColumnVarNameInTable="columnsProduct" msprop:Generator_ColumnPropNameInRow="sProduct" msprop:Generator_ColumnPropNameInTable="sProductColumn" msprop:Generator_UserColumnName="sProduct" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="512" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nNumber" msprop:Generator_ColumnVarNameInTable="columnnNumber" msprop:Generator_ColumnPropNameInRow="nNumber" msprop:Generator_ColumnPropNameInTable="nNumberColumn" msprop:Generator_UserColumnName="nNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="sBarCode" msprop:Generator_ColumnVarNameInTable="columnsBarCode" msprop:Generator_ColumnPropNameInRow="sBarCode" msprop:Generator_ColumnPropNameInTable="sBarCodeColumn" msprop:Generator_UserColumnName="sBarCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nPrice" msprop:Generator_ColumnVarNameInTable="columnnPrice" msprop:Generator_ColumnPropNameInRow="nPrice" msprop:Generator_ColumnPropNameInTable="nPriceColumn" msprop:Generator_UserColumnName="nPrice" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TProduct" msprop:Generator_TableClassName="TProductDataTable" msprop:Generator_TableVarName="tableTProduct" msprop:Generator_RowChangedName="TProductRowChanged" msprop:Generator_TablePropName="TProduct" msprop:Generator_RowDeletingName="TProductRowDeleting" msprop:Generator_RowChangingName="TProductRowChanging" msprop:Generator_RowEvHandlerName="TProductRowChangeEventHandler" msprop:Generator_RowDeletedName="TProductRowDeleted" msprop:Generator_RowClassName="TProductRow" msprop:Generator_UserTableName="TProduct" msprop:Generator_RowEvArgName="TProductRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nProductID" msprop:Generator_ColumnVarNameInTable="columnnProductID" msprop:Generator_ColumnPropNameInRow="nProductID" msprop:Generator_ColumnPropNameInTable="nProductIDColumn" msprop:Generator_UserColumnName="nProductID" type="xs:int" />
+              <xs:element name="sProduct" msprop:Generator_ColumnVarNameInTable="columnsProduct" msprop:Generator_ColumnPropNameInRow="sProduct" msprop:Generator_ColumnPropNameInTable="sProductColumn" msprop:Generator_UserColumnName="sProduct" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="512" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sBarCode" msprop:Generator_ColumnVarNameInTable="columnsBarCode" msprop:Generator_ColumnPropNameInRow="sBarCode" msprop:Generator_ColumnPropNameInTable="sBarCodeColumn" msprop:Generator_UserColumnName="sBarCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nNumber" msprop:Generator_ColumnVarNameInTable="columnnNumber" msprop:Generator_ColumnPropNameInRow="nNumber" msprop:Generator_ColumnPropNameInTable="nNumberColumn" msprop:Generator_UserColumnName="nNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="nCost" msprop:Generator_ColumnVarNameInTable="columnnCost" msprop:Generator_ColumnPropNameInRow="nCost" msprop:Generator_ColumnPropNameInTable="nCostColumn" msprop:Generator_UserColumnName="nCost" type="xs:int" minOccurs="0" />
+              <xs:element name="nPrice" msprop:Generator_ColumnVarNameInTable="columnnPrice" msprop:Generator_ColumnPropNameInRow="nPrice" msprop:Generator_ColumnPropNameInTable="nPriceColumn" msprop:Generator_UserColumnName="nPrice" type="xs:int" minOccurs="0" />
+              <xs:element name="nBalance" msprop:Generator_ColumnVarNameInTable="columnnBalance" msprop:Generator_ColumnPropNameInRow="nBalance" msprop:Generator_ColumnPropNameInTable="nBalanceColumn" msprop:Generator_UserColumnName="nBalance" type="xs:int" minOccurs="0" />
+              <xs:element name="nType" msprop:Generator_ColumnVarNameInTable="columnnType" msprop:Generator_ColumnPropNameInRow="nType" msprop:Generator_ColumnPropNameInTable="nTypeColumn" msprop:Generator_UserColumnName="nType" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtReport03" msprop:Generator_TableClassName="dtReport03DataTable" msprop:Generator_TableVarName="tabledtReport03" msprop:Generator_TablePropName="dtReport03" msprop:Generator_RowDeletingName="dtReport03RowDeleting" msprop:Generator_RowChangingName="dtReport03RowChanging" msprop:Generator_RowEvHandlerName="dtReport03RowChangeEventHandler" msprop:Generator_RowDeletedName="dtReport03RowDeleted" msprop:Generator_UserTableName="dtReport03" msprop:Generator_RowChangedName="dtReport03RowChanged" msprop:Generator_RowEvArgName="dtReport03RowChangeEvent" msprop:Generator_RowClassName="dtReport03Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sName" msprop:Generator_ColumnVarNameInTable="columnsName" msprop:Generator_ColumnPropNameInRow="sName" msprop:Generator_ColumnPropNameInTable="sNameColumn" msprop:Generator_UserColumnName="sName" type="xs:string" minOccurs="0" />
+              <xs:element name="sLastname" msprop:Generator_ColumnVarNameInTable="columnsLastname" msprop:Generator_ColumnPropNameInRow="sLastname" msprop:Generator_ColumnPropNameInTable="sLastnameColumn" msprop:Generator_UserColumnName="sLastname" type="xs:string" minOccurs="0" />
+              <xs:element name="sIdentification" msprop:Generator_ColumnVarNameInTable="columnsIdentification" msprop:Generator_ColumnPropNameInRow="sIdentification" msprop:Generator_ColumnPropNameInTable="sIdentificationColumn" msprop:Generator_UserColumnName="sIdentification" type="xs:string" minOccurs="0" />
+              <xs:element name="dBirth" msprop:Generator_ColumnVarNameInTable="columndBirth" msprop:Generator_ColumnPropNameInRow="dBirth" msprop:Generator_ColumnPropNameInTable="dBirthColumn" msprop:Generator_UserColumnName="dBirth" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SubLevel" msprop:Generator_ColumnVarNameInTable="columnSubLevel" msprop:Generator_ColumnPropNameInRow="SubLevel" msprop:Generator_ColumnPropNameInTable="SubLevelColumn" msprop:Generator_UserColumnName="SubLevel" type="xs:string" minOccurs="0" />
+              <xs:element name="nMax" msprop:Generator_ColumnVarNameInTable="columnnMax" msprop:Generator_ColumnPropNameInRow="nMax" msprop:Generator_ColumnPropNameInTable="nMaxColumn" msprop:Generator_UserColumnName="nMax" type="xs:string" minOccurs="0" />
+              <xs:element name="nMoney" msprop:Generator_ColumnVarNameInTable="columnnMoney" msprop:Generator_ColumnPropNameInRow="nMoney" msprop:Generator_ColumnPropNameInTable="nMoneyColumn" msprop:Generator_UserColumnName="nMoney" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TProduct" />
+      <xs:field xpath="mstns:nProductID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

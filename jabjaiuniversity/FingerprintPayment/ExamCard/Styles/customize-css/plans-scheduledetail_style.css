@@ -1,0 +1,38 @@
+﻿.plan-schedule-detail-container {
+    
+}
+
+.plan-schedule-detail-container table.plans-schedule-table td {
+    vertical-align: middle;
+    text-align:center;
+}
+
+@media (max-width: 999px) {
+    .plan-schedule-detail-container {
+        font-size: 20px;
+    }
+
+    .plan-schedule-detail-container table.table-schedule-detail tr td:nth-child(1) {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .plan-schedule-detail-container {
+        font-size: 22px;
+    }
+
+    .plan-schedule-detail-container table.table-schedule-detail tr td:nth-child(1) {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .plan-schedule-detail-container {
+        font-size: 26px;
+    }
+
+    .plan-schedule-detail-container table.table-schedule-detail tr td:nth-child(1) {
+        width: 15%;
+    }
+}

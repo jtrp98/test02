@@ -1,0 +1,185 @@
+﻿.timeiosetting-container {
+
+}
+
+.timeiosetting-container .timeiosettings-table tr td {
+    vertical-align: middle !important;
+}
+
+.timeiosetting-container .adjust-col-padding-right-side {
+    padding-right: 0px;
+}
+
+.timeiosetting-container .adjust-col-padding-left-side {
+    padding-left: 5px;
+}
+
+.timeiosetting-container .minute-box {
+    width: 100%;
+    text-align: center;
+}
+
+.timeiosetting-container .time-unit {
+    text-align: center;
+}
+
+.timeiosetting-container .checkbox {
+    text-align: left;
+}
+
+.timeiosetting-container .timeiosettings-table td.table-td-attend div:nth-child(1) {
+    float: left;
+    width: 45%;
+}
+
+.timeiosetting-container .timeiosettings-table td.table-td-attend div:nth-child(2) {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.timeiosetting-container .timeiosettings-table td.table-td-attend div:nth-child(3) {
+    float: left;
+    width: 45%;
+}
+
+.timeiosetting-container .timeiosettings-table input[type=text] {
+    border-radius: 5px;
+    border-width:thin;
+}
+
+@media (max-width: 999px) {
+
+    .timeiosetting-container {
+        font-size: 20px;
+    }
+
+    .timeiosetting-container .button-section .global-btn {
+        font-size: 20px;
+    }
+
+    .timeiosetting-container .adjust-col-padding-right-side {
+        padding-right: 15px;
+    }
+
+    .timeiosetting-container .adjust-col-padding-left-side {
+        padding-left: 15px;
+    }
+
+    .timeiosetting-container .clockpicker input[type=text] {
+        font-size: 20px;
+    }
+
+    .timeiosetting-container .clockpicker input[type=text] + span {
+        padding: 6px 4px;
+    }
+
+    .timeiosetting-container .timeiosettings-table #tablename {
+        font-size: 20px;
+    }
+
+    .timeiosetting-container .dropdown-menu {
+        font-size: 20px;
+    }
+
+    .timeiosetting-container .timeiosetting-btn-select {
+        font-size: 20px;
+    }
+
+    /* Timeiosettings modal dialog*/
+    .timeio-modal-container {
+        font-size: 20px;
+    }
+
+    .timeio-modal-container h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .timeio-modal-container .modal-footer .global-btn {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .timeiosetting-container {
+        font-size: 22px;
+    }
+
+    .timeiosetting-container .button-section .global-btn {
+        font-size: 22px;
+    }
+
+    .timeiosetting-container .clockpicker input[type=text] {
+        font-size: 22px;
+    }
+
+    .timeiosetting-container .timeiosettings-table #tablename {
+        font-size: 22px;
+    }
+
+    .timeiosetting-container .dropdown-menu {
+        font-size: 22px;
+    }
+
+    .timeiosetting-container .timeiosetting-btn-select {
+        font-size: 22px;
+    }
+
+    /* Timeiosettings modal dialog*/
+    .timeio-modal-container {
+        font-size: 22px;
+    }
+
+    .timeio-modal-container h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .timeio-modal-container .modal-footer .global-btn {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .timeiosetting-container {
+        font-size: 26px;
+    }
+
+    .timeiosetting-container .button-section .global-btn {
+        font-size: 26px;
+    }
+
+    .timeiosetting-container .clockpicker input[type=text] {
+        font-size: 26px;
+    }
+
+    .timeiosetting-container .timeiosettings-table #tablename {
+        font-size: 26px;
+    }
+
+    .timeiosetting-container .dropdown-menu {
+        font-size: 26px;
+    }
+
+    .timeiosetting-container .timeiosetting-btn-select {
+        font-size: 26px;
+    }
+
+    /* Timeiosettings modal dialog*/
+    .timeio-modal-container {
+        font-size: 26px;
+    }
+
+    .timeio-modal-container h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .timeio-modal-container .modal-footer .global-btn {
+        font-size: 26px;
+    }
+}
+

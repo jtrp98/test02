@@ -1,0 +1,18 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="FingerprintPayment.PaymentGateway.KBank.Checkout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        /* https://www.cleancss.com/css-minify/ */
+        @font-face {font-family: THSarabun;src: url(../../fonts/THSarabun.ttf) }html, body {height: 100%;display: flex;flex-direction: column;font-family: THSarabun }.section-top {height: 90% }.section-bottom {flex-grow: 1;margin-top: 20px }.section-bottom.improve-system {text-align: center;margin-top: 5px;}.section-bottom.improve-system .confirm-btn {text-decoration: none;width: 90% !important;border-radius: 25px;background-image: linear-gradient(to right, #29c47b, #63d39f);}.card {box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: .3s;height: 100% }.card:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) }.container {height: 100%;display: flex;flex-direction: column }.confirm-btn {text-align: center;padding: 15px 0 0 }.confirm-btn button {width: 100%;height: 50px }.font-1 {font-size: 18px !important }.font-2 {font-size: 25px !important }.font-3 {font-size: 35px !important }.btn-success {color: #fff;background-color: #5cb85c;border-color: #4cae4c }.btn {display: inline-block;margin-bottom: 0;font-weight: 400;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;background-image: none;border: 1px solid transparent;padding: 6px 0;font-size: 14px;line-height: 1.42857143;border-radius: 4px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;margin-top: 10px;font-size: 23px;width: 100% }.pay-button {border-radius: 25px;background-color: #219b78 !important;background-image: linear-gradient(to right,#20c276,#67d6a3) }.row-topic {display: flex;height: 93px;margin-bottom: 17px }.logo {width: 96px;height: 86.34px;margin-top: 10px }.topic {text-indent: 1em;border-left: 6px solid #ffa291;margin: 25px 10px 10px }.topic p {margin: 0;font-weight: 700 }.topic-detail {text-align: left;margin: 10px 0 20px;font-weight: 700;color: #ffb8a9 }.payer {display: block;overflow: hidden }.payer p {width: 100%;text-align: left;margin: 0px;font-weight: 400 }.payer p.row-input {text-align: left }.row-highlight {background-color: #fff0e1;margin: 0 -20px }.row {border-bottom: 1px solid #facda4;display: block;overflow: hidden;margin: 0 20px;padding-top: 25px }.row.last {border-bottom: 0 solid #facda4;height: 15px }.row-label {float: left;width: 5%;text-align: left;margin: -3px -3px 10px 3px;font-weight: 700;color: #444;white-space: nowrap;}.row-input {float: right;width: 95%;text-align: right;margin: 18px 3px -5px -3px;font-weight: 700;color: #444 }.row-summary {bottom: 15px }.row-summary .row-label {float: left;width: 50%;text-align: left;margin: 15px 0 10px;font-size: 20px;font-weight: 700;color: #000 }.row-summary .row-input {float: right;width: 50%;text-align: right;margin: 15px 0 10px;font-size: 20px;font-weight: 700;color: #000 }.improve-system p.message {background-color: #f1a456;border-radius: 20px;padding: 22px 34px;color: white;font-size: 30px;}.improve-system img.contact {width: 24%;float: left;margin-right: 12px;}.improve-system p.contact {text-align: left;font-size: 24px;font-weight: bold;margin: 0px;}hr.improve-system {width: 92%;border-top: 2px solid orange;margin-top: 15px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <asp:Literal ID="ltrPay" runat="server"></asp:Literal>
+</body>
+</html>

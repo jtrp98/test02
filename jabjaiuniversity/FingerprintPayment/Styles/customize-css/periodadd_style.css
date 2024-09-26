@@ -1,0 +1,237 @@
+﻿.periodadd-container {
+}
+
+.periodadd-container label {
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.periodadd-container td.time-section div:nth-child(1) {
+    float: left;
+    width: 150px;
+}
+
+.periodadd-container td.time-section div:nth-child(2) {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.periodadd-container td.time-section div:nth-child(3) {
+    float: left;
+    width: 150px;
+}
+
+.periodadd-container .periodsadd-table td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.periodadd-container .table-tab {
+    background: #286090 !important;
+    color: white;
+}
+
+/**/
+.periodadd-container .tab-content .glyphicon {
+        font-size: 14px;
+ }
+
+ .periodadd-container .tab-content .level-name {
+     font-size: 26px;
+     vertical-align: middle;
+ }
+
+ .periodadd-container .tab-content .checkbox-container {
+     padding-top: 12px;
+ }
+
+@media (max-width: 999px) {
+
+    .periodadd-container {
+        font-size: 20px;
+    }
+
+    .periodadd-container label {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .periodadd-container input[type=text].subject-textfield {
+        width: 318px;
+        height: 38px;
+    }
+
+    .periodadd-container .clockpicker input[type=text] {
+        font-size: 20px;
+        height: 38px;
+        text-align: center;
+    }
+
+    .periodadd-container #divmain li > a {
+        font-size: 20px;
+    }
+
+    .periodadd-container .table-tab {
+        font-size: 20px;
+    }
+
+    .periodadd-container .tab-content .glyphicon {
+        font-size: 14px;
+    }
+
+    .periodadd-container .tab-content .level-name {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    .periodadd-container .tab-content .checkbox-container {
+        padding-top: 8px;
+    }
+
+    .periodadd-container .periodsadd-button-segment .global-btn {
+        font-size: 20px;
+        font-family: 'thaifont';
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .periodadd-container {
+        font-size: 22px;
+    }
+
+    .periodadd-container label {
+        font-size: 22px;
+        font-weight: normal;
+    }
+
+    .periodadd-container input[type=text].subject-textfield {
+        width: 415px;
+        height: 40px;
+    }
+
+    .periodadd-container .clockpicker input[type=text] {
+        font-size: 22px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .periodadd-container td.time-section div:nth-child(1) {
+        float: left;
+        width: 200px;
+    }
+
+    .periodadd-container td.time-section div:nth-child(2) {
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .periodadd-container td.time-section div:nth-child(3) {
+        float: left;
+        width: 200px;
+    }
+
+    .periodadd-container .periodsadd-table td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .periodadd-container #divmain li > a {
+        font-size: 22px;
+    }
+
+    .periodadd-container .table-tab {
+        font-size: 22px;
+    }
+
+    .periodadd-container .tab-content .glyphicon {
+        font-size: 14px;
+    }
+
+    .periodadd-container .tab-content .level-name {
+        font-size: 22px;
+        vertical-align: middle;
+    }
+
+    .periodadd-container .tab-content .checkbox-container {
+        padding-top: 10px;
+    }
+
+    .periodadd-container .periodsadd-button-segment .global-btn {
+        font-size: 22px;
+        font-family: 'thaifont';
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .periodadd-container {
+        font-size: 26px;
+    }
+
+    .periodadd-container label {
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+    .periodadd-container input[type=text].subject-textfield {
+        width: 415px;
+        height: 42px;
+    }
+
+    .periodadd-container .clockpicker input[type=text] {
+        font-size: 26px;
+        height: 42px;
+        text-align: center;
+    }
+
+    .periodadd-container td.time-section div:nth-child(1) {
+        float: left;
+        width: 200px;
+    }
+
+    .periodadd-container td.time-section div:nth-child(2) {
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .periodadd-container td.time-section div:nth-child(3) {
+        float: left;
+        width: 200px;
+    }
+
+    .periodadd-container .periodsadd-table td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .periodadd-container #divmain li > a {
+        font-size: 26px;
+    }
+
+    .periodadd-container .table-tab {
+        font-size: 26px;
+    }
+
+    .periodadd-container .tab-content .glyphicon {
+        font-size: 14px;
+    }
+
+    .periodadd-container .tab-content .level-name {
+        font-size: 26px;
+        vertical-align: middle;
+    }
+
+    .periodadd-container .tab-content .checkbox-container {
+        padding-top: 12px;
+    }
+
+    .periodadd-container .periodsadd-button-segment .global-btn {
+        font-size: 26px;
+        font-family: 'thaifont';
+    }
+}

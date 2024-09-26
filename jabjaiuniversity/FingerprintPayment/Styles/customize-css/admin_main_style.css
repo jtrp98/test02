@@ -1,0 +1,126 @@
+﻿.notificastion-panel .list-group-item {
+    font-size: 20px;
+}
+
+.card-summary {
+    font-size: 26px;
+}
+
+.panel-summary {     
+}
+
+span.graph-label {
+    font-size: 23px;
+}
+
+.legend {
+
+}
+
+.legend table td.legendLabel {
+    font-size: 20px;
+    width: 250px;
+    padding: 0px;
+}
+
+.legend table td:nth-child(2).legendLabel {
+        padding-left: 5px;
+}
+
+.legend table td:nth-child(3).legendColorBox {
+        padding-left: 10px;
+}
+
+.btn-view-all-alert {
+    font-size: 23px;
+}
+
+@media (max-width: 999px) {
+
+    .panel-summary {
+        min-height: 120px;
+        min-width: 140px;
+    }
+
+    .panel-summary .panel-heading {
+        height: 120px;
+    }
+
+    .card-summary {
+        font-size: 16px;
+    }
+
+    .card-summary .huge {
+        font-size: 32px;
+    }
+
+    .card-summary .card-summary-icon {
+        font-size: 3em;
+    }
+
+    .legend table td.legendLabel {
+        font-size: 14px;
+        width: 300px;
+        padding: 0px;
+    }
+
+    .legend table td:nth-child(3).legendColorBox {
+        padding-left: 5px;
+}
+}
+
+@media (min-width: 1000px) and (max-width: 1099px){
+    .card-summary {
+        font-size: 16px;
+    }
+
+    .card-summary .huge {
+        font-size: 36px;
+    }
+
+    .card-summary .card-summary-icon {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1199px){
+    .card-summary {
+        font-size: 18px;
+    }
+
+    .card-summary .huge {
+        font-size: 36px;
+    }
+
+    .card-summary .card-summary-icon {
+        font-size: 3.5em;
+    }
+}
+
+@media (min-width: 1200px) and (max-width:1299px) {
+    .card-summary {
+        font-size: 22px;
+    }
+
+    .card-summary .huge {
+        font-size: 36px;
+    }
+
+    .card-summary .card-summary-icon {
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 1300px) {
+    .card-summary {
+        font-size: 22px;
+    }
+
+    .card-summary .huge {
+        font-size: 50px;
+    }
+
+    .card-summary .card-summary-icon {
+        font-size: 4.5em;
+    }
+}

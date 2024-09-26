@@ -1,0 +1,49 @@
+﻿.stock-add-container {
+
+}
+
+@media (max-width: 999px) {
+    .stock-add-container .stock-add-label {
+        font-size: 20px;
+    }
+
+    .stock-add-container .stock-add-label label {
+        float: left;
+    }
+
+    .stock-add-container .global-btn {
+        font-size: 20px;
+    }
+
+    .stock-add-container .cool-table .pagerCell td {
+        padding-left: 25px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .stock-add-label {
+        font-size: 22px;
+    }
+
+    .stock-add-container .stock-add-label label {
+        float: right;
+    }
+
+    .stock-add-container .global-btn {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .stock-add-label {
+        font-size: 26px;
+    }
+
+    .stock-add-container .stock-add-label label {
+        float: right;
+    }
+
+    .stock-add-container .global-btn {
+        font-size: 26px;
+    }
+}

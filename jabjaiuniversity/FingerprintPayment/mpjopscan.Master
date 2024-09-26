@@ -1,0 +1,697 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mpjopscan.master.cs" Inherits="FingerprintPayment.mpjopscan" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="images/School Bright logo only.png" sizes="16x16 32x32" type="image/png">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>School Bright</title>
+
+    <link href="/Styles/cssreset.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jscommon.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <%--popup--%>
+    <link rel="stylesheet" type="text/css" href="/Scripts/css/popup.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/javascript/autocomplete.css" media="screen" />
+    <script type="text/javascript" src="/Scripts/jquery.PopUp.js"></script>
+    <%--draggable()--%>
+    <script type='text/javascript' src="/Scripts/ui.core.js"></script>
+    <script type='text/javascript' src="/Scripts/ui.draggable.js"></script>
+    <script type='text/javascript' src="/Scripts/ui.resizable.js"></script>
+    <%-- JQuery Alert Box--%>
+    <script type="text/javascript" src="/Scripts/alertBox/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/Scripts/alertBox/sexyalertbox.v1.2.jquery.js"></script>
+    <script type="text/javascript" src="/Scripts/alertBox/alertBox.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Scripts/alertBox/sexyalertbox.css" />
+    <script src="/javascript/shortcut.js" type="text/javascript"></script>
+    <%--End JQuery Alert Box--%>
+    <%--<link href="Styles/css.css" rel="stylesheet" type="text/css" />--%>
+    <%--JQuery Calendar--%>
+    <script type="text/javascript" src="/Scripts/jquery.ui.1.8.10.js"></script>
+    <link href="/Scripts/ui-1.8.10_V1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Scripts/jquery.bpopup.min.js"></script>
+    <script src='/Scripts/jquery_tinywatermark-3_1_0.js' type='text/javascript'></script>
+    <link href="/bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />
+    <script src="/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <link href="/Styles/style.css" rel="Stylesheet" type="text/css" />
+    <style>
+        lable {
+            font-size: 34px;
+        }
+        /* Paste this css to your style sheet file or under head tag */
+        /* This only works with JavaScript, 
+        if it's not present, don't show loader */
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(/images/loader-128x/Preloader_1.gif) center no-repeat #fff;
+        }
+    </style>
+    <script language="Javascript" type="text/javascript">
+        //                                       $(document).ready(function () {
+        //                                           fnOpenDevice();
+        //                                       });
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+            //setTimeout(function () {  $(".se-pre-con").fadeOut("slow"); }, 3000);
+        });
+        var xmlHttp;
+        function srvTime() {
+            try {
+                //FF, Opera, Safari, Chrome
+                xmlHttp = new XMLHttpRequest();
+            }
+            catch (err1) {
+                //IE
+                try {
+                    xmlHttp = new ActiveXObject('Msxml2.XMLHTTP');
+                }
+                catch (err2) {
+                    try {
+                        xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+                    }
+                    catch (eerr3) {
+                        //AJAX not supported, use CPU time.
+                        alert("AJAX not supported");
+                    }
+                }
+            }
+            xmlHttp.open('HEAD', window.location.href.toString(), false);
+            xmlHttp.setRequestHeader("Content-Type", "text/html");
+            xmlHttp.send('');
+            return xmlHttp.getResponseHeader("Date");
+        }
+        function ShowTime() {
+            var st = srvTime();
+            var dt = new Date(st);
+            document.getElementById("lblTime").innerHTML = dt.toLocaleTimeString();
+            //window.setTimeout("ShowTime()", 500); // Here 1000(milliseconds) means one 1 Sec  
+        }
+        var tmpFuncSuccess = null;
+        var tmpFuncCancel = null;
+        var objData = null;
+        function clearTmpFunc() {
+            console.log("call clear");
+            tmpFuncSuccess = null;
+            tmpFuncCancel = null;
+        }
+        function closeModalOnKey(e) {
+            if (e.which == 27 || e.which == 13) {
+                if (!$('#modalAlert').hasClass('in'))
+                    return;
+                e.preventDefault();
+                e.stopPropagation();
+                document.removeEventListener("keydown", closeModalOnKey);
+                if (typeof tmpFuncCancel !== "function") {
+                    tmpFuncSuccess = "";
+                }
+                else {
+                    tmpFuncCancel();
+                }
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            }
+        }
+
+        $(document).unbind('keydown').bind('keydown', function (event) {
+            var doPrevent = false;
+            if (event.keyCode === 8) {
+                var d = event.srcElement || event.target;
+                if ((d.tagName.toUpperCase() === 'INPUT' &&
+                    (
+                        d.type.toUpperCase() === 'TEXT' ||
+                        d.type.toUpperCase() === 'PASSWORD' ||
+                        d.type.toUpperCase() === 'FILE' ||
+                        d.type.toUpperCase() === 'SEARCH' ||
+                        d.type.toUpperCase() === 'EMAIL' ||
+                        d.type.toUpperCase() === 'NUMBER' ||
+                        d.type.toUpperCase() === 'DATE')
+                ) ||
+                    d.tagName.toUpperCase() === 'TEXTAREA') {
+                    doPrevent = d.readOnly || d.disabled;
+                }
+                else {
+                    doPrevent = true;
+                }
+            }
+
+            if (doPrevent) {
+                event.preventDefault();
+            }
+        });
+
+        $(document).ready(function () {
+            window.history.forward();
+            //ShowTime();
+            function noBack() {
+                window.history.forward();
+            }
+
+            $('#modalAlert #modal-confirm').on('click', function (e) {
+                if (typeof tmpFuncSuccess === "function")
+                    tmpFuncSuccess = "";
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            });
+            $('#modalAlert #modal-cancel').on('click', function (e) {
+                if (typeof tmpFuncCancel !== "function") {
+                    tmpFuncSuccess = "";
+                }
+                else {
+                    tmpFuncCancel();
+                }
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            });
+            $('#modalAlert #modal-close').on('click', function (e) {
+                if (typeof tmpFuncCancel !== "function") {
+                    tmpFuncSuccess = "";
+                }
+                else {
+                    tmpFuncCancel();
+                }
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            });
+        });
+
+        var emptFunc = function () { };
+        function showModal() {
+            var header = arguments[0];
+            var msg = arguments[1];
+            if (typeof arguments[2] === "boolean") {
+                //show confirm footer
+                tmpFuncSuccess = arguments[3];
+                document.getElementsByClassName("modal-footer")[0].style.display = "block";
+                if (typeof arguments[4] === "function")
+                    tmpFuncCancel = arguments[4];
+                else
+                    tmpFuncCancel = emptFunc;
+            }
+            else if (typeof arguments[2] === "function") {
+                document.getElementsByClassName("modal-footer")[0].style.display = "none";
+                tmpFuncSuccess = arguments[2];
+            }
+            else {
+                document.getElementsByClassName("modal-footer")[0].style.display = "none";
+            }
+
+            $('#modalAlert #modal-header').text(header);
+            $('#modalAlert #modal-content').html(msg);
+            document.addEventListener("keydown", closeModalOnKey);
+            $('#modalAlert').modal('show');
+        }
+        /*showModal("test",fucntion(){
+                
+        });*/
+        function j_infomainLed(header, msg, _total, _collect) {
+            setTimeout(function () { ShowDisplyLed(_collect + " 2") }, 500);
+            ShowDisplyLed(_total + " 3");
+            //               Sexy.info("<br/><h1>&nbsp;&nbsp;" + header + "</h1><br/><p>&nbsp;&nbsp;&nbsp;" + msg + "</p>",
+            //            { onComplete:
+            //			        function (returnvalue) {
+            //			            if (returnvalue) {
+            //			                setTimeout(fnCapture, 500);
+            //			            }
+            //			        }
+            //			    });
+            showModal(header, msg, function () {
+                setTimeout(fnCapture, 500);
+            });
+        }
+        function ShowDisplyLed(strArry) {
+            var sID = strArry;
+            $.ajax({
+                type: "POST",
+                url: "ShowDisplyLed.ashx",
+                cache: false,
+                dataType: "html",
+                data: { ID: sID },
+                success: function (response) {
+                }
+            });
+        }
+        var aaa = 0;
+        function fnOpenDevice() {
+            for (i = 0; i < 3; i++) {
+                document.getElementById("aspnetForm").objFPmp2[i].DeviceID = document.getElementById("aspnetForm").inc.value;
+                document.getElementById("aspnetForm").objFPmp2[i].CodeName = document.getElementById("aspnetForm").dev.value;
+                document.getElementById("aspnetForm").objFPmp2[i].MinutiaeMode = document.getElementById("aspnetForm").templateFormat.value;
+            }
+
+            // template format of objVerify should be the same to those of objFPmp2[]
+            document.getElementById("objVerify").MinutiaeMode = document.getElementById("aspnetForm").templateFormat.value;
+            return;
+        }
+        function fnCapture(idx, type) {
+            //ShowTime();
+            var str = document.getElementById("aspnetForm").ctl00$MainContent$txtsIDShow.value;
+            if (str.length == 4) {
+                $('input[id*=txtsIDShow]').prop("disabled", true);
+                $('input[id*=txtsID]').val($('input[id*=txtsIDShow]').val());
+            }
+            else {
+                $('input[id*=txtsIDShow]').focus();
+                return;
+            }
+            if (idx != null) {
+                document.getElementById("aspnetForm").objFPmp2[idx].Capture();
+                var result = document.getElementById("aspnetForm").objFPmp2[idx].ErrorCode;
+                if (result == 0) {
+                    //                    var strimg1 = objFPmp2.ImageTextData;
+
+                    var strmin = document.getElementById("aspnetForm").objFPmp2[idx].MinTextData;
+                    //                    var strmin = "AwAAABQAAABUAQAAAQASAAEAZAAAAAAATgEAAGg7/dTCEY8HkhJORvRrLLrFdKgKpEaoJlVdqlVTYAWyaR0NiFO3Sm4Foik*g3i62vyZey42fWmgoCNxsEGsH7WP39CqETvHJinjNsEVHDay7W6rfrB*NUfA2FONxTBk7fdfR61SvFh6/5E6*LNol7Y3*ym9*SC8tKvGfSEcfcEGjJPJvj/ysCv*lH4FFzO9odIDdgu1ZB1IZDnoDqzXs1MvokNvWxboqoNsJRLMv1PC9fblsNfUIqcb/4/MStJQCxonk1hQnThA7rr*eZ64oMwzvm4v6kAwknCm2mwFICrzdfNndc9MmU2eULQNMK6kTlsZ5WzS8SkvF/lSFDoI8cdc4vMUqdTy3wlf8mGF89JSgZd353CT12Q4PlXDoUl7wk/YRf9VNPtKNQt/mqpV4lAp1YhgFnoyVybSqfUMCtWCPvoqfGBhgn40CDIC7Vth7w";
+                    document.getElementById("aspnetForm").min[idx].value = strmin;
+
+                    CheckDatabase(type);
+                }
+                else
+
+                    return;
+            }
+
+        }
+
+        function fnRegister() {
+            var strmin1 = document.getElementById("aspnetForm").min[0].value;
+            var strmin2 = document.getElementById("aspnetForm").min[1].value;
+
+            if (document.getElementById("objVerify").RegisterForText(strmin1, strmin2) && document.getElementById("objVerify").ErrorCode == 0)
+                alert('success- registered');
+            else
+                alert('failed - ' + document.getElementById("objVerify").ErrorCode);
+
+            return document.getElementById("objVerify").ErrorCode;
+        }
+
+        function fnVerifyEx(finger) {
+            var strmin1 = "";
+            strmin1 = document.getElementById("aspnetForm").min[0].value;
+            var strmin2 = "";
+            strmin2 = finger;
+            var strmin3 = "";
+            strmin3 = document.getElementById("aspnetForm").min[2].value;
+
+            document.getElementById("objVerify").SecurityLevel = 9;
+
+            try {
+                if (document.getElementById("objVerify").VerifyForText(strmin1, strmin2) && document.getElementById("objVerify").ErrorCode == 0) {
+                    //alert('Success - matched');
+                }
+                else {
+                    //alert('Failed - ' + objVerify.ErrorCode);
+                }
+            }
+            catch (err) {
+                return 1;
+            }
+
+            return document.getElementById("objVerify").ErrorCode;
+        }
+
+        function fnVerify() {
+            var strmin1 = "";
+            strmin1 = document.getElementById("aspnetForm").min[0].value;
+
+            var strmin2 = "";
+            strmin2 = document.getElementById("aspnetForm").min[3].value;
+
+            document.getElementById("objVerify").SecurityLevel = 5;
+
+            document.getElementById("objVerify").VerifyForText(strmin1, strmin2);
+
+            return document.getElementById("objVerify").ErrorCode;
+        }
+
+        function fnSetimage() {
+            document.getElementById("aspnetForm").objFPmp2.ImageTextData = document.getElementById("aspnetForm").img1.value;
+
+            return;
+        }
+
+        function setJobScanForm(col_sID, col_Name, col_LastName) {
+            $("input[id*=txtCheckFinger]").val = col_sID;
+            $("input[id*=txtsName]").val = col_Name;
+            $("input[id*=txtsLastName]").val = col_LastName;
+            if ($('input[id*=txtsID]').val() != "") {
+                $('input[id*=txtsID]').prop("disabled", false);
+                $('input[id*=txtsIDShow]').val("");
+                $("input[id*=btnSavepage1]").click();
+            }
+        }
+
+        function setEmpScanForm(col_sID, col_Name, col_LastName) {
+            $("input[id*=txtCheckFinger]").val = col_sID;
+            $("input[id*=txtsName]").val = col_Name;
+            $("input[id*=txtsLastName]").val = col_LastName;
+        }
+
+        function CheckDatabase(type) {
+            var found = false;
+            var emp = undefined;
+            var sIdentification = document.getElementById("aspnetForm").ctl00$MainContent$txtsID.value;
+
+            Getdata(sIdentification, type);
+        }
+
+        function Getdata(sID, Mode) {
+            $.ajax({
+                type: "POST",
+                url: "/App_Logic/dataGeneric.ashx?ID=" + sID + "&mode=" + Mode,
+                cache: false,
+                contentType: 'application/json;',
+                success: function (obj) {
+
+
+                    //.done(function () {
+                    //if (document.getElementById("aspnetForm").ctl00$MainContent$txtsName.value == "") {
+                    //    document.getElementById("aspnetForm").ctl00$MainContent$txtsName.value = "";
+                    //    document.getElementById("aspnetForm").ctl00$MainContent$txtsLastName.value = "";
+                    //    document.getElementById("aspnetForm").ctl00$MainContent$txtCheckFinger.value = "";
+                    //    hideScan('', '8', '');
+                    //}
+                    //});
+                }
+            }).done(function (obj) {
+                if (obj.length == 0) {
+                    $("input[id*=txtsID]").val("");
+                    $('input[id*=txtsID]').prop("disabled", false);
+                    j_alert("แจ้งผลการดำเนินการ", "<lable>ไม่มีข้อมูลในระบบ</lable>");
+                    return;
+                }
+                else {
+                    $.each(obj, function (index) {
+                        _check = true;
+                        var ID = "";
+                        var sName = obj[index].sName;
+                        var sLastname = obj[index].sLastname;
+                        var sFinger = obj[index].sFinger;
+                        var sFinger2 = obj[index].sFinger2;
+
+                        //if (sName != "") {
+                        //    errcode = fnVerifyEx(sFinger);
+                        //    if (errcode != 0) {
+                        //        errcode = fnVerifyEx(sFinger2);
+                        //    }
+                        //}
+                        if (fnVerifyEx(sFinger) == 0 || fnVerifyEx(sFinger2) == 0) {
+                            if (Mode == "EmpScan") {
+                                _ID = obj[index].sEmp;
+                                document.getElementById("aspnetForm").ctl00$MainContent$txtCheckFinger.value = _ID;
+                            }
+                            else if (Mode == "JobScan") {
+                                _ID = obj[index].sID;
+                                document.getElementById("aspnetForm").ctl00$MainContent$txtCheckFinger.value = _ID;
+                                //                                setJobScanForm(rs_addmoney.fields(0), rs_addmoney.fields(1), rs_addmoney.fields(2));
+                            }
+                            document.getElementById("aspnetForm").ctl00$MainContent$txtsName.value = sName;
+                            document.getElementById("aspnetForm").ctl00$MainContent$txtsLastName.value = sLastname;
+                            setJobScanForm(_ID, sName, sLastname);
+                            return;
+                        }
+                    })
+                    if (document.getElementById("aspnetForm").ctl00$MainContent$txtsName.value == "") {
+                        j_alert("แจ้งผลการดำเนินการ", "<lable>ไม่พบลายนิ้วมือในระบบ</lable>");
+                        document.getElementById("aspnetForm").ctl00$MainContent$txtsName.value = "";
+                        document.getElementById("aspnetForm").ctl00$MainContent$txtsLastName.value = "";
+                        document.getElementById("aspnetForm").ctl00$MainContent$txtCheckFinger.value = "";
+                        hideScan('', '8', '');
+                    }
+                }
+            });
+        }
+
+        function Clear() {
+            $('input[id*=txtsID]').prop("disabled", false);
+            $("input[id*=txtsID]").val('');
+            $("input[id*=txtCheckFinger]").val('');
+            $("input[id*=txtsName]").val('');
+            $("input[id*=txtsLastName]").val('');
+            //            $("input[id*=txtnBalance]").val('');
+            return false;
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body id="from2" runat="server">
+    <div id="content-overlay" class="content-overlay">
+        ระบบอยู่ในระหว่างการทดลอง
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="onOverlayCloseClick();"><span aria-hidden="true">×</span></button>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRQlOEf26LiWyBDakCtlDNEYOyZ84vMDqaUmd_naxj9wYhfQ/viewform" target="_blank">
+        <img src="images/แจ้งปัญหา.jpg" style="position: fixed; z-index: 2; bottom: 16%; right: -100px; border-radius: 5px; -webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -o-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg);"></img>
+        <%--<img id="ribbonbottom" src="images/fbmessage.png"  />--%>
+    </a>
+    <div class="se-pre-con" onload="$('.se-pre-con').show();" style="text-align: center; font-size: 60px; font-weight: bolder; vertical-align: bottom; display: block;">
+        <div style="height: 60%;"></div>
+        <div style="vertical-align: middle;">รอหน่อยนะจ๊ะ</div>
+    </div>
+    <form id="from1" runat="server">
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" StartingNodeUrl="~/Web.config" />
+        <div class="content-header">
+            <div class="logo">
+                <img src="/images/logo tv.png" alt="logo" />
+            </div>
+            <div class="welcome-msg">
+                <asp:Label ID="lbllogin" runat="server" Text="" />
+            </div>
+            <div class="logout-btn">
+                <%--<asp:LinkButton ID="lkbLogout" runat="server" PostBackUrl="logout.aspx">ออกจากระบบ</asp:LinkButton>--%>
+            </div>
+            <div class="group--btn--header">
+                <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <label style="font-size: 100px; margin-right: 40px;" id="lblTime">
+                            <asp:Literal ID="ltrTime" runat="server" Text="00:00:00" /></label>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="timer" EventName="Tick" />
+                    </Triggers>
+                </asp:UpdatePanel>
+                <asp:Timer ID="timer" runat="server" Interval="1000"></asp:Timer>
+
+                <%--       <p>
+                    HOTLINE: 091-8233139
+                </p>--%>
+                <%-- <img alt="logo_facebook" src="/images/logo_facebook.png" />
+                <!--img alt="logo_image" src="images/youtube_logo.png" /-->
+                <img alt="logo_image" src="/images/logo_email.png" />--%>
+            </div>
+            <%--     <div class="group--btn--header ">
+                1111111111111111
+            </div>--%>
+        </div>
+        <div class="content-breadcrumb" style="font-size: 24px;">
+            <i class="glyphicon glyphicon-tags"></i><b id="spanText"></b>
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+            </asp:SiteMapPath>
+            <asp:Literal ID="ltrAutoComplete" runat="server" />
+        </div>
+        <div class="wrap_content-body">
+            <div class="content-body">
+                <div class="container">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+            </div>
+            <div class="footer-zone center">
+                <img src="/images/footer.gif" alt="footer" />
+            </div>
+        </div>
+        <center style="display: none;">
+            <table style="border: 0px; vertical-align: top; border-width: 0px;" width="1000px"
+                cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td></td>
+                    <td>
+                        <table cellpadding="0" cellspacing="0">
+                            <%--   <tr>
+                                    <td style="background-image: url(images/tb01.gif); width: 32px; height: 20px; border: 0px;">
+                                    </td>
+                                    <td style="background-image: url(images/tb02.gif); width: 799px; height: 20px; border: 0px;">
+                                    </td>
+                                    <td style="background-image: url(images/tb03.gif); width: 25px; height: 20px; border: 0px;">
+                                    </td>
+                                </tr>--%>
+                            <tr>
+                                <td style="background-image: url(images/tb01.gif); width: 50px; border: 0px; background-position: bottom; background-repeat: repeat-x;"></td>
+                                <td style="width: 950px; border: 0px; vertical-align: bottom;">
+                                    <table cellpadding="0" cellspacing="0" style="width: 100%;" border="0px">
+                                        <tr>
+                                            <td style="background-image: url(images/tb02.gif); background-position: bottom; background-repeat: repeat-x; width: 800px; border: 0px; text-align: left; vertical-align: bottom;">
+                                                <table width="100%" height="100px" cellpadding="0" cellspacing="0">
+                                                    <tr style="text-align: left;">
+                                                        <td style="vertical-align: text-bottom; width: 100%;" height="100px">
+                                                            <p style="text-align: left; margin-left: 0px; margin-bottom: 5px;">
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td style="text-align: right; background-image: url(images/tb02.gif); vertical-align: top; background-position: bottom; background-repeat: repeat-x; border: 0px;">
+                                                <p style="margin-bottom: 0px;">
+                                                    <asp:Literal ID="ltrIcon" runat="server" />
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="background-image: url(images/tb03.gif); width: 50px; height: 100px; border: 0px; background-position: 0% bottom; background-repeat: repeat-x;"></td>
+                            </tr>
+                            <tr>
+                                <td style="background-image: url(images/tb04.gif); width: 50px; border: 0px;"></td>
+                                <td style="background-image: url(images/tb09.jpg); border: 0px; text-align: left;"></td>
+                                <td style="background-image: url(images/tb05.gif); background-repeat: repeat-y; width: 50px; border: 0px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="background-image: url(images/tb06.gif); width: 50px; height: 30px; border: 0px;"></td>
+                                <td style="background-image: url(images/tb07.gif); background-position: bottom; height: 30px; border: 0px;"></td>
+                                <td style="background-image: url(images/tb08.gif); width: 50px; height: 30px; border: 0px;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <img src="/images/footer.gif" width="1050px" height="100px" />
+            </div>
+        </center>
+        <asp:ContentPlaceHolder ID="CPH3" runat="server">
+        </asp:ContentPlaceHolder>
+        <object id="objVerify" style="left: 0px; top: 0px" height="0" width="0" classid="CLSID:8D613732-7D38-4664-A8B7-A24049B96117"
+            name="objVerify" viewastext>
+        </object>
+        <div style="display: none;">
+            <table border="1" cellspacing="0" cellpadding="0">
+                <caption>
+                </caption>
+                <tr>
+                    <td>
+                        <object id="OBJECT1" style="left: 0px; width: 149px; top: 0px; height: 182px;" height="182"
+                            width="149" classid="CLSID:D547FDD7-82F6-44e8-AFBA-7553ADCEE7C8" name="objFPmp2"
+                            viewastext>
+                            <param name="CodeName" value="1">
+                        </object>
+                    </td>
+                    <td>
+                        <object id="OBJECT2" style="left: 0px; width: 149px; top: 0px; height: 182px;" height="182"
+                            width="149" classid="CLSID:D547FDD7-82F6-44e8-AFBA-7553ADCEE7C8" name="objFPmp2"
+                            viewastext>
+                            <param name="CodeName" value="1">
+                        </object>
+                    </td>
+                    <td>
+                        <object id="OBJECT3" style="left: 0px; width: 149px; top: 0px; height: 182px;" height="182"
+                            width="149" classid="CLSID:D547FDD7-82F6-44e8-AFBA-7553ADCEE7C8" name="objFPmp2"
+                            viewastext>
+                            <param name="CodeName" value="1">
+                        </object>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <input type="button" name="btnCapture1" value='Capture' onclick='fnCapture(0);'>
+                    </td>
+                    <td align="center">
+                        <input type="button" name="btnCapture2" value='Capture' onclick='fnCapture(1);'>
+                    </td>
+                    <td align="center">
+                        <input type="button" name="btnCapture3" value='Capture' onclick='fnCapture(2);'>
+                    </td>
+                </tr>
+            </table>
+            <select name="dev">
+                <option value="0">FDP02
+                <option value="1">FDU02
+                    <option value="2">FDU03
+                        <option value="3">FDU04
+                            <option selected value="4">
+                FDU05
+            </select>
+            <select name="inc">
+                <option value="-1">-1
+                <option value="0">0
+                    <option value="1">1
+                        <option value="2">2
+                            <option value="3">3
+                                <option value="4">4
+                                    <option value="5">5
+                                        <option value="6">6
+                                            <option value="7">7
+                                                <option value="8">8
+                                                    <option value="9">
+                9
+            </select>
+            <p>
+                <select name="templateFormat">
+                    <option value="256">ANSI 378
+                    <option value="512">SG 400
+                        <option value="768">
+                    ISO 19794-2
+                </select>
+                <input type="button" name="open" value='Open Device' onclick='fnOpenDevice();'>
+                <p>
+                    <p>
+                        <input type="text" name="min"><br>
+                        <input type="text" name="min"><br>
+                        <input type="text" name="min">
+                        <input type="text" name="min">
+                        <p>
+                            <input type="button" name="btnRegister" value='Register' onclick='fnRegister();'
+                                style='width: 200px;'>
+                            <br>
+                            <input type="button" name="btnVerify" value='VerifyEx' onclick='fnVerifyEx();' style='width: 200px;'>
+                            <br>
+                            <input type="button" name="btnVerify" value='Verify' onclick='fnVerify();' style='width: 200px;'>
+        </div>
+    </form>
+    <div id="modalAlert" class="modal fade alertBoxInfo" tabindex="-1" role="dialog"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md" style="top: 150px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" id="modal-close" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 style="font-size: 20px; text-align: center; font-weight: bold" class="modal-title"
+                        id="modal-header">Modal title</h4>
+                </div>
+                <div class="modal-body" id="modal-content" style="padding: 40px 10px; text-align: center; font-size: 19px;">
+                </div>
+                <div class="modal-footer" style="display: block; text-align: center;">
+                    <button type="button" id="modal-cancel" class="btn btn-default" style="font-size: 16px !important"
+                        data-dismiss="modal">
+                        Cancel</button>
+                    <button type="button" id="modal-confirm" class="btn btn-primary" style="font-size: 16px !important">
+                        Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>School Bright</title>
+    <title></title>
+    <script src="/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jscommon.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Scripts/blockUI/jquery.blockUI.js" />
+
+    <script type='text/javascript' src="/Scripts/ui.core.js"></script>
+    <script type='text/javascript' src="/Scripts/ui.draggable.js"></script>
+    <script type='text/javascript' src="/Scripts/ui.resizable.js"></script>
+
+    <script type="text/javascript" src="/Scripts/alertBox/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/Scripts/alertBox/sexyalertbox.v1.2.jquery.js"></script>
+    <script type="text/javascript" src="/Scripts/alertBox/alertBox.js"></script>
+    <link rel="stylesheet" type="text/css" href="Scripts/alertBox/sexyalertbox.css" />
+
+    <script type="text/javascript" src="/Scripts/jquery.ui.1.8.10.js"></script>
+    <link href="/Scripts/ui-1.8.10_V1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Scripts/jquery.bpopup.min.js"></script>
+    <script src="/javascript/shortcut.js" type="text/javascript"></script>
+    <link href="/Styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="/bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />
+    <script src="/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+
+    <link href="/bootstrap/css/bootstrap-clockpicker.min.css" rel="stylesheet" type="text/css" />
+    <script src="/bootstrap/js/bootstrap-clockpicker.min.js" type="text/javascript"></script>
+    <script src="/bootstrap/js/highlight.min.js" type="text/javascript"></script>
+</head>
+<script language="javascript" type="text/javascript">
+
+    window.addEventListener('load', function () {
+        // At first, let's check if we have permission for notification
+        // If not, let's ask for it
+        if (window.Notification && Notification.permission !== "granted") {
+            Notification.requestPermission(function (status) {
+                if (Notification.permission !== status) {
+                    Notification.requestPermission();
+                }
+            });
+        }
+
+        var button = document.getElementsByTagName('login').item[0]
+    //function networkInfo(){
+   // Connect to WMI
+            //var locator = new ActiveXObject("WbemScripting.SWbemLocator");
+            //var service = locator.ConnectServer(".");
+
+            // Get the info
+            //var properties = service.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration");
+            //var e = new Enumerator (properties);
+
+            // Output info
+            //document.write("<table border=1>");
+            //document.write("<thead>");
+            //document.write("<td>Caption</td>");
+            //document.write("<td>MAC Address</td>");
+            //document.write("</thead>");
+            //for (;!e.atEnd();e.moveNext ())
+            //{
+            //    var p = e.item ();
+            //    document.write("<tr>");
+            //    document.write("<td>" + p.Caption + "</td>");
+            //    document.write("<td>" + p.MACAddress + "</td>");
+            //    document.write("</tr>");
+            //}
+            //document.write("</table>");
+        //
+        //}
+        $('#login').click(function () {
+            if (!Notification) {
+                alert('Desktop notifications not available in your browser. Try Chromium.');
+                return;
+            }
+            if (Notification.permission !== "granted") {
+                Notification.requestPermission();
+                alert("Error");
+            }
+            else {
+                var notification = new Notification('Notification title', {
+                    icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+                    body: "Hey there! You've been notified!"
+                });
+
+                notification.onclick = function () {
+                    window.open("http://stackoverflow.com/a/13328397/1269037");
+                };
+            }
+        })
+    });
+</script>
+<body>
+    <input type="button" id="login" value="test" />
+</body>
+</html>

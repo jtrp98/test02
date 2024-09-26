@@ -1,0 +1,63 @@
+﻿.subleveladdtable-container {
+
+}
+
+.subleveladdtable-label-table {
+
+}
+
+.subleveladdtable-button-section {
+
+}
+
+.subleveladdtable-container .clockpicker input[type=text] {
+    text-align: center;
+}
+
+@media (max-width: 999px) {
+
+    .subleveladdtable-container {
+        font-size: 20px;
+    }
+
+    .subleveladdtable-label-table li > a {
+        font-size: 20px;
+    }
+
+    .subleveladdtable-button-section .global-btn {
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .subleveladdtable-container {
+        font-size: 22px;
+    }
+
+    .subleveladdtable-label-table li > a {
+        font-size: 22px;
+    }
+
+    .subleveladdtable-button-section .global-btn {
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .subleveladdtable-container {
+        font-size: 26px;
+    }
+
+    .subleveladdtable-label-table li > a {
+        font-size: 26px;
+    }
+
+    .subleveladdtable-button-section .global-btn {
+        font-size: 26px;
+    }
+
+}

@@ -1,0 +1,98 @@
+﻿.smssetting-container {
+}
+
+@media(max-width: 999px) {
+
+    .smssetting-container {
+        font-size: 20px;
+    }
+
+    .smssetting-container .cool-table .headerCell td:nth-child(1) {
+        width: 25%;
+    }
+
+    .smssetting-container .cool-table .headerCell td:nth-child(2) {
+        width: 30%;
+    }
+
+    .smssetting-container .cool-table .headerCell td:nth-child(3) {
+        width: 45%;
+    }
+
+    .smssetting-container .cool-table td {
+        font-size: 20px;
+    }
+
+    .smssetting-container label, .smssetting-container select {
+        font-size: 20px;
+    }
+
+    .smssetting-container .custom-button {
+        font-size: 20px;
+        width: 90px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .smssetting-container {
+        font-size: 22px;
+    }
+
+    .smssetting-container .cool-table .headerCell td:nth-child(1) {
+        width: 25%;
+    }
+
+    .smssetting-container .cool-table .headerCell td:nth-child(2) {
+        width: 30%;
+    }
+
+    .smssetting-container .cool-table .headerCell td:nth-child(3) {
+        width: 45%;
+    }
+
+    .smssetting-container .cool-table td {
+        font-size: 22px;
+    }
+
+    .smssetting-container label, .smssetting-container select {
+        font-size: 22px;
+    }
+
+    .smssetting-container .custom-button {
+        font-size: 22px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .smssetting-container {
+        font-size: 26px;
+    }
+
+    .smssetting-container .cool-table .headerCell td:nth-child(1) {
+        width: 25%;
+    }
+
+    .smssetting-container .cool-table .headerCell td:nth-child(2) {
+        width: 45%;
+    }
+
+    .smssetting-container .cool-table .headerCell td:nth-child(3) {
+        width: 30%;
+    }
+
+    .smssetting-container .cool-table td {
+        font-size: 26px;
+    }
+
+    .smssetting-container label, .smssetting-container select {
+        font-size: 26px;
+    }
+
+    .smssetting-container .custom-button {
+        font-size: 26px;
+        width: 120px;
+    }
+}

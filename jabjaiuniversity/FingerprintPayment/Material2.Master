@@ -1,0 +1,620 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Material2.master.cs" Inherits="FingerprintPayment.Material2" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/images/School Bright logo only.png" sizes="16x16 32x32" type="image/png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>School Bright</title>
+    <%--<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />--%>
+    <!-- Fonts and icons -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="/Content/Material/assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+    <link href="/Content/Material/layout.css?v=<%=DateTime.Now.Ticks%>" rel="stylesheet" />
+    <%--<link href="/Content/Material/ldbtn.css" rel="stylesheet" />
+    <link href="/Content/Material/loading.css" rel="stylesheet" />--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" integrity="sha512-uvXdJud8WaOlQFjlz9B15Yy2Au/bMAvz79F7Xa6OakCl2jvQPdHD0hb3dEqZRdSwG4/sknePXlE7GiarwA/9Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/Scripts/Easy-Customizable-Loading/jquery.mloading.css" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="Head" runat="server" />
+
+    <script src="/Content/Material/assets/js/core/jquery.min.js"></script>
+    <script src="/Scripts/FileSaver.min.js" type="text/javascript"></script>
+    <style>
+        /*temporary*/
+        .fi.fi-gb {
+            filter: gray; /* IE6-9 */
+            -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+            filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+        }
+
+        .dataTables_processing {
+            width: 150px !important;
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+
+<body class="">
+    <%--insert top banner--%>
+    <section class="top-banner">
+        <%if (!string.IsNullOrEmpty(NOTE_HEAD))
+            {  %>
+            <div class="p-3 text-center fw-bold" style="background-color: #FFC4A3;color:#000">
+                 <%=NOTE_HEAD %>               
+            </div>
+        <% } %>
+       
+    </section>
+    <div class="wrapper ">
+        <div class="sidebar" data-background-color="black">
+            <!--
+                Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+                Tip 2: you can also add an image using data-image tag
+            -->
+            <div class="logo">
+                <a href="/AdminMain.aspx" class="simple-text logo-mini">
+                    <img src="/Content/Material/assets/img/logo-1.png" style="width: 40px; position: absolute; margin: 0px 0px 0px -17px;" />
+                </a>
+                <a href="/AdminMain.aspx" class="simple-text logo-normal">
+                    <img src="/Content/Material/assets/img/logo-2.png" style="height: 40px;" />
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav nav-menu screen-min-992">
+                    <asp:Literal ID="ltrMenu" runat="server"></asp:Literal>
+                </ul>
+                <ul class="nav screen-max-991">
+                    <asp:Literal ID="ltrResponsiveMenu" runat="server"></asp:Literal>
+                    <li><hr style="border-top: 2px solid #fff; margin: 4px 12px;" /></li>
+                    <li class="nav-item m-dropdown-language">
+                        <select id="aLanguage2" class="selectpicker" data-width="fit">
+                            <option data-content='<span class="fi fi-th"></span> ไทย'>ไทย</option>
+                            <option disabled data-content='<span class="fi fi-gb"></span> English'>English</option>
+                        </select>
+                    </li>
+                    <li class="nav-item m-dropdown-manual">
+                        <button id="aManual2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn">แนะนำการใช้<b class="caret"></b></button>
+                        <div class="dropdown-menu" aria-labelledby="aManual2">
+                            <a class="dropdown-item" href="https://drive.google.com/drive/folders/1ktHVYo4nI0AZLhTy4jpcjCqz82Zhs1hB" target="_blank">คู่มือ</a>
+                            <a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLE9B4Gj8Dm0ksGUCd5ftnhdqGEOEz1BB_" target="_blank">วิดีโอ</a>
+                        </div>
+                    </li>
+                </ul>
+                <p class="web-version text-center">เวอร์ชั่น 2.0.0.0</p>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-minimize">
+                            <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
+                                <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+                                <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
+                            </button>
+                        </div>
+                        <!-- <a class="navbar-brand" href="#pablo">Dashboard</a> -->
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                    </button>
+                    <div class="menu-search input-group">
+                        <input id="iptSearchMenu" type="text" value="" class="form-control" placeholder="ค้นหาเมนู" style="/*margin-left: 32px; */ background-color: white;"
+                            data-url="/Content/Material/menu-data.ashx" autocomplete="off"
+                            data-noresults-text="Nothing to see here.">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="material-icons" style="font-size: 1.55rem;">search</i></span>
+                        </div>
+                        <div class="screen-max-991 justify-content-end">
+                            <ul class="navbar-nav navbar-nav-pad">
+                                <li class="nav-item dropdown dropdown-noti">
+                                    <a class="nav-link" href="#" id="bellNoti2" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons" style="font-size: 1.75rem;">notifications</i>
+                                        <span id="notificationCount2" class="notification" style="display: none;">0</span>
+                                        <p class="d-none">
+                                            Some Actions
+                                        </p>
+                                    </a>
+                                    <div class="m-bell-noti dropdown-menu dropdown-menu-right" aria-labelledby="bellNoti2" style="width: 382px;">
+                                        <div class="panel-heading" id="notificationTitle2">
+                                            <i class="material-icons" style="vertical-align: middle;">notifications</i> รายการแจ้งเตือน
+                                        </div>
+                                        <ul class="nav nav-pills nav-pills-warning" role="tablist">
+                                            <li class="nav-item">
+                                                <a href="#notiTab21" id="notiTab21Link" class="nav-link active" data-toggle="tab" role="tablist">แจ้งเตือนระบบ <span id="noti21-badge" style="display: none; background-color: rgb(200, 35, 51); border-radius: 15px; padding: 8px 7px 7px 7px; font-size: 12px;" class="badge">0</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#notiTab22" id="notiTab22Link" class="nav-link" data-toggle="tab" role="tablist">แจ้งเตือนเรียนออนไลน์ <span id="noti22-badge" style="display: none; background-color: rgb(200, 35, 51); border-radius: 15px; padding: 8px 7px 7px 7px; font-size: 12px;" class="badge">0</span></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content tab-space" style="padding: 5px 0 10px 0px;">
+                                            <div class="tab-pane active" id="notiTab21">
+                                            </div>
+                                            <div class="tab-pane" id="notiTab22">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown dropdown-user-profile">
+                                    <a class="nav-link user user-flex" href="#" id="userProfile2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <div class="photo">
+                                            <img src="<%=Session["Emp_Image_Profile"].ToString() %>" style="width: 34px;" />
+                                        </div>
+                                        <div class="user-info">
+                                            <span><%--<%=Session["Emp_Name_Only"].ToString() %>--%>
+                                                <b class="caret"></b>
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userProfile2">
+                                        <a class="dropdown-item text-muted" href="#">ข้อมูลส่วนตัว</a>
+                                        <% if (IS_ADMIN)
+                                            { %>
+                                        <a class="dropdown-item" href="/Modules/Invoices/InvoicesList.aspx">ใบแจ้งหนี้</a>
+                                        <% } %>
+                                        <div class="submenu-item dropright">
+                                            <a class="dropdown-item dropdown-toggle text-muted" href="#" id="aSettings2" data-toggle="dropdown">ตั้งค่า</a>
+                                            <div class="m-setting dropdown-menu" aria-labelledby="aSettings2">
+                                                <a class="dropdown-item text-muted" href="#">ตั้งค่าการยืนยันตัวตนแบบสองชั้น</a>
+                                                <a class="dropdown-item text-muted" href="#">เปลี่ยนรหัสผ่าน</a>
+                                            </div>
+                                        </div>
+                                        <a id="aReportProblem2" class="dropdown-item" href="#">แจ้งปัญหา</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/logout.aspx">ออกจากระบบ</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-end">
+                        <!-- <form class="navbar-form">
+                            <div class="input-group no-border">
+                                <input type="text" value="" class="form-control" placeholder="Search...">
+                                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                    <i class="material-icons">search</i>
+                                    <div class="ripple-container"></div>
+                                </button>
+                            </div>
+                        </form> -->
+                        <ul class="navbar-nav navbar-nav-pad">
+                            <li class="nav-item dropdown dropdown-online-status">
+                                <button id="btnOnlineStatus" class="btn pl-4"><i class="material-icons">brightness_1</i> </button>
+                            </li>
+                            <li class="nav-item dropdown dropdown-manual">
+                                <button id="aManual" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn">แนะนำการใช้<b class="caret"></b></button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="aManual">
+                                    <a class="dropdown-item" href="https://drive.google.com/drive/folders/1ktHVYo4nI0AZLhTy4jpcjCqz82Zhs1hB" target="_blank">คู่มือ</a>
+                                    <a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLE9B4Gj8Dm0ksGUCd5ftnhdqGEOEz1BB_" target="_blank">วิดีโอ</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown dropdown-language">
+                                <select class="selectpicker" data-width="fit">
+                                    <option data-content='<span class="fi fi-th"></span> ไทย'>ไทย</option>
+                                    <option disabled data-content='<span class="fi fi-gb"></span> English'>English</option>
+                                </select>
+                            </li>
+                            <li class="nav-item dropdown dropdown-noti">
+                                <a class="nav-link" href="#" id="bellNoti" aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons" style="font-size: 1.75rem;">notifications</i>
+                                    <span id="notificationCount" class="notification" style="display: none;">0</span>
+                                    <p class="d-lg-none d-md-block">
+                                        Some Actions
+                                    </p>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bellNoti" style="width: 382px;">
+                                    <div class="panel-heading" id="notificationTitle">
+                                        <i class="material-icons" style="vertical-align: middle;">notifications</i> รายการแจ้งเตือน
+                                    </div>
+                                    <ul class="nav nav-pills nav-pills-warning" role="tablist">
+                                        <li class="nav-item">
+                                            <a href="#notiTab1" id="notiTab1Link" class="nav-link active" data-toggle="tab" role="tablist">แจ้งเตือนระบบ <span id="noti1-badge" style="display: none; background-color: rgb(200, 35, 51); border-radius: 15px; padding: 8px 7px 7px 7px; font-size: 12px;" class="badge">0</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#notiTab2" id="notiTab2Link" class="nav-link" data-toggle="tab" role="tablist">แจ้งเตือนเรียนออนไลน์ <span id="noti2-badge" style="display: none; background-color: rgb(200, 35, 51); border-radius: 15px; padding: 8px 7px 7px 7px; font-size: 12px;" class="badge">0</span></a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content tab-space" style="padding: 5px 0 10px 0px;">
+                                        <div class="tab-pane active" id="notiTab1">
+                                        </div>
+                                        <div class="tab-pane" id="notiTab2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown dropdown-user-profile">
+                                <a class="nav-link user user-flex" href="#" id="userProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="photo">
+                                        <img src="<%=Session["Emp_Image_Profile"].ToString() %>" style="width: 34px;" />
+                                    </div>
+                                    <div class="user-info">
+                                        <span><%=Session["Emp_Name_Only"].ToString() %>
+                                            <b class="caret"></b>
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userProfile">
+                                    <a class="dropdown-item text-muted" href="#">ข้อมูลส่วนตัว</a>
+                                    <% if (IS_ADMIN)
+                                        { %>
+                                    <a class="dropdown-item" href="/Modules/Invoices/InvoicesList.aspx">ใบแจ้งหนี้</a>
+                                    <% } %>
+                                    <div class="submenu-item dropright">
+                                        <a class="dropdown-item dropdown-toggle text-muted" href="#" id="aSettings" data-toggle="dropdown">ตั้งค่า</a>
+                                        <div class="dropdown-menu" aria-labelledby="aSettings">
+                                            <a class="dropdown-item text-muted" href="#">ตั้งค่าการยืนยันตัวตนแบบสองชั้น</a>
+                                            <a class="dropdown-item text-muted" href="#">เปลี่ยนรหัสผ่าน</a>
+                                        </div>
+                                    </div>
+                                    <a id="aReportProblem" class="dropdown-item" href="#">แจ้งปัญหา</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/logout.aspx">ออกจากระบบ</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="content">
+                    <div class="container-fluid">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row pb-2">
+                        <div class="col-2 text-left">
+                            ช่องทางการติดต่อ : 
+                        </div>
+                        <div class="col-2 text-center d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook align-middle" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                            </svg><a href="https://www.facebook.com/jabjaithailand/" class="px-1 text-light">School Bright</a>
+                        </div>
+                        <div class="col-2 text-center d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube align-middle" viewBox="0 0 16 16">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                            </svg><a href="https://www.youtube.com/channel/UCiKXsX7k-5ISHvgQI26jPSg" class="px-1 text-light">School Bright</a>
+                        </div>
+                        <div class="col-2 text-center d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-line align-middle" viewBox="0 0 16 16">
+                                <path d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0ZM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157Zm.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156h-.562Zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832a.17.17 0 0 0-.013-.015v-.001a.139.139 0 0 0-.01-.01l-.003-.003a.092.092 0 0 0-.011-.009h-.001L7.88 4.79l-.003-.002a.029.029 0 0 0-.005-.003l-.008-.005h-.002l-.003-.002-.01-.004-.004-.002a.093.093 0 0 0-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.154.154 0 0 0 .039.038l.001.001.01.006.004.002a.066.066 0 0 0 .008.004l.007.003.005.002a.168.168 0 0 0 .01.003h.003a.155.155 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156h-.561Zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.155.155 0 0 0-.108.044h-.001l-.001.002-.002.003a.155.155 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.155.155 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z" />
+                            </svg><a href="https://line.me/R/ti/p/%40jabjai" class="px-1 text-light">@JABJAI</a>
+                        </div>
+                        <div class="col-2 text-center">
+                            <span class="material-icons align-middle">email</span> cs@schoolbright.co
+                        </div>
+                        <div class="col-2 text-right">
+                            <span class="material-icons align-middle">call</span> 02-096-2550
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            Copyrights © 2021 All Rights Reserved by Jabjai Corporation Co.,Ltd.
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="privacypolicy.html" target="_blank" class="text-light">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div id="modalNotifyOnlyClose" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×</button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-2 mb-2">
+                            หัวข้อ:
+                        </div>
+                        <div class="col-md-10 mb-10">
+                            xxx x x x x x x x
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mb-12">
+                            ข้อความ:
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mb-12">
+                            xxx x x x x x x xxxx x x x x x x xxxx x x x x x x xxxx x x x x x x x
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 mb-2">
+                            วันที่บันทึก:
+                        </div>
+                        <div class="col-md-10 mb-10">
+                            xxx x x x x x x x
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="modalClose" type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--   Core JS Files   -->
+    <script src="/Content/Material/assets/js/core/jquery.min.js"></script>
+    <script src="/Content/Material/assets/js/core/popper.min.js"></script>
+    <script src="/Content/Material/assets/js/core/bootstrap-material-design.min.js"></script>
+    <script src="/Content/Material/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Plugin for the momentJs  -->
+    <%--  <script src="/Content/Material/assets/js/plugins/moment.min.js"></script>--%>
+    <script src="/Content/Material/assets/js/plugins/moment-with-locales.js"></script>
+    <!-- Plugin for Sweet Alert -->
+    <script src="/Content/Material/assets/js/plugins/sweetalert2.js"></script>
+    <!-- Forms Validations Plugin -->
+    <script src="/Content/Material/assets/js/plugins/jquery.validate.min.js"></script>
+    <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+    <script src="/Content/Material/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+    <!-- Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+    <script src="/Content/Material/assets/js/plugins/bootstrap-selectpicker.js"></script>
+    <!-- Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+    <script src="/Content/Material/assets/js/plugins/bootstrap-datetimepicker.th.min.js"></script>
+    <!-- DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+    <script src="/Content/Material/assets/js/plugins/jquery.dataTables.min.js"></script>
+    <%--<script src="/Content/Material/assets/js/plugins/dataTables.material.min.js"></script>--%>
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <!-- Library for adding dinamically elements -->
+    <script src="/Content/Material/assets/js/plugins/arrive.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="/Content/Material/assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="/Content/Material/assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+
+    <script src="/Content/Material/assets/js/notification.js?v=<%=DateTime.Now.Ticks%>" type="text/javascript"></script>
+
+    <%--<script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.7/dist/latest/bootstrap-autocomplete.min.js"></script>--%>
+    <script src="/Content/bootstrap-autocomplete@v2.3.7/bootstrap-autocomplete.js?v=<%=DateTime.Now.Ticks%>" type="text/javascript"></script>
+
+    <script src="/Scripts/Easy-Customizable-Loading/jquery.mloading.js" type="text/javascript"></script>
+
+    <script>
+        //var $clickElm = null;
+        /*  ********** Online / Offline Detection **********  */
+        // Request a small image at an interval to determine status
+        // ** Get a 1x1 pixel image here: http://www.1x1px.me/
+        // ** Use this code with an HTML element with id="status"
+        const checkOnlineStatus = async () => {
+            try {
+                let date = new Date();
+                const online = await fetch("/1pixel.png?d=" + date.getTime());
+                // either true or false
+                if (online.status >= 200 && online.status < 300) {
+                    $("#btnOnlineStatus").parent().removeClass("dropdown-offline-status");
+                    if (!$("#btnOnlineStatus").parent().hasClass("dropdown-online-status")) {
+                        $("#btnOnlineStatus").parent().addClass("dropdown-online-status");
+                    }
+                    return true;
+                }
+                else {
+                    $("#btnOnlineStatus").parent().removeClass("dropdown-online-status");
+                    if (!$("#btnOnlineStatus").parent().hasClass("dropdown-offline-status")) {
+                        $("#btnOnlineStatus").parent().addClass("dropdown-offline-status");
+                    }
+                    return false;
+                }
+            } catch (err) {
+                $("#btnOnlineStatus").parent().removeClass("dropdown-online-status");
+                if (!$("#btnOnlineStatus").parent().hasClass("dropdown-offline-status")) {
+                    $("#btnOnlineStatus").parent().addClass("dropdown-offline-status");
+                }
+                return false;
+            }
+        };
+
+        setInterval(async () => {
+            let result = await checkOnlineStatus();
+        }, 30000);
+
+        // forgot to include async load event listener in the video! 
+        window.addEventListener("load", async (event) => {
+            let result = await checkOnlineStatus();
+        });
+
+
+        //document.addEventListener('click', function (e) {
+
+        //    var target = e.target || e.srcElement,
+        //        text = target.innerText;
+
+        //    if (text == "search ค้นหา") {
+        //        $clickElm = $(target);
+
+        //        if (!$clickElm.hasClass('ld-ext-left')) {
+        //            $clickElm.addClass('ld-ext-left');
+        //        }
+
+        //        if ($clickElm.find('.ld').length == 0) {
+        //            $clickElm.append('<div class="ld ld-ring ld-spin"></div>');                  
+        //        }
+        //    }
+
+        //});
+
+        $(document).ready(function () {
+
+            var currentMenu = '';
+            $(".nav.nav-menu > .nav-item").hover(
+                function () {
+                    if (!!currentMenu && !currentMenu.indexOf("#menu")) $(currentMenu).hide();
+
+                    if ($(this).find('.nav-menu-a').length > 0) {
+                        var currentMenuPositionTop = $(this).find('.nav-menu-a').position().top;
+                        var topNavbarHeight = $('.top-banner').height() + 90; // insert top banner
+                        //var topNavbarHeight = 90;
+                        currentMenu = $(this).find('.nav-menu-a').attr('href');
+                        if (!!currentMenu && !currentMenu.indexOf("#menu")) {
+                            $(currentMenu).show();
+
+                            // re calculate bottom position
+                            var ulNavID = currentMenu + ' ul.nav.nav-drop-right';
+                            if ($(ulNavID)[0].getBoundingClientRect().bottom > $(window).height()) {
+                                var newTop = currentMenuPositionTop - ($(ulNavID)[0].getBoundingClientRect().bottom - $(window).height());
+                                if (newTop < 0) {
+                                    $(ulNavID).css({ top: '0px', height: $(window).height() - topNavbarHeight + 'px' });
+                                }
+                                else {
+                                    $(ulNavID).css({ top: newTop + 'px' });
+                                }
+                            }
+                            else {
+                                $(ulNavID).css({ top: currentMenuPositionTop + 'px' });
+                            }
+                        }
+                    }
+                },
+                function () {
+                    //$($(this).attr('href')).hide();
+                    if (!!currentMenu && !currentMenu.indexOf("#menu")) {
+                        $(currentMenu).hide();
+                        $(currentMenu + ' ul.nav.nav-drop-right').removeAttr("style");
+                    }
+                }
+            );
+
+            $(".nav-item .collapse").hover(
+                function () {
+                    currentMenu = '#' + $(this).attr('id');
+                },
+                function () {
+                    if (!!currentMenu && !currentMenu.indexOf("#menu")) {
+                        $(currentMenu).hide();
+                        $(currentMenu + ' ul.nav.nav-drop-right').removeAttr("style");
+                    }
+                }
+            );
+
+            $("#aReportProblem").click(function () {
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLSfRQlOEf26LiWyBDakCtlDNEYOyZ84vMDqaUmd_naxj9wYhfQ/viewform', '_blank');
+            });
+
+            // Message System
+            $("#bellNoti, #bellNoti2").on('click', function (event) {
+                $(this).parent().toggleClass('open');
+
+                UpdateLastNotification();
+            });
+
+            $('body').on('click', function (e) {
+                if (!$('li.dropdown.dropdown-noti').is(e.target)
+                    && $('li.dropdown.dropdown-noti').has(e.target).length === 0
+                    && $('.open').has(e.target).length === 0
+                ) {
+                    $('li.dropdown.dropdown-noti').removeClass('open');
+                }
+            });
+
+            LoadMessageSystem();
+
+            $('#iptSearchMenu').autoComplete({
+                resolverSettings: {
+                    fail: function () {
+                        console.log('fail');
+                    }
+                },
+                formatResult: function (item) {
+                    return {
+                        url: item.url,
+                        menu: item.menu,
+                        text: item.menu
+                    };
+                }
+            });
+
+            $('#iptSearchMenu').on('autocomplete.select', function (evt, item) {
+                //console.log('eventsAutoComplete autocomplete.select -- ' + 'fired autocomplete.select. url: ' + item.url + ' menu: ' + item.menu + '\n');
+                window.location.href = item.url;
+            });
+
+            $('.nav-menu-a[href^="#"]').click(function () {
+                return false;
+            });
+
+            // Check screen width
+            if ($(window).width() > 991) {
+                $('.screen-max-991').hide();
+                $('.screen-min-992').show();
+
+                $('.nav.nav-drop-right').perfectScrollbar();
+            }
+            else {
+                $('.screen-max-991').show();
+                $('.screen-min-992').hide();
+
+                $('.sidebar .sidebar-wrapper').perfectScrollbar();
+            }
+
+            $.extend(true, $.fn.dataTable.defaults, {
+                "language": {
+                    "processing": '<img src="/images/SBLoading.gif?v=1" style="width:100px;align-self:center;" />',
+                }
+            });
+        });
+
+        function DOWNLOAD_IMPORT_INVOICE_EXCEL_FILE() {
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/import/invoices.aspx/ExportExcl", true);
+            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            xhr.responseType = 'blob';
+            xhr.onload = function () {
+                saveAs(xhr.response, "ImportInvoice.xlsx");
+            };
+            xhr.send();
+
+            return false;
+        }
+
+        $(window).resize(function () {
+            if ($(window).width() > 991) {
+                $('.screen-max-991').hide();
+                $('.screen-min-992').show();
+
+                $('.sidebar .sidebar-wrapper').perfectScrollbar('destroy');
+
+                $('.nav.nav-drop-right').perfectScrollbar();
+            }
+            else {
+                $('.screen-max-991').show();
+                $('.screen-min-992').hide();
+
+                $('.nav.nav-drop-right').perfectScrollbar('destroy');
+
+                $('.sidebar .sidebar-wrapper').perfectScrollbar();
+            }
+        });
+
+    </script>
+    <asp:ContentPlaceHolder ID="Script" runat="server" />
+    <asp:ContentPlaceHolder ID="ModalPopup" runat="server" />
+</body>
+
+</html>

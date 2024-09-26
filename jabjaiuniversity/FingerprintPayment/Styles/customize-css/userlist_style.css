@@ -1,0 +1,85 @@
+﻿.userlist-container {
+
+}
+
+.userlist-container .button-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 999px) {
+
+    .userlist-container {
+        font-size: 20px;
+    }
+
+    .userlist-container label {
+        font-weight: normal;
+        font-size: 20px;
+    }
+
+    .userlist-container .control-label {
+        padding-right: 0px;
+    }
+
+    .userlist-container .control-input {
+        padding-left: 0px;
+    }
+
+    .userlist-container .col-class {
+        margin-top: 10px;
+    }
+
+    .userlist-container .col-name {
+        margin-top: -5px;
+    }
+
+    .userlist-container .search-btn {
+        font-size: 20px;
+        width: 120px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    
+    .userlist-container {
+        font-size: 22px;
+    }
+
+    .userlist-container label {
+        font-weight: normal;
+        font-size: 22px;
+    }
+
+    .userlist-container .control-label {
+        padding-right: 0px;
+    }
+
+    .userlist-container .control-input {
+        padding-left: 0px;
+    }
+
+    .userlist-container .search-btn {
+        font-size: 22px;
+        width: 150px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .userlist-container {
+        font-size: 26px;
+    }
+
+    .userlist-container label {
+        font-weight: normal;
+        font-size: 26px;
+    }
+
+    .userlist-container .search-btn {
+        font-size: 26px;
+        width: 150px;
+    }
+
+}

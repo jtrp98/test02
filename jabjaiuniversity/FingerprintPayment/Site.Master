@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fingerprint Payment System</title>
+    <link href="Styles/cssreset.css" rel="Stylesheet" type="text/css" />
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="Scripts/jscommon.js" type="text/javascript"></script>
+    <%--<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js" />--%>
+    <link rel="icon" href="images/School Bright logo only.png" sizes="16x16 32x32" type="image/png">
+    <%--popup--%>
+    <link rel="stylesheet" type="text/css" href="Scripts/css/popup.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="javascript/autocomplete.css" media="screen" />
+    <script type="text/javascript" src="Scripts/jquery.PopUp.js"></script>
+    <%--draggable()--%>
+    <script type='text/javascript' src="Scripts/ui.core.js"></script>
+    <script type='text/javascript' src="Scripts/ui.draggable.js"></script>
+    <script type='text/javascript' src="Scripts/ui.resizable.js"></script>
+    <%-- JQuery Alert Box--%>
+    <script type="text/javascript" src="Scripts/alertBox/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="Scripts/alertBox/alertBox.js"></script>
+    <link rel="stylesheet" type="text/css" href="Styles/customize-css/site_custom_style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%--End JQuery Alert Box--%>
+    <%--<link href="Styles/css.css" rel="stylesheet" type="text/css" />--%>
+    <%--JQuery Calendar--%>
+    <script type="text/javascript" src="Scripts/jquery.ui.1.8.10.js"></script>
+    <link href="Scripts/ui-1.8.10_V1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.bpopup.min.js"></script>
+    <script src='Scripts/jquery_tinywatermark-3_1_0.js' type='text/javascript'></script>
+    <link href="bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />
+    <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+
+    <link href="bootstrap%20SB2/bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Scripts/Easy-Customizable-Loading/jquery.mloading.css" type="text/css" />
+    <script src="/Scripts/Easy-Customizable-Loading/jquery.mloading.js" type="text/javascript"></script>
+    <link href="Styles/style.css" rel="Stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .box {
+            background-color: skyblue;
+            margin-top: 10px;
+            padding: 5% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+            -webkit-transform: skewY(-2deg);
+            -moz-transform: skewY(-2deg);
+            -ms-transform: skewY(-2deg);
+            -o-transform: skewY(-2deg);
+            transform: skewY(-2deg);
+        }
+
+        .fa {
+            padding: 2px;
+            font-size: 30px;
+            width: 35px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10%;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        .btnLogin {
+            background-color: red !important; /* For browsers that do not support gradients */
+            background-image: linear-gradient(90deg, #ff7f64, #febc7e) !important; /* Standard syntax (must be last) */
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .footer {
+            background-color: #616161;
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+            height: 175px;
+            width: 100%;
+            overflow: hidden;
+            padding: 0px;
+        }
+
+        .box > .wrapper {
+            -webkit-transform: skewY(2deg);
+            -moz-transform: skewY(2deg);
+            -ms-transform: skewY(2deg);
+            -o-transform: skewY(2deg);
+            transform: skewY(2deg);
+        }
+
+        .seven {
+            background-color: #013A6B;
+            background-image: -webkit-linear-gradient(110deg, #013A6B 55%, #004E95 55%);
+            min-height: 10px;
+        }
+
+        .bg:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 400px;
+            background-color: #000;
+            transform-origin: left bottom;
+            top: 0;
+            left: 0;
+            -webkit-transform: skew(0deg, -30deg);
+            -moz-transform: skew(0deg, -30deg);
+            -ms-transform: skew(0deg, -30deg);
+            -o-transform: skew(0deg, -30deg);
+            transform: skew(0deg, -30deg);
+        }
+
+        .noborder2 {
+            border-left: 0px solid #000000;
+            border-right: 0px solid #000000;
+            border-bottom: 1px solid #949191;
+            border-top: 0px solid #000000;
+            text-decoration: none;
+            text-shadow: none !important;
+            box-shadow: inset 0px 0px 0px 0px white;
+            background-color: #f3f5f6;
+        }
+
+        .logindiv {
+            padding: 5px;
+            font-size: 22px;
+            color: #666666;
+        }
+
+        .hid {
+            visibility: hidden;
+        }
+
+        .pad0 {
+            padding: 0px;
+        }
+
+        @media all and (max-width: 600px) {
+            .hiddendiv {
+                visibility: hidden !important;
+                display: none !important;
+            }
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .row {
+            display: table;
+        }
+
+        .row2 {
+            float: none;
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        @media all and (max-width: 790px) {
+            .hiddendiv {
+                visibility: hidden !important;
+                display: none !important;
+            }
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .row {
+            display: table;
+            width: 100%;
+        }
+
+        .row2 {
+            float: none;
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .img100 {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .img1 {
+            width: 0.1%;
+            height: 100%;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            //var imghigh = document.getElementsByClassName("imghigh");
+            //var img1 = document.getElementsByClassName("img1");
+            ////var clientHeight = document.getElementById('myDiv').clientHeight;
+            ////var offsetHeight = document.getElementById('myDiv').offsetHeight;
+            //var xxx = imghigh[0].clientHeight - 200;
+            //img1[0].classList.add('img100');
+            //document.getElementById('div_register').setAttribute("style", "height:" + xxx + "px;");
+
+        });
+
+        function ddlcheck2() {
+            var imghigh = document.getElementsByClassName("imghigh");
+            //var clientHeight = document.getElementById('myDiv').clientHeight;
+            //var offsetHeight = document.getElementById('myDiv').offsetHeight;
+            alert(imghigh[0].clientHeight);
+            var xxx = imghigh[0].clientHeight - 140;
+
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="login-body" style="overflow-y: hidden">
+    <%-- <div class="se-pre-con" style="text-align: center; font-size: 60px; vertical-align: bottom; display: block; font-weight: bolder;">
+        รอหน่อยนะจ๊ะ
+    </div>--%>
+    <%--  <div class="se-pre-con" onload="$('.se-pre-con').show();" style="text-align: center; font-size: 60px; font-weight: bolder; vertical-align: bottom; display: block;">
+            <div style="height: 60%;"></div>
+            <div style="vertical-align: middle;">รอหน่อยนะจ๊ะ</div>
+        </div>--%>
+    <%-- <div id="content-overlay" class="content-overlay" style="font-family: thaifont;">
+            ระบบอยู่ในระหว่างการทดลอง
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="onOverlayCloseClick()"><span aria-hidden="true">×</span></button>
+        </div>--%>
+
+
+    <form id="Form1" runat="server">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <div class="my-container" style="padding-top: 30px; padding-bottom: 30px;">
+            <div class="row">
+                <div id="div_register" class="left-container hiddendiv imghigh " style="height: 100vh;">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <%--<li data-target="#myCarousel" data-slide-to="4"></li>--%>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <%--<div class="item active">
+                                <img src="/images/20190205154515.jpg" alt="logo" width="100%" height="100%" />
+                            </div>--%>
+                            <div class="item active">
+                                <img src="/images/21-11-2022.png" alt="logo" width="100%" height="100%" />
+                            </div>
+                           <%-- <div class="item">
+                                <img src="/images/slide_5.jpg" alt="logo" width="100%" height="100%" />
+                            </div>--%>
+                      <%--      <div class="item">
+                                <img src="/images/slide_3.jpg" alt="logo" width="100%" height="100%" />
+                            </div>
+                            <div class="item">
+                                <img src="/images/slide_0.jpg" alt="logo" width="100%" height="100%" />
+                            </div>--%>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <%--<img class="left-image img1" src="/images/20190205154515.jpg" alt="logo" width="100%" height="100%" />--%>
+                </div>
+                <div class="row2 col-lg-4 col-md-4 col-xs-12 right-container">
+                    <div class="login-panel">
+                        <div class="col-xs-12 hiddendiv" style="visibility: hidden">
+                            <p>hidden</p>
+                        </div>
+                        <div class="header-panel">
+                            <div class="col-sm-12" style="height: 90px; margin-left: 10px;">
+                                <img class="" style="max-width: 100%; max-height: 100%;" src="/images/Artboard2.png" alt="logo" />
+                            </div>
+                        </div>
+                        <div class="header-panel">
+                            <div class="col-sm-12" style="">
+                                <span class="" style="text-align: center;">Please Login</span>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="col-sm-12 col-xs-12">
+                                <div class="form-group col-sm-12 pad0">
+                                    <asp:TextBox ID="txtsid" type="text" class="noborder2 pull-left" Style="width: 100%;" placeholder="username" runat="server" autofocus />
+                                </div>
+                                <div class="form-group col-sm-12 pad0">
+                                    <asp:TextBox ID="txtspass" type="text" class="noborder2 pull-left" Style="width: 100%;" placeholder="password" TextMode="Password" runat="server" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12" style="visibility: hidden">
+                            <p>hidden</p>
+                        </div>
+                        <div class="">
+                            <div class="col-sm-12">
+                                <div id="btnLogin" class="btn btn-success btnLogin custom-button" style="width: 100%; border: none;">
+                                    เข้าสู่ระบบ
+                                </div>
+                            </div>
+                        </div>
+
+                        <%--      <div class="">
+                            <div class="col-sm-12">
+                                <asp:Button ID="btnLogin" class="btn btn-success btnLogin custom-button" Style="width: 100%; border: none;" runat="server" Text="เข้าสู่ระบบ" />
+                            </div>
+                        </div>--%>
+                    </div>
+                </div>
+            </div>
+            <div id="modalAlert" class="modal fade alertBoxInfo" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-md" style="top: 150px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" id="modal-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 style="font-family: thaifont; font-size: 30px; text-align: center; font-weight: bold" class="modal-title" id="modal-header">ข้อความระบบ</h4>
+                        </div>
+                        <div class="modal-body" id="modal-content" style="padding: 40px 10px; text-align: center; font-size: 28px; font-weight: normal; font-family: thaifont;">
+                        </div>
+                        <div class="modal-footer" style="display: block; text-align: center;">
+                            <button type="button" id="modal-cancel" class="btn btn-danger" style="font-size: 16px !important" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="footer hiddendiv">
+        <div class="header-container header-outer col-xs-12" style="padding-top: 25px; background-color: #616161;">
+            <div class="col-xs-12 wrapper" style="">
+                <div class="col-xs-10" style="text-align: left; color: white; font-size: 180%;">
+                    <p>Contact : cs@schoolbright.co Tel : 02-096-2550</p>
+                </div>
+
+                <div class="col-xs-2" style="padding-left: 2%">
+                    <a target="_blank" href="https://www.facebook.com/jabjaithailand/">
+                        <img border="0" alt="W3Schools" src="/images/facebook.jpg" width="40" height="40">
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCiKXsX7k-5ISHvgQI26jPSg">
+                        <img border="0" alt="W3Schools" style="margin-left: 8px" src="/images/youtube.jpg" width="40" height="40">
+                    </a>
+                    <a target="_blank" href="https://line.me/R/ti/p/%40jabjai">
+                        <img border="0" alt="W3Schools" style="margin-left: 8px" src="/images/line@.jpg" width="40" height="40">
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-xs-12 wrapper" style="">
+                <div class="col-xs-6" style="text-align: left; color: white; font-size: 180%;">
+                    <p>Copyright © 2016 All Rights Reserved by Jabjai Corporation Co., Ltd.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="box" class="hidden"></div>
+</body>
+</html>

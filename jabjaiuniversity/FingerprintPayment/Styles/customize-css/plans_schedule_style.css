@@ -1,0 +1,54 @@
+﻿.plans-schedule-container {
+
+}
+
+.plans-schedule-container input[type=text] {
+    width: 100px;
+}
+
+@media (max-width: 999px) {
+    .plans-schedule-container {
+        font-size: 20px;
+    }
+
+    .plans-schedule-container .chosen-container {
+        font-size: 20px;
+    }
+
+    .plans-schedule-container .button-section .global-btn {
+        font-size: 20px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .plans-schedule-container {
+        font-size: 22px;
+    }
+
+    .plans-schedule-container .button-section .global-btn {
+        font-size: 22px;
+        width: 130px;
+    }
+
+    .plans-schedule-container .chosen-container {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .plans-schedule-container {
+        font-size: 26px;
+    }
+
+    .plans-schedule-container .button-section .global-btn {
+        font-size: 26px;
+        width: 150px;
+    }
+
+    .plans-schedule-container .chosen-container {
+        font-size: 26px;
+    }
+
+}

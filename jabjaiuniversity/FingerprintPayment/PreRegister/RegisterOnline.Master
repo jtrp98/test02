@@ -1,0 +1,200 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RegisterOnline.master.cs" Inherits="FingerprintPayment.PreRegister.RegisterOnline" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Register Online - School Bright</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!-- Fonts and icons -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="assets/css/material-dashboard.css?v=<%=DateTime.Now.Ticks%>" rel="stylesheet" />
+    <link href="assets/css/layout.css?v=<%=DateTime.Now.Ticks%>" rel="stylesheet" />
+    <style>
+        @import url("webfonts/TH_Sarabun/thsarabunnew.css?v=<%=DateTime.Now.Ticks%>");
+
+        body {
+            font-family: THSarabunNew;
+        }
+
+        h6, .h6 {
+            font-size: 0.75rem;
+            text-transform: none;
+            font-weight: normal;
+        }
+
+        .vertical-align-middle {
+            display: flex;
+            align-items: center;
+        }
+
+        .school-name span {
+            font-size: 2.3em;
+            line-height: 35px;
+        }
+
+        .powered-by span {
+            font-size: 1.9em;
+        }
+
+        .red-star {
+            color: red !important;
+        }
+
+            .red-star sup {
+                font-size: 22px;
+                font-weight: bold;
+                top: -4px;
+                left: -3px;
+            }
+
+        label.error {
+            color: red;
+            line-height: 1.3;
+            margin-top: 3px;
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+
+            .school-logo {
+                text-align: center !important;
+            }
+
+            .school-name {
+                text-align: center !important;
+                padding-top: 28px;
+            }
+
+                .school-name span {
+                    font-size: 1.7em;
+                }
+
+            .powered-by {
+                padding-top: 25px;
+            }
+
+                .powered-by span {
+                    font-size: 1.4em;
+                }
+        }
+    </style>
+    <%--<script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>
+    <script> var vConsole = new VConsole();</script>--%>
+    <asp:ContentPlaceHolder ID="cphStyle" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="off-canvas-sidebar">
+    <div class="wrapper wrapper-full-page">
+        <div class="container">
+            <div class="row">
+                <br>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body" style="padding-top: 5px; padding-bottom: 5px;">
+                            <div class="row justify-content-center">
+                                <div class="col-md-2 mr-auto">
+                                    <div class="school-logo">
+                                        <img src="<%=schoolLogo %>" width="98" class="picture-src" id="wizardPicturePreview" title="">
+                                    </div>
+                                </div>
+                                <div class="col-md-10" style="margin-top: auto; margin-bottom: auto;">
+                                    <div class="row">
+                                        <div class="col-md-7 school-name text-left vertical-align-middle">
+                                            <span style="color: #666666; font-weight: bold;"><%=schoolName %></span>
+                                        </div>
+                                        <div class="col-md-5 ml-auto text-right powered-by">
+                                            <span style="color: #666666; font-weight: bold;">ระบบรับสมัครนักเรียน</span>
+                                            <h6>Powered by School Bright</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap-material-design.min.js"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="assets/js/material-dashboard.js?v=<%=DateTime.Now.Ticks%>" type="text/javascript"></script>
+    <script src="assets/js/layout.js?v=<%=DateTime.Now.Ticks%>"></script>
+    <script src="assets/js/prototype.js?v=<%=DateTime.Now.Ticks%>"></script>
+    <!-- Forms Validations Plugin -->
+    <script src="assets/js/plugins/jquery.validate.min.js"></script>
+    <script src="assets/js/plugins/additional-methods.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/plugins/bootstrap-notify.js"></script>
+    <!--  Plugin for Sweet Alert -->
+    <script src="assets/js/plugins/sweetalert2.js"></script>
+
+    <script src="assets/js/localStorage.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $.ajaxSetup({
+                statusCode: {
+                    401: function () {
+                        window.location.reload();
+                    }
+                }
+            });
+
+            if (jQuery().dataTable) {
+                $.fn.dataTable.ext.errMode = 'none';
+            }
+
+        });
+
+        function ListFileBase64FromSession() {
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: 'RegisterOnline04.aspx/ListFileBase64FromSession',
+                data: JSON.stringify({}),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    var r = JSON.parse(result.d);
+                    if (r.success) {
+                        console.table(r.documentFiles);
+                    }
+                    else {
+                        console.log(r.success, r.message);
+                    }
+                },
+                error: function (xhr, errorType, exception) {
+                    var responseText;
+                    try {
+                        responseText = jQuery.parseJSON(xhr.responseText);
+                        var errorMessage = "[" + errorType + ", " + exception + "] Exception:" + responseText.ExceptionType + ", StackTrace:" + responseText.StackTrace + ", Message:" + responseText.Message;
+
+                        console.log(errorMessage);
+                    } catch (e) {
+                        responseText = xhr.responseText;
+                        console.log(responseText);
+                    }
+                }
+            });
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="cphScript" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

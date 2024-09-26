@@ -1,0 +1,3 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mpVoid.Master.cs" Inherits="FingerprintPayment.mpVoid" %>
+
+ <asp:ContentPlaceHolder ID="MainContent" runat="server" />

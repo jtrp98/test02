@@ -1,0 +1,25 @@
+﻿.plans-term-container {
+    
+}
+
+.plans-term-container table.plans-term-table tr td {
+    vertical-align: middle;
+}
+
+@media (max-width: 999px) {
+    .plans-term-container {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .plans-term-container {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .plans-term-container {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,239 @@
+﻿
+h4 {
+    font-family: THSarabunNew;
+}
+
+/*.card-icon {
+    padding-bottom: 6px !important;
+}
+
+    .card-icon .material-icons {
+        font-size: 38px;
+        margin: 0px 1px 0px -1px;
+    }*/
+
+.dropdown.bootstrap-select.col-sm-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.dropdown-toggle.bs-placeholder .filter-option-inner-inner {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.dropdown .dropdown-toggle:after {
+    margin-right: -12px;
+}
+
+.btn-group .dropdown-toggle:after {
+    margin-right: -5px;
+}
+
+.filter-option-inner-inner {
+    padding: 5px 0px 0px 10px;
+    margin-top: -8px;
+    line-height: 1.5;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner {
+    padding-right: 0px;
+}
+
+.el-switch .el-switch-style {
+    height: 1.6em;
+    left: 0;
+    background: #ff514b;
+    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 3em;
+    cursor: pointer;
+}
+
+.modal-footer .btn.btn-default, .modal-footer .btn.btn-primary, .modal-footer .btn.btn-danger, .modal-footer .btn.btn-success {
+    width: 95px !important;
+}
+
+.tab-pane .btn.btn-default, .tab-pane .btn.btn-primary, .tab-pane .btn.btn-danger, .tab-pane .btn.btn-success {
+    /*width: 95px !important;
+    padding: 12px;*/
+    padding: 12px 22px;
+}
+
+/* Placeholder Style */
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    padding: 5px;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding: 5px;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    padding: 5px;
+}
+
+.card .card-body .col-form-label, .card .card-body .label-on-right {
+    padding: 12px 5px 0 0;
+}
+
+.card .card-body .form-group {
+    margin: 0px 0 0;
+}
+
+label.col-form-label {
+    font-size: 14px;
+    color: black;
+}
+
+.col-form-label span {
+    vertical-align: -webkit-baseline-middle;
+    font-size: 1em;
+    color: #707070;
+    font-weight: bold;
+}
+
+    .col-form-label span.required {
+        color: red;
+        vertical-align: middle;
+    }
+
+.table tr td ul.dropdown-menu li a, .table tr th ul.dropdown-menu li a {
+    white-space: nowrap;
+}
+
+.table tr td .btn-group, .table tr td .btn-group-vertical {
+    position: relative;
+    margin: 3px 1px;
+}
+
+.table thead tr th {
+    font-weight: bold;
+}
+
+table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before,
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+    top: 30%;
+}
+
+.bmd-form-group .form-control, .bmd-form-group label, .bmd-form-group input::placeholder {
+    padding-left: 5px;
+}
+
+form {
+    margin-bottom: 0px;
+}
+
+    form .bmd-form-group .error {
+        font-size: 0.8rem;
+        color: #f44336;
+    }
+
+.modal-body .div-select-input .form-group.bmd-form-group, .modal-body .div-text-input .form-group.bmd-form-group {
+    margin: -4px 0 0;
+}
+
+table tbody tr td .form-check, table thead tr th .form-check {
+    margin-left: 11px;
+    width: 22px;
+}
+
+table tbody tr td .bootstrap-select ul li.disabled .dropdown-item.disabled, table thead tr th .bootstrap-select ul li.disabled .dropdown-item.disabled {
+    background-color: rgb(238, 238, 238);
+    color: black;
+}
+
+.div-search .div-text-input {
+    margin: 5px 0px 0px 0px;
+}
+
+.div-search .div-select-input {
+    margin-top: -3px;
+}
+
+.popup-form {
+    padding: 0px 0px 10px 0px;
+}
+
+    .popup-form .div-row-padding {
+        padding: 5px 0px;
+    }
+
+    .popup-form .dropdown-toggle:after {
+        margin-right: 5px;
+    }
+
+    .popup-form .div-datepicker {
+        margin-top: 0px;
+    }
+
+    .popup-form .filter-option-inner-inner {
+        padding-left: 5px;
+    }
+
+    .popup-form .col-form-label.text-right {
+        margin-bottom: 0px !important;
+    }
+
+    .popup-form .dropdown-toggle.bs-placeholder .filter-option-inner-inner {
+        color: #aaaaaa;
+        font-size: 14px;
+    }
+
+    .popup-form .dropdown-toggle .filter-option-inner-inner {
+        font-size: 14px;
+    }
+
+    .popup-form .dropdown-toggle {
+        padding: 4px 0px 0px 0px;
+    }
+
+    .popup-form .dropdown.bootstrap-select.col-sm-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .popup-form .bmd-form-group input::placeholder {
+        line-height: 2;
+    }
+
+    .popup-form form .form-group {
+        margin: 0px 0 0;
+    }
+
+    .popup-form form .bmd-form-group .error, .popup-form form .dropdown.bootstrap-select + .error, .popup-form .checkbox-radios.drop-out .error, .popup-form form .bmd-form-group + .text-danger + .error {
+        font-size: 0.8rem;
+        color: #f44336;
+    }
+
+    .popup-form .toggle.btn {
+        border-radius: 4px;
+    }
+
+    .popup-form .toggle-handle.btn {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+        padding: 6px 12px;
+    }
+
+    .popup-form .toggle-on.btn {
+        padding-right: 35px !important;
+    }
+
+    .popup-form .toggle-off.btn {
+        padding-left: 40px !important;
+    }
+
+.input-group-addon {
+    display: flex;
+}
+
+    .input-group-addon span.input-group-text {
+        font-size: 14px;
+    }

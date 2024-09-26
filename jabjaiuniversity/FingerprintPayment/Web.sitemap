@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <!--<siteMapNode url="Default.aspx" title="Home"  description="">-->
+
+  <siteMapNode url="AdminMain.aspx" title="หน้าหลัก"  description="">
+    <!--ระบบตารางเรียน-->
+    <siteMapNode url="ระบบตารางเรียน" title="เติมเงินเข้าระบบ"  description="" >
+      <siteMapNode url="~/BP1/courseRegister.aspx" title="การจัดการวิชาเรียน"  description="" />
+    </siteMapNode>
+    <siteMapNode url="" title="ข้อมูลการเรียนการสอน"  description="" >
+      <siteMapNode url="~/Modules/TimeAttendance/plans-term.aspx" title="เลือกเทอม"  description="">
+        <siteMapNode url="~/Modules/TimeAttendance/plans-schedule.aspx" title="จัดตารางสอน"  description=""/>
+        <siteMapNode url="~/Modules/TimeAttendance/plans-scheduledetail.aspx" title="จัดตารางสอน"  description="" />
+      </siteMapNode>
+      <siteMapNode url="~/Modules/TimeAttendance/planelist.aspx" title="การจัดการวิชาเรียน"  description="" >
+        <siteMapNode url="~/Modules/TimeAttendance/planeadd.aspx" title="เพิ่มข้อมูลรายวิชา"  description="" />
+        <siteMapNode url="~/Modules/TimeAttendance/planeedit.aspx" title="แก้ไขข้อมูลรายวิชา"  description=""/>
+      </siteMapNode>
+      <siteMapNode url="~/Modules/TimeAttendance/periodslist.aspx" title="ข้อมูลคาบเรียน"  description="" >
+        <siteMapNode url="~/Modules/TimeAttendance/periodsadd.aspx" title="เพิ่มข้อมูลคาบเรียน"  description="" />
+        <siteMapNode url="~/Modules/TimeAttendance/periodsedit.aspx" title="แก้ไขข้อมูลคาบเรียน"  description="" />
+      </siteMapNode>
+    </siteMapNode>
+
+    <!--การบ้าน-->
+    <siteMapNode url="~/homeworklist.aspx" title="การบ้าน"  description="">
+      <siteMapNode url="homeworkadd.aspx" title="สั่งการบ้าน"  description="" />
+      <siteMapNode url="homeworkdetail.aspx" title="รายละเอียดการบ้าน"  description="" />
+      <!--<siteMapNode url="~/Modules/TimeAttendance/smsadd.aspx" title="เพิ่มข้อมูลข้อความ"  description="" />-->
+    </siteMapNode>
+
+    <siteMapNode url="useraddmoney.aspx" title="เติมเงินเข้าระบบ"  description="" />
+    <siteMapNode url="Withdrawal.aspx" title="ถอนเงินออกจากระบบ"  description="" />
+    <siteMapNode url="maclist.aspx" title="ตั้งต่า MAC Address"  description="" />
+    <siteMapNode url="companyedit.aspx" title="แก้ไขการตั้งค่าโรงเรียน"  description="" />
+    <siteMapNode url="ProductDetail.aspx" title="รายการข้อมูลสินค้า"  description="" >
+      <siteMapNode url="Productadd.aspx" title="เพิ่มข้อมูลสินค้า"  description="" />
+      <siteMapNode url="Productedit.aspx" title="แก้ไขข้อมูลสินค้า"  description="" />
+    </siteMapNode>
+    
+    <siteMapNode url="~/shop/Stcok-List.aspx" title="ข้อมูลการนำเข้าสต๊อก"  description="" >
+      <siteMapNode url="~/shop/Stockadd.aspx" title="เพิ่มสินค้าเข้าสต๊อก"  description="" />
+      <siteMapNode url="~/shop/StockDetail.aspx" title="รายละเอียดการนำเข้า"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="~/shop/product-type.aspx" title="รายชื่อประเภทสินค้า"  description="" />
+    <siteMapNode url="~/shop/Product.aspx" title="รายชื่อสินค้า"  description="" />
+    <siteMapNode url="~/shop/index.aspx" title="ร้านค้า"  description="" />
+    <siteMapNode url="~/grade/GradeRoomList.aspx" title="บันทึกคะแนนผลการเรียน"  description="" />
+    <siteMapNode url="~/grade/SchoolReportList.aspx" title="รายงานผลการพัฒนาผู้เรียน"  description="" />
+    <siteMapNode url="~//grade/GradeRoomList.aspx?mode=2" title="เอกสารปพ. ต่างๆ"  description="" />
+
+    <siteMapNode url="~/Leaveform/leaveSetting.aspx" title="ตั้งค่าการลา"  description="" />
+    <siteMapNode url="~/Leaveform/leaveSetting-checker.aspx" title="ตั้งค่าการลา"  description="" />
+    <siteMapNode url="~/Leaveform/leaveRegister.aspx" title="แจ้งการลา"  description="" />
+    <siteMapNode url="~/Leaveform/leaveList.aspx" title="ข้อมูลการลา"  description="" />
+    <siteMapNode url="~/classconfig/classSetting.aspx" title="ข้อมูลระดับการศึกษา"  description="" />
+
+    <siteMapNode url="~/TimeAttendance/index.aspx" title="ข้อมูลการลงเวลา"  description="" >
+      <siteMapNode url="~/TimeAttendance/holiday.aspx" title="ข้อมูลวันหยุด"  description="" />
+      <siteMapNode url="~/TimeAttendance/leave.aspx" title="ข้อมูลการลา"  description="" />
+      <siteMapNode url="~/TimeAttendance/timesetting.aspx" title="การตั้งเวลา"  description="" />
+      <siteMapNode url="~/TimeAttendance/periodlist.aspx" title="การจัดตาราเรียน"  description="" />
+      <siteMapNode url="~/TimeAttendance/period.aspx" title="การจัดตาราเรียน"  description="" />
+      <siteMapNode url="~/TimeAttendance/studentClass.aspx" title="การจัดตาราเรียน"  description="" />
+      <siteMapNode url="~/TimeAttendance/Class.aspx" title="ข้อมูลจัดห้องเรียน"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="userlist2.aspx" title="รายชื่อนักเรียน"  description="" >
+      <siteMapNode url="userlist2-register.aspx" title="เพิ่มข้อมูลนักเรียน"  description="" />
+      <siteMapNode url="userlist2-details.aspx" title="ดูข้อมูลข้อมูลนักเรียน"  description="" />
+      <siteMapNode url="userlist2-edit.aspx" title="แก้ไขข้อมูลนักเรียน"  description="" />
+      <siteMapNode url="report07.aspx" title="รายงานรายชื่อนักเรียน"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="/topup.aspx" title="เติมเงิน"  description="" />
+    <siteMapNode url="pagesellproduct.aspx" title="ขายสินค้า"  description="" />
+    <siteMapNode url="pagcashsales.aspx" title="ขายสินค้าเงินสด"  description="" />
+    <siteMapNode url="pageditsellproduct.aspx" title="แก้ไขการขายที่ผิด"  description="" >
+    </siteMapNode>
+    
+    <siteMapNode url="~/Report/report01.aspx" title="รายงานการเข้าใช้งานระบบ"  description="" />
+    <!--<siteMapNode url="reportmain.aspx" title="รายงาน"  description="" >-->
+    <siteMapNode url="/Report/Sales.aspx" title="รายงานการซื้อ-ขายสินค้า"  description="" />
+    <siteMapNode url="~/Report/ProductBalanceReport.aspx" title="รายงานยอดคงเหลือสินค้า"  description="" />
+    <siteMapNode url="report05.aspx" title="รายงานการขายสินค้าเงินสด"  description="" />
+    <siteMapNode url="report08.aspx" title="รายงานขายสินค้าแบบรวบยอด"  description="" />
+    <siteMapNode url="/Report/topupmoney.aspx" title="รายงานการการเติมเงิน"  description="" />
+    
+    <!--</siteMapNode>-->
+    <siteMapNode url="/employees/employees-list.aspx" title="รายชื่อพนักงาน"  description="" >
+      <siteMapNode url="/employees/employees-add.aspx" title="เพิ่มข้อมูลพนักงาน"  description="" />
+      <siteMapNode url="/employees/employees-edit.aspx" title="แก้ไขข้อมูลพนักงาน"  description="" />
+      <siteMapNode url="/employees/employees-details.aspx" title="รายละเอียดข้อมูลพนักงาน"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="/schoolprofile/schoolprofile.aspx" title="ข้อมูลโรงเรียน"  description="" />
+    <siteMapNode url="~/Modules/TimeAttendance/timeiosettings.aspx" title="ข้อมูลเวลาเข้า - ออกโรงรียน"  description="" />
+    <siteMapNode url="~/Modules/TimeAttendance/holidaysettings.aspx" title="ปฏิทินโรงเรียน"  description="" />
+
+    <siteMapNode url="~/Modules/TimeAttendance/roomlist.aspx" title="ข้อมูลห้องเรียน"  description="">
+      <siteMapNode url="~/Modules/TimeAttendance/roomadd.aspx" title="เพิ่ม/แก้ไข ข้อมูลห้องเรียน"  description=""/>
+    </siteMapNode>
+    <siteMapNode url="~/Modules/TimeAttendance/leavelist.aspx" title="ข้อมูลการลา"  description="" />
+    <siteMapNode url="~/Modules/TimeAttendance/yearlist.aspx" title="ข้อมูลปีการศึกษา"  description="" >
+      <siteMapNode url="~/Modules/TimeAttendance/yearsettings.aspx" title="เพิ่ม/แก้ไข ข้อมูลปีการศึกษา"  description="" />
+    </siteMapNode>
+    <siteMapNode url="~/Modules/TimeAttendance/jobscaning.aspx" title="สแกนเข้าโรงเรียน"  description="" />
+    <siteMapNode url="~/Modules/TimeAttendance/empscanning.aspx" title="สแกนเข้างาน"  description="" />
+
+    <siteMapNode url="~/Modules/TimeAttendance/learnscaning.aspx" title="สแกนเข้าเรียน-เข้าสอน"  description="" />
+
+    <siteMapNode url="~/Modules/TimeAttendance/levelsettings.aspx" title="ข้อมูลระดับช่วงชั้น"  description="" >
+      <siteMapNode url="~/Modules/TimeAttendance/leveladd.aspx" title="เพิ่มข้อมูลระดับช่วงชั้น"  description="" />
+      <siteMapNode url="~/Modules/TimeAttendance/sublevelsettings.aspx" title="ข้อมูลระดับชั้นเรียน"  description="">
+        <siteMapNode url="~/Modules/TimeAttendance/subleveladd.aspx" title="เพิ่มข้อมูลระดับชั้นเรียน"  description="" />
+        <siteMapNode url="~/Modules/TimeAttendance/subleveledit.aspx" title="แก้ไขมูลตารางเวลา"  description="" />
+        <siteMapNode url="~/Modules/TimeAttendance/subleveladdtable.aspx" title="เพิ่มมูลตารางเวลา"  description="" />
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode url="~/Modules/TimeAttendance/smssettings.aspx" title="ข้อมูลข้อความ"  description="" >
+      <siteMapNode url="~/Modules/TimeAttendance/smsadd.aspx" title="เพิ่มข้อมูลข้อความ"  description="" />
+      <siteMapNode url="~/Modules/TimeAttendance/smsedit.aspx" title="แก้ไขข้อมูลข้อความ"  description="" />
+      <siteMapNode url="~/Modules/TimeAttendance/smsdetail.aspx" title="รายละเอียดข้อมูลข้อความ"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="~/TitleList/TitleList.aspx" title="ตั้งค่าคำนำหน้า"  description="" />
+    <siteMapNode url="~/Joblist/Joblist.aspx" title="ตั้งค่าตำแหน่ง"  description="" />
+    <siteMapNode url="~/department/DepartmentList.aspx" title="ตั้งค่าแผนก"  description="" />
+    <siteMapNode url="~/Modules/TimeAttendance/eventsettings.aspx" title="ข้อมูลกิจกรรม"  description="" />
+    <siteMapNode url="~/classmember/classmember.aspx" title="ข้อมูลครูประจำชั้น"  description="" />
+    <siteMapNode url="~/permissionssetting.aspx" title="ตั้งค่าสิทธิ์พนักงาน"  description="" />
+
+    <siteMapNode url="~/grade/grade-classroom.aspx" title="ระบบแจ้งผลการเรียน"  description="">
+      <siteMapNode url="~/grade/grade-register.aspx" title="ลงทะเบียนเกรด"  description="" />
+      <siteMapNode url="~/grade/grade-result.aspx" title="ดูประวัติการเรียน"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="" title="คู่มือ"  description="">
+      <siteMapNode url="~/manual.aspx" title="คู่มือการใช้งานระบบ"  description="" />
+      <siteMapNode url="~/manual2.aspx" title="คู่มือการสมัครสมาชิก"  description="" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Behaviors/behavior-students.aspx" title="ตัดคะแนนความประพฤติของนักเรียน"  description="">
+      <siteMapNode url="~/Behaviors/behavior-details.aspx" title="ประวัติคะแนนความประพฤติของนักเรียน"  description=""/>
+    </siteMapNode>
+    <siteMapNode url="~/Behaviors/Behavior-Setting.aspx" title="ตั้งค่าการตัดคะแนนความประพฤติ"  description=""/>
+    <siteMapNode url="~/Behaviors/behavior-activities.aspx" title="เพิ่มข้อมูลคะแนนความประพฤติ"  description=""/>
+
+    <!--<siteMapNode url="~/Modules/TimeAttendance/menureport.aspx" title="รายงานระบบตรวจเวลาเรียน"  description="">-->
+    <siteMapNode url="~/report/reportsmonth.aspx" title="รายงานสรุปสถิติการการมาโรงเรียนรายเดือน"  description=""/>
+    <siteMapNode url="~/report/Reportmobile01.aspx" title="รายงานการมาโรงเรียน"  description=""/>
+    <siteMapNode url="~/report/Behaviorsreports.aspx" title="รายงานคะแนนพฤติกรรม"  description=""/>
+    <siteMapNode url="~/report/reportlearnscanning02.aspx" title="รายงานสรุปสถิติการเข้าห้องเรียนรายบุคคล"  description=""/>
+    <siteMapNode url="~/report/Reportmobile02.aspx" title="รายงานการเข้าทำงาน"  description=""/>
+    <siteMapNode url="~/report/employessreports.aspx" title="รายชื่อพนักงาน"  description=""/>
+    <siteMapNode url="~/report/studentreports.aspx" title="รายชื่อนักเรียน"  description=""/>
+    <siteMapNode url="~/Leaveform/reportLeave.aspx" title="รายงานการลา"  description=""/>
+    <siteMapNode url="~/Modules/TimeAttendance/reportlearnscanning.aspx" title="รายงานการเข้าเรียน-เข้าสอน"  description=""/>
+    <siteMapNode url="~/Modules/TimeAttendance/reportempscanning.aspx" title="รายงานการเข้า-ออก โรงเรียนของพนักงาน"  description=""/>
+    <!--</siteMapNode>-->
+
+    <siteMapNode url="~/TuitionFee/payment.aspx" title="รายการชำระเงิน"  description=""/>
+    <siteMapNode url="~/TuitionFee/paymentgroup.aspx" title="กลุ่มรายการชำระเงิน"  description=""/>
+    <siteMapNode url="~/TuitionFee/Tuitionfeesetting.aspx" title="กำหนดค่าเทอม"  description=""/>
+  </siteMapNode>
+
+  <!--</siteMapNode>-->
+</siteMap>
+

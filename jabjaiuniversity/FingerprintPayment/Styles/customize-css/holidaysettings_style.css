@@ -1,0 +1,114 @@
+﻿.holiday-container {
+
+}
+
+.holiday-container .button-section {
+    padding-top: 10px;
+}
+
+@media (max-width: 999px) {
+
+    .holiday-container {
+        font-size: 20px;
+    }
+
+    .holiday-container .global-btn {
+        font-size: 20px;
+        width: 120px;
+    }
+
+    .holiday-container .adjust-col-padding {
+        padding-right: 10px;
+    }
+
+    .holiday-container input[type=text] {
+        width: 263px;
+        height: 42px;
+    }
+
+    .holiday-container .date-container input[type=text] {
+        float: left;
+        width: 230px;
+        height: 42px;
+    }
+
+    .holiday-container .date-container input[type=text] + span {
+        float: left;
+        width: 35px;
+        height: 42px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .holiday-containe .date-container input[type=text] + span .glyphicon {
+        top: 7px;
+    }
+}
+
+@media (min-width:1000px) and (max-width: 1199px) {
+    .holiday-container {
+        font-size: 22px;
+    }
+
+    .holiday-container .global-btn {
+        font-size: 22px;
+        width: 120px;
+    }
+
+    .holiday-container input[type=text] {
+        width: 263px;
+        height: 42px;
+    }
+
+    .holiday-container .date-container input[type=text] {
+        float: left;
+        width: 230px;
+        height: 42px;
+    }
+
+    .holiday-container .date-container input[type=text] + span {
+        float: left;
+        width: 35px;
+        height: 42px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .holiday-containe .date-container input[type=text] + span .glyphicon {
+        top: 7px;
+    }
+}
+
+@media (min-width:1200px) {
+    .holiday-container {
+        font-size: 26px;
+    }
+
+    .holiday-container .global-btn {
+        font-size: 26px;
+        width: 150px;
+    }
+
+    .holiday-container input[type=text] {
+        width: 263px;
+        height: 42px;
+    }
+
+    .holiday-container .date-container input[type=text] {
+        float: left;
+        /*width: 230px;*/
+        height: 42px;
+    }
+
+    .holiday-container .date-container input[type=text] + span {
+        float: left;
+        width: 35px;
+        height: 42px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .holiday-containe .date-container input[type=text] + span .glyphicon {
+        top: 7px;
+    }
+}

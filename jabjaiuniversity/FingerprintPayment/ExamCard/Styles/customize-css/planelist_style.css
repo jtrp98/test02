@@ -1,0 +1,24 @@
+﻿.planelist-container {
+
+}
+
+@media (max-width: 999px) {
+    .planelist-container .minor-button {
+        width: 100px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .planelist-container .minor-button {
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .planelist-container .minor-button {
+        width: 100px;
+    }
+}

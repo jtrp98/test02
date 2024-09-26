@@ -1,0 +1,64 @@
+﻿.plans-room-container {
+
+}
+
+.plans-room-container .plans-room-table .glyphicon {
+    font-size: 14px;
+}
+
+.plans-room-container .plans-room-table tr td {
+    vertical-align: middle;
+}
+
+@media (max-width: 999px) {
+
+    .plans-room-container .tab-titles li > a {
+        font-size: 20px;
+    }
+
+    .plans-room-container .plans-room-table tr td {
+        font-size: 20px;
+    }
+
+     .plans-room-container .btn-plans-room {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .plans-room-container .tab-titles li > a {
+        font-size: 22px;
+    }
+
+    .plans-room-container .plans-room-table tr td {
+        font-size: 22px;
+    }
+
+     .plans-room-container .btn-plans-room {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .plans-room-container .tab-titles li > a {
+        font-size: 26px;
+    }
+
+    .plans-room-container .plans-room-table tr td {
+        font-size: 26px;
+    }
+
+    .plans-room-container .btn-plans-room {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 26px;
+    }
+}

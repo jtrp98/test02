@@ -1,0 +1,22 @@
+﻿.card-header span.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+}
+
+
+.dropdown.bootstrap-select {
+    width: 99% !important;
+}
+
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting {
+    background-image: url('') !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #fff !important;
+    border: 0px !important;
+}

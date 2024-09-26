@@ -1,0 +1,581 @@
+﻿/*label {
+            font-weight: normal;
+            font-size: 26px;
+        }*/
+
+.select2-selection__rendered {
+    line-height: 41px !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 41px !important;
+}
+
+.select2-selection__arrow {
+    height: 41px !important;
+}
+
+    .select2-selection__arrow b {
+        border-color: black transparent transparent transparent !important;
+    }
+
+[class^='select2'] {
+    border-radius: 1px !important;
+    border-top-color: #abadb3 !important;
+    border-left-color: #dbdfe6 !important;
+    border-right-color: #dbdfe6 !important;
+    border-bottom-color: #dbdfe6 !important;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    cursor: default;
+    z-index: 1060 !important;
+}
+
+.centertext {
+    text-align: center;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.setmin-width0 {
+    min-width: 0px !important;
+}
+
+.setfont-size14 {
+    font-size: 14px !important;
+}
+
+/* DatetimePicker */
+.bootstrap-datetimepicker-widget table td, .bootstrap-datetimepicker-widget table td span, .bootstrap-datetimepicker-widget table th.picker-switch {
+    font-size: 20px;
+}
+
+    .bootstrap-datetimepicker-widget table td span {
+        font-size: 18px;
+    }
+
+.bootstrap-datetimepicker-widget table td {
+    width: 30px;
+    height: 30px;
+}
+
+
+#divDStart .dropdown-menu {
+    font-size: inherit;
+}
+
+.bootstrap-datetimepicker-widget {
+    width: 300px !important;
+}
+
+#datatable1 td, #datatable1 th {
+    text-align: center;
+}
+
+.roundbtn {
+    margin: 0 auto;
+    display: block;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    background: #ff6863;
+    text-decoration: none;
+    color: #fff;
+}
+
+    .roundbtn:hover {
+        background: #fb4943;
+        text-decoration: none;
+        color: #fff;
+    }
+
+.enable-annouce {
+}
+
+.disable-annouce {
+}
+
+/*label.error {
+    color: red;*/
+/*  font-size: 24px;*/
+/*}*/
+
+
+.completionList {
+    border: solid 1px #444444;
+    background-color: White;
+    margin: 0px;
+    padding: 2px;
+    height: 100px;
+    overflow: auto;
+}
+
+.cover {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.f70 {
+    font-size: 70%;
+}
+
+.listItem {
+    color: blue;
+    background-color: White;
+}
+
+.hid {
+    visibility: hidden;
+}
+
+.hid2 {
+    visibility: hidden;
+    display: none;
+}
+
+#loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("https://i.imgur.com/CgViPo0.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.width10 {
+    margin: 0 auto;
+    width: 10%;
+}
+
+.itemHighlighted {
+    background-color: #ffc0c0;
+}
+
+.gvbutton {
+    font-size: 25px;
+}
+
+.nounder a:hover {
+    text-decoration: none;
+}
+
+.shadowblack {
+    text-decoration: none;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.boxhead a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a.imjusttext {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+    a.imjusttext:hover {
+        color: aquamarine;
+    }
+
+.btn-red {
+    background: red; /* use your color here */
+}
+
+
+.nowrap {
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.namemangin {
+    margin-left: 5px;
+    padding-left: 35px;
+    border-left: 10px
+}
+
+.tab {
+    border-collapse: collapse;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-bottom: 3px solid #337AB7;
+    border-left: 3px solid #337AB7;
+    border-right: 3px solid #337AB7;
+    border-top: 3px solid #337AB7;
+    box-shadow: inset 0 1px 0 #337AB7;
+}
+
+.pad-5-0 {
+    padding: 5px 0;
+}
+
+.subtbl-wrapper {
+    margin-bottom: 0px;
+}
+
+    .subtbl-wrapper .card-status,
+    .subtbl-wrapper .card-nfc,
+    .subtbl-wrapper .card-parent,
+    .subtbl-wrapper .card-type,
+    .subtbl-wrapper .encard-nfc {
+        /*width: 200px;*/
+       /* height: 40px;*/
+        text-align: left;
+        /*//padding: 0 5px;*/
+        padding-top: 8px;
+    }
+
+    .subtbl-wrapper .encard-nfc {
+        color: #aaa;
+    }
+
+#datatable1_length {
+    display: none;
+}
+
+.file-thumbnail-footer {
+    display: none;
+}
+
+.fileinput-remove {
+    display: none;
+}
+
+.krajee-default.file-preview-frame .kv-file-content {
+    width: auto;
+    height: auto;
+}
+
+.btn-file {
+    padding: 2px 20px;
+}
+
+.kv-file-content img {
+    max-height: 250px !important;
+}
+
+.file-input .glyphicon {
+    font-size: 14px;
+}
+
+.file-caption-main {
+    /* display:none!important;*/
+    font-size: 26px;
+}
+
+.progress-bar {
+    font-size: 14px;
+}
+
+.number-wrapper {
+    position: relative;
+}
+
+    .number-wrapper i {
+        position: absolute;
+        right: 0;
+        color: green;
+        font-size: 18px;
+        top: 8px;
+    }
+/* Testing Specific file merge */
+
+.dropdown.bootstrap-select {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+label {
+    font-weight: normal;
+    /*  font-size: 26px;*/
+}
+
+.select2-selection__rendered {
+    line-height: 41px !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 41px !important;
+}
+
+.select2-selection__arrow {
+    height: 41px !important;
+}
+
+    .select2-selection__arrow b {
+        border-color: black transparent transparent transparent !important;
+    }
+
+[class^='select2'] {
+    border-radius: 1px !important;
+    border-top-color: #abadb3 !important;
+    border-left-color: #dbdfe6 !important;
+    border-right-color: #dbdfe6 !important;
+    border-bottom-color: #dbdfe6 !important;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    cursor: default;
+    z-index: 1060 !important;
+}
+
+.centertext {
+    text-align: center;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.setmin-width0 {
+    min-width: 0px !important;
+}
+
+.setfont-size14 {
+    font-size: 14px !important;
+}
+
+/* DatetimePicker */
+.bootstrap-datetimepicker-widget table td, .bootstrap-datetimepicker-widget table td span, .bootstrap-datetimepicker-widget table th.picker-switch {
+    font-size: 20px;
+}
+
+    .bootstrap-datetimepicker-widget table td span {
+        font-size: 18px;
+    }
+
+.bootstrap-datetimepicker-widget table td {
+    width: 30px;
+    height: 30px;
+}
+
+
+#divDStart .dropdown-menu {
+    font-size: inherit;
+}
+
+.bootstrap-datetimepicker-widget {
+    width: 300px !important;
+}
+
+#datatable1 td, #datatable1 th {
+    text-align: center;
+}
+
+.roundbtn {
+    margin: 0 auto;
+    display: block;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    background: #ff6863;
+    text-decoration: none;
+    color: #fff;
+}
+
+    .roundbtn:hover {
+        background: #fb4943;
+        text-decoration: none;
+        color: #fff;
+    }
+
+.enable-annouce {
+}
+
+.disable-annouce {
+}
+
+/*label.error {
+    color: red;
+    font-size: 24px;
+}*/
+
+.completionList {
+    border: solid 1px #444444;
+    background-color: White;
+    margin: 0px;
+    padding: 2px;
+    height: 100px;
+    overflow: auto;
+}
+
+.cover {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.f70 {
+    font-size: 70%;
+}
+
+.listItem {
+    color: blue;
+    background-color: White;
+}
+
+.hid {
+    visibility: hidden;
+}
+
+.hid2 {
+    visibility: hidden;
+    display: none;
+}
+
+#loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("https://i.imgur.com/CgViPo0.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.width10 {
+    margin: 0 auto;
+    width: 10%;
+}
+
+.itemHighlighted {
+    background-color: #ffc0c0;
+}
+
+.gvbutton {
+    font-size: 25px;
+}
+
+.nounder a:hover {
+    text-decoration: none;
+}
+
+.shadowblack {
+    text-decoration: none;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.boxhead a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a.imjusttext {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+    a.imjusttext:hover {
+        color: aquamarine;
+    }
+
+.btn-red {
+    background: red; /* use your color here */
+}
+
+
+.nowrap {
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.namemangin {
+    margin-left: 5px;
+    padding-left: 35px;
+    border-left: 10px
+}
+
+.tab {
+    border-collapse: collapse;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-bottom: 3px solid #337AB7;
+    border-left: 3px solid #337AB7;
+    border-right: 3px solid #337AB7;
+    border-top: 3px solid #337AB7;
+    box-shadow: inset 0 1px 0 #337AB7;
+}
+
+.pad-5-0 {
+    padding: 5px 0;
+}
+
+.dt-buttons {
+    float: right;
+    margin: 10px 0;
+}
+
+    .dt-buttons .buttons-excel {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        /* font-size: 24px;*/
+        font-weight: normal;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: #fff;
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+        width: 125px;
+    }
+
+}
+
+.swal2-actions {
+    margin: 0px !important;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.swal2-popup {
+    width: 15em;
+}
+
+.swal2-modal {
+   /* font-size: 18px;*/
+    /* padding: 20px 0px;*/
+}
+
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+    background-color: transparent !important;
+}
+
+.bootstrap-datetimepicker-widget table td.day:hover, .bootstrap-datetimepicker-widget table td.hour:hover, .bootstrap-datetimepicker-widget table td.minute:hover, .bootstrap-datetimepicker-widget table td.second:hover {
+    background: transparent;
+}
+
+table.dataTable tbody tr:last-child td,
+table.dataTable thead tr th {
+    border-bottom: 1px solid #000;
+}

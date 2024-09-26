@@ -1,0 +1,218 @@
+﻿.leavelist-container {
+
+}
+
+@media (max-width: 999px) {
+
+    .leavelist-container {
+        font-size: 20px;
+    }
+
+    .leavelist-container .global-btn {
+        font-size: 20px;
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .leavelist-container {
+        font-size: 22px;
+    }
+
+    .leavelist-container .button-section {
+        margin-top: 10px;
+    }
+
+    .leavelist-container .global-btn {
+        font-size: 22px;
+        width: 150px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .leavelist-container {
+        font-size: 26px;
+    }
+
+    .leavelist-container .button-section {
+        margin-top: 10px;
+    }
+
+    .leavelist-container .global-btn {
+        font-size: 26px;
+        width: 180px;
+    }
+
+}
+
+/* Leavelist Modal */
+.leavelist-modal-container {
+    
+}
+
+@media (max-width: 999px) {
+
+    .leavelist-modal-container {
+        width: 600px;
+        top: 30px;
+        left: 0px;
+        font-size: 20px;
+    }
+
+    .leavelist-modal-container .global-btn {
+        font-size: 20px;
+        width: 130px;
+    }
+
+    .leavelist-modal-container .modal-title {
+        font-size: 22px;
+    }
+
+    .leavelist-modal-container input[type=text], .leavelist-modal-container select {
+        height: 42px;
+    }
+
+    
+    .leavelist-modal-container select {
+       width: 153px;
+    }
+
+    .leavelist-modal-container .datepicker {
+        float: left;
+        width: 120px;
+    }
+
+    .leavelist-modal-container .datepicker + span {
+        float: left;
+        width: 35px;
+        height: 42px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .leavelist-modal-container .datepicker + span .glyphicon {
+        top: 7px;
+    }
+
+    .leavelist-modal-container .clockpicker {
+        float: left;
+        width: 153px;
+    }
+
+    .leavelist-modal-container .modal-body .row {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .leavelist-modal-container {
+        width: 800px;
+        top: 50px;
+        left: -90px;
+        font-size: 22px;
+    }
+
+    .leavelist-modal-container .global-btn {
+        font-size: 22px;
+        width: 130px;
+    }
+
+    .leavelist-modal-container .modal-title {
+        font-size: 24px;
+    }
+
+    .leavelist-modal-container input[type=text], .leavelist-modal-container select {
+        height: 42px;
+    }
+
+    .leavelist-modal-container select {
+       width: 183px;
+    }
+
+    .leavelist-modal-container .datepicker {
+        float: left;
+        width: 150px;
+    }
+
+    .leavelist-modal-container .datepicker + span {
+        float: left;
+        width: 35px;
+        height: 42px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .leavelist-modal-container .datepicker + span .glyphicon {
+        top: 7px;
+    }
+
+    .leavelist-modal-container .clockpicker {
+        float: left;
+        width: 183px;
+    }
+
+    .leavelist-modal-container .modal-body .row {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .leavelist-modal-container {
+        width: 800px;
+        top: 50px;
+        left: -90px;
+        font-size: 26px;
+    }
+
+    .leavelist-modal-container .global-btn {
+        font-size: 26px;
+        width: 150px;
+    }
+
+    .leavelist-modal-container .modal-title {
+        font-size: 28px;
+    }
+
+    .leavelist-modal-container input[type=text], .leavelist-modal-container select {
+        height: 42px;
+    }
+
+    .leavelist-modal-container select {
+       width: 183px;
+    }
+
+    .leavelist-modal-container .datepicker {
+        float: left;
+        width: 150px;
+    }
+
+    .leavelist-modal-container .datepicker + span {
+        float: left;
+        width: 35px;
+        height: 42px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .leavelist-modal-container .datepicker + span .glyphicon {
+        top: 7px;
+    }
+
+    .leavelist-modal-container .clockpicker {
+        float: left;
+        width: 183px;
+    }
+
+    .leavelist-modal-container .modal-body .row {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+}

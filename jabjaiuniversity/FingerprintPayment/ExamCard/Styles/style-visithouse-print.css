@@ -1,0 +1,210 @@
+
+	body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #FAFAFA;
+        font: 12pt "Tahoma";
+    }
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 10mm 12mm 10mm 16mm;
+        margin: 10mm auto;
+        border: 1px #D3D3D3 solid;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+		/*background: #FFEAEA;*/
+    }
+    .sub-page {
+        /*padding: 1cm;*/
+        border: 0px #ccc solid;
+        height: 275mm;
+        /*outline: 2cm #FFEAEA solid;*/
+		background: white;
+		position: relative;
+    }
+    
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+        html, body {
+            width: 210mm;
+            height: 297mm;        
+        }
+        .page {
+            margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+
+            color: #000;
+            background-color: #fff;
+        }
+    }
+	
+	.page-number {
+		font-size: 12px;
+		float: right;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+	.photo {
+		float: right;
+		position: absolute;
+		border: 1px solid;
+		width: 70px;
+		height: 85px;
+		top: 120px;
+		right: 0px;
+		text-align: center;
+		padding-top: 5px;
+	}
+	.text-center {
+		text-align: center;
+	}
+	.text-left {
+		text-align: left;
+	}
+	.header-title {
+		font-size: 22px;
+	}	
+	.header-title-2 {
+		font-size: 19px;
+	}
+	.header-sub-title {
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.header-sub-title-2 {
+		font-size: 12px;
+		font-weight: bold;
+	}
+	.normal-text {
+		font-size: 12px;
+	}	
+	.normal-text-2 {
+		font-size: 14px;
+	}	
+	.license-text {
+		font-size: 14px;
+	}
+	.symbol-check-size {
+		font-size: 20px;
+	}
+	
+	.input-bottom-dot {
+		border-top-width: 0px;
+		border-left-width: 0px;
+		border-right-width: 0px;
+		border-bottom-style: dotted;
+		border-bottom: 1px dotted;
+		text-align: center;
+		vertical-align: bottom;
+		margin: 0 5px 0 5px;
+		font-size: 12px;
+	}
+	
+	.card-number {
+		display: inline-block;
+		border: 1px solid;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		font-size: small;
+	}
+	.card-number-s {
+		vertical-align: bottom;
+	}
+	
+	table {
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+
+	.no-border table, .no-border th, .no-border td {
+		border: 0px solid black;
+	}
+	table, th, td {
+	  border: 1px solid black;
+	}
+	
+	table tr th {
+		font-size: 12px;
+		font-weight: bold;
+		text-align: center;
+	}
+	table tr td {
+		font-size: 12px;
+	}
+
+	.container-radio {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		padding: 4px 0 0 2px;
+	}
+	.radio-b {
+		position: absolute;
+		font-size: 16px;
+	}
+	.radio-check-active {
+		position: absolute;
+		margin: -5px 2px 2px 4px;
+		font-size: 18px;
+	}
+	.radio-check-deactive {
+		position: absolute;
+		margin: -5px 2px 2px 4px;
+		font-size: 18px;
+		display: none;
+	}
+	
+	.container-checkbox {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		padding: 0px 0 0 2px;
+	}
+	.checkbox-b {
+		position: absolute;
+		font-size: 20px;
+	}
+	.checkbox-check-active {
+		position: absolute;
+		margin: -1px 2px 2px 4px;
+		font-size: 18px;
+	}
+	.checkbox-check-deactive {
+		position: absolute;
+		margin: -1px 2px 2px 4px;
+		font-size: 18px;
+		display: none;
+	}
+	
+	.tab-1 {
+		padding-left: 15px;
+	}
+	.tab-2 {
+		padding-left: 30px;
+	}
+	.tab-3 {
+		padding-left: 45px;
+	}
+	
+	.between-row {
+		margin-top: 10px;
+	}

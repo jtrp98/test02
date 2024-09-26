@@ -1,0 +1,37 @@
+﻿.pageeditsellproduct-container {
+
+}
+
+.pageeditsellproduct-container .button-section {
+    text-align: center;
+}
+
+@media (max-width: 999px) {
+    .pageeditsellproduct-container {
+        font-size: 20px;
+    }
+
+    .pageeditsellproduct-container .global-btn {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .pageeditsellproduct-container {
+        font-size: 22px;
+    }
+
+    .pageeditsellproduct-container .global-btn {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pageeditsellproduct-container {
+        font-size: 26px;
+    }
+
+    .pageeditsellproduct-container .global-btn {
+        font-size: 26px;
+    }
+}

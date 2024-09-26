@@ -1,0 +1,50 @@
+﻿.planeadd-container .planadd-row {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 999px) {
+
+    .planeadd-container .planadd-row {
+        font-size: 20px;
+    }
+
+    .planeadd-container .button-segment {
+        margin-top: 5px;
+    }
+
+    .planeadd-container .button-segment .global-btn {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .planeadd-container .planadd-row {
+        font-size: 22px;
+    }
+
+    .planeadd-container .button-segment {
+        margin-top: 5px;
+    }
+
+    .planeadd-container .button-segment .global-btn {
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .planeadd-container .planadd-row {
+        font-size: 26px;
+    }
+
+    .planeadd-container .button-segment {
+        margin-top: 10px;
+    }
+
+    .planeadd-container .button-segment .global-btn {
+        font-size: 26px;
+    }
+
+}

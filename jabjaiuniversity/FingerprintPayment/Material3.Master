@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Material3.master.cs" Inherits="FingerprintPayment.Material3" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/images/School Bright logo only.png" sizes="16x16 32x32" type="image/png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>School Bright</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+    <link rel="stylesheet" href="/Content/VisitHouse/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/VisitHouse/assets/css/homeVisit.css?v=<%=DateTime.Now.Ticks%>">
+
+    <asp:ContentPlaceHolder ID="Head" runat="server" />
+</head>
+
+<body>
+    <header style="display: none;">
+        <a id="aPrev" href="#">
+            <img src="/Content/VisitHouse/assets/img/ic_arrow_forward.png" alt="prev"></a>
+        <p>แบบประเมิน / เยี่ยมบ้าน</p>
+    </header>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    <script src="/Content/VisitHouse/assets/js/jquery.min.js"></script>
+    <script src="/Content/VisitHouse/assets/js/popper.min.js"></script>
+    <script src="/Content/VisitHouse/assets/js/bootstrap.min.js"></script>
+    <script src="/Content/VisitHouse/assets/js/sweetAlert.js"></script>
+
+    <asp:ContentPlaceHolder ID="Script" runat="server" />
+    <asp:ContentPlaceHolder ID="ModalPopup" runat="server" />
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sb-student-call",
+  "private_key_id": "a149de212247219716a857fe9826000cefddd143",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCUcJuS+AKJ08mn\nArxVbgmnLpI/xRRU7pSG5dbJz2thG7OxGkMBXwq2Y/YLaJ70Y92LYVMAo6woZorv\n9mHblc2y/ElmHkEpguuc2ORTcRQ+9BgFqmn/cwlWEEi4sC/VSMsH+Sr8q38Sv7xo\nFCkYwrDE1b2HdGRJFVT9loWWokE2QCcPRA0tU38ckhZvvyweK1IWknXCRYeLTdYE\n5htqCK0e2bmQEXkglE3cUmZVgqCdsdOtuf/Nk4WaifOE6hyYpE+kiRpQcSLz6lNQ\n7uckjLkhO2q1HqcJPVHyhe1REZb1fRxlPdE+aglYMB3w1DZCLCroh+6c3Tlw+6sU\nBKiOq3fhAgMBAAECggEAI06ajo1bqzVbIlSp/8b12FRhOHZTxPTfkquSGHvz3kv0\nxIQK2oVk+qeRozqODnK/hDLQx5bmsNBdLUEFGzIJVJCiE75QAQPxL2Q+gONlbajp\nGtXjMv3Fg3lJltZfdkODeWDImwNerRK6iWX8NXW/jn4Jf/HNFb4TcmLuYPs0eCbS\n2Nw6HQb+naCpPBy8wK2zxdHF3QYaBZGRs51VZ4ReDZYVA66sDOW+/h33YYcEPubn\nG+B4Av588atJmBJF9NMS4QyAMN8WcK42k3eHPox0N3QhdaBUkR3zwKQgFblb2UJ/\nKZlxVvsNxeDN//uTH1Cmao/RMIkmAOPZKxAhd4t+DQKBgQDNF3uNaEz/gsaT1ovw\nL7gDizbU3O5wFLNL75Br+uaYue7UdJT5qqtns8K4IroC/R7Ac5E1IUIUVu7vpOoi\nWBYbZ1HJd3Jo58111mZD1EA33mLHVByQcqJ7dw2ZMiSavj6xpLh7hwxk2XhIWW0o\nRi/aVZe2LCCsVDyriO5407jvtQKBgQC5STFraekvkTONyTVBnXRrlVRusO2PIdY4\nCGrwoVpoepOoA9SgR7IbVUKc+8PzihkDhcarF8/74G350pObuNBTkDKNrM86NpqR\nY8D8D24psGEj8HJjGA5Np9me6GZAt3uAkm/tzrZZbJchdILvNcr6NUBsqJWWgFTK\nyX3pSFOK/QKBgFyzy5YMWhl4TDgQ1yoW968qYvtubZxdzvl47KfSPh80k/6WP6xm\nd5mlSFOg5sFpFlhZJH6GbO7yqIfL3ETv2fZDClXtVtqSRG2KHql0LB7Ut4NvwoWM\nO2NhWdUwNBl5+q6jTPwQ/Aotvk+9lDiLGSAwZiXi5lXesZm7iEc3NDWtAoGBALQD\nYHgzVdJZB/Vg3tT43PsJAhbo3mSJQ079HqjamrOXI43A6vstrOTRWP6bvC0IpnS9\nq97eK7tSuIZXCAHq9Lu7BOKQWmT8V/+ZIw3BEA6Axl/cY8XSwVLBGLVCpNWLbfnk\nS8qHYrJOxiZCxFMTuDiPNCBdSbgGxlqemC3ljwUhAoGAeALXGoydACsjBMEVb9Kp\nBXphM+ktBCx4O7GKJTPaGvvgFigJLmY9eCMoCtyE8AgVEsJVPxW/kXIHThZJ1zYO\nIBQLlYflGg21L3J6Md79j56G8RaXlbxWbLBx0DjhhXPozIYtZF7gfKwD501FBJrb\n+xc/aEHO144SSb5ReM79cgw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "studentcall@sb-student-call.iam.gserviceaccount.com",
+  "client_id": "106634097068042357705",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/studentcall%40sb-student-call.iam.gserviceaccount.com"
+}

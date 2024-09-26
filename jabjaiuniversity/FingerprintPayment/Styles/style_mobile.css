@@ -1,0 +1,18 @@
+﻿body
+{
+}
+.for-mobile
+{
+    display: none;
+}
+@media (max-width: 600px)
+{
+    .for-mobile
+    {
+        display: block;
+    }
+    .for-desktop
+    {
+        display: none;
+    }
+}

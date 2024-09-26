@@ -1,0 +1,90 @@
+﻿input.textNumber{  
+    font-weight: normal;  
+    color: #565656;  
+    border: 1px solid #9c9c9c;  
+    /*width: 250px;  */
+    padding: 2px;
+    /*margin-bottom: 5px;  */
+    text-align: right;  
+} 
+/* by pan 20/01/2554*/ 
+/*input.textNumber.active{  
+    background: #def7d2;  
+    border: 1px solid #71d22d;  
+}*/ 
+
+input.text{  
+    font-weight: normal;  
+    color: #565656;  
+    border: 1px solid #9c9c9c;  
+    /*width: 250px;  */
+    padding: 1px;/*2px*/  
+    /*margin-bottom: 5px;  */
+    text-align: left;  
+}  
+input.text.active{  
+    background: #E4EAF2;  
+    border: 1px solid #4C77B6;  
+} 
+
+textarea.text.active{  
+    background: #E4EAF2;  
+    border: 1px solid #4C77B6;  
+}
+textarea.text{  
+    font-weight: normal;  
+    color: #565656;  
+    border: 1px solid #9c9c9c;  
+   /* width: 400px;  */
+    padding: 2px;  
+   /* margin-bottom: 5px;  */
+    text-align: left;  
+} 
+
+input.searchBox
+{
+	font-weight: normal;  
+    color: #565656;  
+    border: 1px solid #9c9c9c;  
+    /*width: 250px;  */
+    padding: 2px;  
+    /*margin-bottom: 5px;  */
+    text-align: left; 
+	/*background-color: #ffcccc;
+	background-image:url('images/objects_084.gif');
+	background-repeat:no-repeat;
+	padding-left:20px;*/
+}
+/* by pan 20/01/2554*/
+/*input.searchBox.active{  
+    background: #def7d2;  
+    border: 1px solid #71d22d;  
+} */
+
+input.show
+{
+	border :0px; 
+}
+
+/********* ModeEdit กรณีเปรียบเทียบค่า แล้วพบว่า ข้อมูลดังกล่าวถูกแก้ไขสำหรับ ตัวเลข ************/
+input.ModeEdit{  
+    background: #feb3b3;  
+    border: 1px solid #fd1111; 
+    text-align: right;  
+}  
+/******** กรณีเป็นข้อความที่อยู่ใน td ********************/
+.strRed{font-family: "Tahoma"; font-size:10pt; color: red; }
+/********* ********************************************************/
+/* by pan 20/01/2554*/
+/*input.while{  
+    color: #ffffff;  
+    border: 0px solid #ffffff;
+    cursor: pointer; 
+    font-weight:0px;
+}  
+input.while.active{  
+   color: #ffffff;  
+    border: 0px solid #ffffff;
+    cursor: pointer;   
+     font-weight:0px;
+} */

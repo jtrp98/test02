@@ -1,0 +1,45 @@
+﻿.employeeslist-container {
+
+}
+
+.employeeslist-container .adjust-col-padding {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media (max-width: 999px) {
+    .employeeslist-container {
+        font-size: 20px;
+    }
+
+    .employeeslist-container .col-space {
+        margin-bottom: 5px;
+    }
+
+    .employeeslist-container .global-btn {
+        font-size: 20px;
+        width: 180px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .employeeslist-container {
+        font-size: 22px;
+    }
+
+    .employeeslist-container .global-btn {
+        font-size: 22px;
+        width: 250px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .employeeslist-container {
+        font-size: 26px;
+    }
+
+    .employeeslist-container .global-btn {
+        font-size: 26px;
+        width: 250px;
+    }
+}

@@ -1,0 +1,81 @@
+﻿.user-add-money-container {
+    font-size: 26px;
+}
+
+.user-add-money-container .table-add-money-container {
+    text-align: center;
+}
+
+@media (max-width: 999px) {
+    .user-add-money-container {
+        font-size: 20px;
+    }
+
+    .user-add-money-container .global-btn {
+        width: 150px;
+        font-size: 20px;
+    }
+    
+    .user-add-money-container .user-add-money-button-segment {
+        text-align: center;
+    }   
+
+    .user-add-money-container .table-add-money-container {
+        padding-top: 50px;
+    }
+
+    .user-add-money-container .table-add-money-container .table-caption {
+        font-size: 22px;
+    }
+
+    .user-add-money-container .table-add-money-container .table-add-money {
+        font-size: 20px;
+    }
+    
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .user-add-money-container {
+        font-size: 22px;
+    }
+
+    .user-add-money-container .global-btn {
+        width: 150px;
+        font-size: 22px;
+    }
+
+    .user-add-money-container .user-add-money-button-segment {
+        text-align: center;
+    }
+
+    .user-add-money-container .table-add-money-container {
+        padding-top: 50px;
+    }
+
+    .user-add-money-container .table-add-money-container .table-caption {
+        font-size: 24px;
+    }
+
+    .user-add-money-container .table-add-money-container .table-add-money {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-add-money-container {
+        font-size: 26px;
+    }
+
+    .user-add-money-container .global-btn {
+        width: 110px;
+        font-size: 26px;
+    }
+
+    .user-add-money-container .table-add-money-container .table-caption {
+        font-size: 28px;
+    }
+
+    .user-add-money-container .table-add-money-container .table-add-money {
+        font-size: 26px;
+    }
+}

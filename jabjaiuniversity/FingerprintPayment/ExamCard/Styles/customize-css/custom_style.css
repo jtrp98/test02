@@ -1,0 +1,2030 @@
+﻿body input[type=text] {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*style form AdminMain.aspx*/
+.notificastion-panel .fa {
+    display: inline-block;
+    font: normal normal normal 8px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 1023px) {
+    .card-item {
+        font-size: 10px;
+    }
+
+    .card-item .status {
+        font-size: 22px;
+    }
+
+    i.card-item-icon {
+        font-size: 2.8em;
+    }
+
+
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+ 
+    .card-item {
+        font-size: 16px;
+    }
+
+    .card-item .status {
+        font-size: 30px;
+    }
+
+    i.card-item-icon {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .card-item {
+        font-size: 22px;
+
+    }
+
+    .card-item .status {
+        font-size: 36px;
+    }
+
+    i.card-item-icon {
+        font-size: 3em;
+    }
+
+    .notificastion-panel .list-group {
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 1360px) {
+    .card-item {
+        font-size: 24px;
+
+    }
+
+    .card-item .status {
+        font-size: 36px;
+    }
+
+    i.card-item-icon {
+        font-size: 3em;
+    }
+
+    .notificastion-panel .list-group {
+        font-size: 18px;
+    }
+}
+
+/*style Stockadd.aspx*/
+.stock-add-container {
+
+}
+
+@media (max-width: 999px) {
+    .stock-add-label {
+        font-size: 13px;
+        padding-right: 5px;
+    }
+
+    .stock-add-container input[type=button] {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .stock-add-label {
+        font-size: 16px;
+        padding-right: 5px;
+    }
+
+    .stock-add-container input[type=button] {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .stock-add-label {
+        font-size: 26px;
+        padding-right: 5px;
+    }
+
+    .stock-add-container input[type=button] {
+        font-size: 26px;
+    }
+}
+
+/*style useraddmoney.aspx*/
+#divhtml tr.active td {
+    text-align: center;
+}
+
+@media (max-width: 1023px) {
+    .button-segment {
+        width: 500px;
+        text-align: center;
+    }
+
+    .button-segment input[type=button] {
+        font-size: 18px;
+        width: 200px;
+    }
+
+    div.table-add-money {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px){
+    
+    div.button-segment {
+        width: 320px;
+        text-align: right;
+    }
+
+    div.button-segment input[type=button] {
+        font-size: 18px;
+        width: 100px;
+    }
+
+    div.table-add-money {
+        float: right;
+        width: 58%;
+    }
+
+    #divhtml table tr.active {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    div.button-segment {
+        width: 315px;
+        text-align: right;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1359px) {
+    div.button-segment {
+        width: 352px;
+        text-align: right;
+    }
+
+    div.button-segment input[type=button] {
+        font-size: 18px;
+        width: 85px;
+    }
+
+    div.table-add-money {
+        float: right;
+        width: 65%;
+    }
+}
+
+@media (min-width: 1360px) {
+    #divmain label {
+        font-size: 22px;
+    }
+
+    div.button-segment {
+        width: 374px;
+        text-align: right;
+    }
+
+    div.button-segment input[type=button] {
+        font-size: 20px;
+        width: 90px;
+    }
+
+    div.table-add-money {
+        float: right;
+        width: 65%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+    #divmain label {
+        font-size: 18px;
+    }
+}
+
+/*style pageeditsellproduct.aspx*/
+@media (max-width: 1023px) {
+    div.detail-card-2 {
+        min-height: 200px;
+        font-family: thaifont;
+        font-size: 26px;
+        color: #555;
+        padding: 30px 10px;
+        width: 500px;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0px;
+        border-left: 1px solid #e7e7e7;
+        background-color: #eee;
+        padding-top: 30px;
+    }
+
+    .button-container .btn {
+            min-width: 140px;
+            font-size: 24px;
+    }
+
+    .page-edit-sell-button-segment .custom-button {
+        min-width: 180px;
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1119px) {
+    div.detail-card-2 {
+        min-height: 200px;
+        font-family: thaifont;
+        font-size: 26px;
+        color: #555;
+        padding: 30px 10px;
+        width: 600px;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    div.button-container input[type=button].btn {
+            min-width: 174px;
+            font-size: 26px;
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1359px) {
+    div.detail-card-2 {
+        min-height: 200px;
+        font-family: thaifont;
+        font-size: 26px;
+        color: #555;
+        padding: 30px 10px;
+        width: 800px;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    div.button-container input[type=button].btn {
+            min-width: 180px;
+            font-size: 26px;
+    }
+
+}
+
+@media (min-width: 1360px) {
+    div.detail-card-2 {
+        min-height: 200px;
+        font-family: thaifont;
+        font-size: 26px;
+        color: #555;
+        padding: 30px 10px;
+        width: 1000px;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    div.button-container input[type=button].btn {
+            width: 180px;
+            font-size: 26px;
+    }
+}
+
+
+/*style holidaysettings.aspx*/
+.holiday-container {
+
+}
+
+@media (max-width: 999px) {
+    .holiday-container {
+        font-size: 18px;
+    }
+
+    .holiday-container table td:first-child {
+        width: 10%;
+    }
+
+    .holiday-container .date-container input[type=text] {
+        float: left;
+        width: 100px;
+    }
+
+    .holiday-container .date-container input[type=text] + span {
+        float: left;
+        width: 35px;
+        height: 35px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .holiday-container .custom-button {
+        font-size: 18px;
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .holiday-table-container .nav-tabs-title li a {
+        font-size: 20px;
+    }
+
+    .holiday-table-container .cool-table td {
+        font-size: 20px;
+        text-align: center
+    }
+
+    .holiday-table-container .cool-table .btn {
+        font-size: 18px;
+        width: 100px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width:1000px) and (max-width: 1199px) {
+    .holiday-container {
+        font-size: 22px;
+    }
+
+    .holiday-container table td:first-child {
+        width: 15%;
+    }
+
+    .holiday-container .date-container input[type=text] {
+        float: left;
+        width: 120px;
+    }
+
+    .holiday-container .date-container span.icon {
+        font-size: 16px;
+        padding-top: 6px;
+    }
+
+    .holiday-container .date-container input[type=text] + span {
+        float: left;
+        width: 41px;
+        height: 41px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .holiday-container .custom-button {
+        font-size: 22px;
+        width: 120px;
+        margin-top: 20px;
+    }
+
+    .holiday-table-container .nav-tabs-title li a {
+        font-size: 22px;
+    }
+
+    .holiday-table-container .cool-table td {
+        font-size: 22px;
+        text-align: center
+    }
+
+    .holiday-table-container .cool-table .btn {
+        font-size: 20px;
+        width: 100px;
+    }
+}
+
+@media (min-width:1200px) {
+    .holiday-container {
+        font-size: 26px;
+    }
+
+    .holiday-container table td:first-child {
+        width: 15%;
+    }
+
+    .holiday-container .date-container input[type=text] {
+        float: left;
+        width: 150px;
+    }
+
+    .holiday-container .date-container span.icon {
+        font-size: 18px;
+        padding-top: 6px;
+    }
+
+    .holiday-container .date-container input[type=text] + span {
+        float: left;
+        width: 48px;
+        height: 48px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .holiday-container .custom-button {
+        font-size: 26px;
+        width: 160px;
+        margin-top: 20px;
+    }
+
+    .holiday-table-container .nav-tabs-title li a {
+        font-size: 26px;
+    }
+
+    .holiday-table-container .cool-table td {
+        font-size: 26px;
+        text-align: center
+    }
+
+    .holiday-table-container .cool-table .btn {
+        font-size: 24px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        width: 140px;
+    }
+}
+
+.btnModalFooter {
+    font-size: 20px;
+}
+
+.table-sub-level {
+    font-size: 20px;
+}
+
+/*Style timeiosettings.aspx*/
+@media (max-width: 999px) {
+     .minute-box {
+        width: 50px;
+        height: 38px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    div.time-unit { 
+        font-size: 20px;
+        text-align:center;
+        vertical-align:middle;
+    }
+
+    .input-group .clock-box {
+        width: 45px;
+        height: 38px;
+        font-size: 20px;
+        text-align:center;
+        z-index: 0;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .minute-box {
+        width: 40px;
+        height: 38px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    div.time-unit { 
+        font-size: 20px;
+        padding-top: 3px;
+        padding-left: 20px;
+        vertical-align:middle;
+    }
+
+    .input-group .clock-box {
+        width: 45px;
+        height: 38px;
+        font-size: 20px;
+        text-align:center;
+        z-index: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .minute-box {
+        width: 50px;
+        height: 38px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    div.time-unit { 
+        font-size: 22px;
+    }
+
+    .input-group .clock-box {
+        width: 60px;
+        height: 38px;
+        font-size: 25px;
+        text-align:center;
+        z-index: 0;
+    }
+}
+
+/* timeio modal */
+.timeio-modal-container {
+    font-size: 22px;
+}
+
+.timeio-modal-container .custom-button {
+    font-size: 22px;
+}
+
+/*style sublevelsettings.aspx*/
+
+#ctl00_MainContent_dgd_ctl02_btnDel {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+@media (max-width: 999px) {
+    .cool-table-3 .headerCell {
+        background-color: #337AB7;
+        color: White;
+        height: 65px;
+        font-size: 18px;
+        text-align:left;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+    .cool-table-3 .headerCell td:nth-child(1) {
+        width: 30%;
+    }
+
+    .cool-table-3 .headerCell td:nth-child(2) {
+        width: 30%;
+    }
+
+    .cool-table-3 .headerCell td:nth-child(3) {
+        width: 40%;
+    }
+
+    .cool-table-3 .custom-button {
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    table.cool-table-3 .headerCell {
+        background-color: #337AB7;
+        color: White;
+        height: 65px;
+        font-size: 20px;
+        text-align:left;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+    .cool-table-3 .headerCell td:nth-child(1) {
+        width: 25%;
+    }
+
+    .cool-table-3 .headerCell td:nth-child(2) {
+        width: 25%;
+    }
+
+    .cool-table-3 .headerCell td:nth-child(3) {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cool-table-3 .headerCell td:nth-child(1) {
+        width: 25%;
+    }
+
+    .cool-table-3 .headerCell td:nth-child(2) {
+        width: 30%;
+    }
+
+    .cool-table-3 .headerCell td:nth-child(3) {
+        width: 45%;
+    }
+}
+
+/*Style subleveladdtable.aspx*/
+@media (max-width: 999px) {
+    .label-table {
+        width: 90%;
+        font-size: 30px;
+        margin-left: 26px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .label-table {
+        width: 90%;
+        font-size: 30px;
+        margin-left: 35px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1359px) {
+    .label-table {
+        width: 90%;
+        font-size: 30px;
+        margin-left: 48px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .label-table {
+        width: 90%;
+        font-size: 30px;
+        margin-left: 50px;
+    }
+}
+
+.time-table {
+
+}
+
+.time-table td:first-child {
+    text-align:left;
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .time-table .minute-box {
+        width: 40px;
+        height: 38px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .time-table div.time-unit { 
+        font-size: 20px;
+        padding-top: 3px;
+        padding-left: 20px;
+        vertical-align:middle;
+    }
+
+    .time-table .input-group .clock-box {
+        width: 40px;
+        height: 38px;
+        font-size: 20px;
+        text-align:center;
+        z-index: 0;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1359px) {
+    .time-table .minute-box {
+        width: 50px;
+        height: 38px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .time-table div.time-unit { 
+        font-size: 24px;
+    }
+
+    .time-table .input-group .clock-box {
+        width: 59px;
+        height: 38px;
+        font-size: 25px;
+        text-align:center;
+        z-index: 0;
+    }
+}
+
+@media (min-width: 1360px) {
+    .time-table .minute-box {
+        width: 50px;
+        height: 38px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .time-table div.time-unit { 
+        font-size: 24px;
+    }
+
+    .time-table .input-group .clock-box {
+        width: 70px;
+        height: 38px;
+        font-size: 25px;
+        text-align:center;
+        z-index: 0;
+    }
+}
+
+/*style roomlist.aspx*/
+.button-fixed-width {
+    width: 80px;
+}
+
+.roomlist-dialog .custom-btn {
+    font-size: 22px;
+}
+
+/*style roomadd.aspx*/
+.roomadd-dialog {
+
+}
+
+.roomadd-dialog .custom-btn {
+    font-size: 22px;
+}
+
+.roomadd-dialog * {
+    font-size: 22px;
+}
+
+#modalconfirm .modal-footer button {
+    font-size: 22px;
+}
+
+/*style subleveledit.aspx*/
+@media (max-width: 999px) {
+    .subleveledit-btn-footer input[type=submit] {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .subleveledit-btn-footer input[type=submit] {
+        font-size: 20px;
+    }
+}
+
+/*style planelist.aspx*/
+.cool-table-4 {
+
+}
+
+@media (max-width: 999px) {
+  
+    .cool-table-4 .headerCell td:nth-child(1) {
+        width: 25%;
+    }
+
+    .cool-table-4 .headerCell td:nth-child(2) {
+        width: 25%;
+    }
+
+    .cool-table-4 .headerCell td:nth-child(3) {
+        width: 50%;
+    }
+
+    .cool-table-4 .custom-button-add {
+        font-size: 16px;
+    }
+
+    .cool-table-4 .custom-button {
+        font-size: 16px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .cool-table-4 .headerCell td:nth-child(1) {
+        width: 27%;
+    }
+
+    .cool-table-4 .headerCell td:nth-child(2) {
+        width: 27%;
+    }
+
+    .cool-table-4 .headerCell td:nth-child(3) {
+        width: 46%;
+    }
+
+    .cool-table-4 td {
+        font-size: 22px;
+    }
+
+    .cool-table-4 .custom-button-add {
+        font-size: 20px;
+    }
+
+    .cool-table-4 .custom-button {
+        font-size: 20px;
+        width: 120px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .cool-table-4 .headerCell td:nth-child(1) {
+        width: 30%;
+    }
+
+    .cool-table-4 .headerCell td:nth-child(2) {
+        width: 32%;
+    }
+
+    .cool-table-4 .headerCell td:nth-child(3) {
+        width: 38%;
+    }
+
+    .cool-table-4 td {
+        font-size: 26px;
+    }
+
+    .cool-table-4 .custom-button-add {
+        font-size: 24px;
+    }
+
+    .cool-table-4 .custom-button {
+        font-size: 24px;
+        width: 150px;
+    }
+}
+
+/*planeedit.aspx*/
+@media (max-width: 999px) {
+    .planeedit-container * {
+        font-size: 20px;
+    }
+
+    .planeedit-container input[type=submit] {
+        font-size: 16px;
+        width: 140px;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .planeedit-container * {
+        font-size: 22px;
+    }
+
+    .planeedit-container input[type=submit] {
+        font-size: 18px;
+        width: 140px;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .planeedit-container * {
+        font-size: 26px;
+    }
+
+    .planeedit-container input[type=submit] {
+        font-size: 22px;
+        width: 180px;
+        margin-top: 15px;
+    }
+}
+
+
+/*planadd.aspx*/
+.planadd-row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Style periodslist.aspx */
+.cool-table-5 {
+
+}
+
+.cool-table-5 .btn-custom {
+    font-size: 20px;
+}
+
+@media (max-width: 999px) {
+    .cool-table-5 .headerCell td:nth-child(1) {
+        width: 20%;
+        text-align: center;
+    }
+
+    .cool-table-5 .headerCell td:nth-child(2) {
+        width: 40%;
+    }
+
+    .cool-table-5 .headerCell td:nth-child(3) {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .cool-table-5 .headerCell td:nth-child(1) {
+        width: 30%;
+        text-align: center;
+    }
+
+    .cool-table-5 .headerCell td:nth-child(2) {
+        width: 40%;
+    }
+
+    .cool-table-5 .headerCell td:nth-child(3) {
+        width: 30%;
+    }
+
+}
+
+/*periodsadd.aspx*/
+
+/*select class tab*/
+
+.periodadd-container {
+
+}
+
+.table-select-class {
+
+}
+
+.periodsadd-table {
+
+}
+
+.periodsadd-table input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+.table-select-class input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 999px) {
+   
+    .periodsadd-table td {
+        font-size: 20px;
+        padding-bottom: 2px;
+    }
+
+    .table-select-class i {
+        font-size: 18px;
+    }
+
+    .table-select-class td {
+        font-size: 20px;
+    }
+
+    .table-select-class .tableHeader {
+        font-size: 20px;
+    }
+
+    .table-select-class a.btn-link {
+        font-size: 18px;
+    }
+
+    .periodsadd-button-segment input[type=submit] {
+        width: 120px;
+        font-size: 16px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .nav-select-class a.select-class-link {
+        font-size: 20px;
+    }
+
+    .periodadd-container td, .periodadd-container input[type=text] {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .periodsadd-table td {
+        font-size: 22px;
+        padding-bottom: 2px;
+    }
+
+    .table-select-class i {
+        font-size: 18px;
+    }
+
+    .table-select-class td {
+        font-size: 20px;
+    }
+
+    .table-select-class .tableHeader {
+        font-size: 24px;
+    }
+
+    .table-select-class a.btn-link {
+        font-size: 16px;
+    }
+
+    .periodsadd-button-segment input[type=submit] {
+        width: 120px;
+        font-size: 18px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .nav-select-class a.select-class-link {
+        font-size: 24px;
+    }
+
+    .periodadd-container td, .periodadd-container input[type=text] {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .periodsadd-table td {
+        font-size: 25px;
+        padding-bottom: 2px;
+    }
+
+    .table-select-class i {
+        font-size: 20px;
+    }
+
+    .table-select-class td {
+        font-size: 22px;
+    }
+
+    .table-select-class .tableHeader {
+        font-size: 25px;
+    }
+
+    .table-select-class a.btn-link {
+        font-size: 22px;
+    }
+
+    .periodsadd-button-segment input[type=submit] {
+        width: 120px;
+        font-size: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .nav-select-class a.select-class-link {
+        font-size: 26px;
+    }
+
+    .periodadd-container td, .periodadd-container input[type=text] {
+        font-size: 26px;
+    }
+}
+
+/*plans-term.aspx*/
+@media (max-width: 999px) {
+    .plans-term-caption {
+        font-size: 22px;
+    }
+}
+
+.cool-table-6 {
+}
+
+@media (max-width: 999px) {
+    .cool-table-6 .headerCell td {
+        font-size: 20px;
+    }
+
+    .cool-table-6 td {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .cool-table-6 a {
+        font-size: 20px;
+        padding: 0px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .cool-table-6 .headerCell td {
+        font-size: 20px;
+    }
+
+    .cool-table-6 td {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .cool-table-6 a {
+        font-size: 20px;
+        padding: 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cool-table-6 .headerCell td {
+        font-size: 26px;
+    }
+
+    .cool-table-6 td {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .cool-table-6 a {
+        font-size: 26px;
+        padding: 0px;
+    }
+}
+
+/*plans-room.aspx*/
+.tab-titles {
+}
+
+@media (max-width: 999px) {
+    .tab-titles a.tabs-link {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .tab-titles a.tabs-link {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tab-titles a.tabs-link {
+        font-size: 28px;
+    }
+}
+
+/*style plans-schedule.aspx*/
+.btn-large-size {
+   min-width: 100px;
+   font-size: 22px;
+}
+
+/*style plansScheduledetail.aspx*/
+.table-schedule-detail {
+
+}
+
+.table-schedule-detail td {
+    padding-bottom: 10px;
+}
+
+.schedule-operator {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align:center;
+}
+
+/*Style reporttempscanning.aspx*/
+
+@media (max-width: 999px) {
+    .report-temp-scanning-container {
+        font-size: 20px;
+    }
+
+        .report-temp-scanning-container button {
+            font-size: 18px;
+        }
+}
+
+@media (min-width: 1000px) {
+    .report-temp-scanning-container {
+        font-size: 26px;
+    }
+
+        .report-temp-scanning-container button {
+            font-size: 22px;
+        }
+}
+
+#ddl_report {
+    width: 100%;
+}
+
+/*style employeesadd.aspx*/
+.employee-add-form {
+
+}
+
+@media (max-width: 999px) {
+    .employee-add-form {
+        font-size: 18px;
+    }
+    .employee-add-form input[type=button].btn, .employee-add-form input[type=submit].btn {
+        font-size: 18px;
+    }
+
+    #ctl00_MainContent_btnImport {
+        margin-top: -7px;
+    }
+
+    .employee-add-form input[type=button].btn-fixed-width, .employee-add-form input[type=submit].btn-fixed-width {
+        width: 110px;
+    }
+
+    .employee-add-form label {
+        font-size: 22px;
+    }
+
+    .cool-table-7 .headerCell td {
+        font-size: 22px;
+    }
+
+    .cool-table-7 td {
+        font-size: 20px;
+    }
+
+    .employee-add-form input[type=radio] + label {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .employee-add-form input[type=button].btn, .employee-add-form input[type=submit].btn {
+        font-size: 22px;
+    }
+
+    #ctl00_MainContent_btnImport {
+        margin-top: -5px;
+    }
+
+    .employee-add-form input[type=button].btn-fixed-width, .employee-add-form input[type=submit].btn-fixed-width {
+        width: 120px;
+    }
+
+    .employee-add-form label {
+        font-size: 24px;
+    }
+
+    .cool-table-7 .headerCell td {
+        font-size: 24px;
+    }
+
+    .cool-table-7 td {
+        font-size: 22px;
+    }
+
+    .employee-add-form input[type=radio] + label {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .employee-add-form input[type=button].btn, .employee-add-form input[type=submit].btn {
+        font-size: 24px;
+    }
+
+    #ctl00_MainContent_btnImport {
+        margin-top: -5px;
+    }
+
+    .employee-add-form input[type=button].btn-fixed-width, .employee-add-form input[type=submit].btn-fixed-width {
+        width: 150px;
+    }
+
+    .employee-add-form label {
+        font-size: 26px;
+    }
+
+    .cool-table-7 .headerCell td {
+        font-size: 26px;
+    }
+
+    .cool-table-7 td {
+        font-size: 24px;
+    }
+
+    .employee-add-form input[type=radio] + label {
+        font-size: 24px;
+    }
+}
+
+/*Style Userlist.aspx*/
+@media (max-width: 999px) {
+    .userlist-container {
+        font-size: 18px;
+    }
+
+    .userlist-container label {
+        font-size: 18px;
+    }
+
+    .userlist-container select {
+        margin-bottom: 15px;
+    }
+
+    .userlist-container #row-name {
+        margin-top: -15px;
+    }
+
+    .userlist-container .col-button a {
+        font-size: 18px;
+        width: 100%;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .userlist-container .custom-button {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .userlist-container {
+        font-size: 20px;
+    }
+
+    .userlist-container label {
+        font-size: 20px;
+    }
+
+    .userlist-container .col-button a {
+        font-size: 18px;
+        width: 90%;
+        text-align: center;
+        margin-top: -3px;
+        margin-left: 15px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        
+    }
+
+    .userlist-container .custom-button {
+        width: 100%;
+        margin-top: 16px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1359px) {
+    .userlist-container {
+        font-size: 26px;
+    }
+
+    .userlist-container label {
+        font-size: 26px;
+    }
+
+    .userlist-container .col-button a {
+        font-size: 26px;
+        width: 93%;
+        text-align: center;
+        margin-top: -3px;
+        margin-left: 15px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        
+    }
+
+    .userlist-container .custom-button {
+        width: 100%;
+        margin-top: 16px;
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .userlist-container {
+        font-size: 26px;
+    }
+
+    .userlist-container label {
+        font-size: 26px;
+    }
+
+    .userlist-container .col-button a {
+        font-size: 26px;
+        width: 93.5%;
+        text-align: center;
+        margin-top: -3px;
+        margin-left: 15px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        
+    }
+
+    .userlist-container .custom-button {
+        width: 100%;
+        margin-top: 16px;
+        font-size: 26px;
+    }
+}
+
+/*Style maclist.aspx*/
+@media (max-width: 1199px) {
+    a.btn-maclist-fixed-width, input[type=submit].btn-maclist-fixed-width {
+        margin-left: 60px;
+        width: 120px;
+    }
+
+    .cool-table-8 a.btn-phone-data {
+        width: 120px;
+        margin-bottom: 5px;
+    }
+
+    .cool-table-8 .headerCell td:nth-child(1) {
+        width: 40%;
+    }
+
+    .cool-table-8 .headerCell td:nth-child(2) {
+        width: 30%;
+        text-align:center;
+    }
+
+    .cool-table-8 .headerCell td:nth-child(3) {
+        width: 30%;
+    }
+
+    .cool-table-8 td {
+        text-align:center;
+    }
+}
+
+@media (min-width: 1200px) {
+    a.btn-maclist-fixed-width, input[type=submit].btn-maclist-fixed-width {
+        width: 150px;
+    }
+
+    .cool-table-8 .headerCell td:nth-child(1) {
+        width: 30%;
+    }
+
+    .cool-table-8 .headerCell td:nth-child(2) {
+        width: 30%;
+    }
+
+    .cool-table-8 .headerCell td:nth-child(3) {
+        width: 40%;
+    }
+
+}
+/*style macsetting.aspx*/
+.macsetting-container {
+    font-size: 24px;
+}
+
+.macsetting-container label, .macsetting-container input {
+    font-size: 24px;
+}
+
+.macsetting-container input[type=radio] + span {
+    font-size: 24px;
+}
+
+/*style macadd.aspx*/
+.macadd-container {
+
+}
+
+.macadd-container .detail-box {
+    font-size: 26px;
+}
+
+/*style companyedit.aspx*/
+@media (max-width: 999px) {
+    .companyedit-container {
+        font-size: 22px;
+    }
+
+    .companyedit-container input[type=submit] {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .companyedit-container {
+        font-size: 26px;
+    }
+
+    .companyedit-container input[type=submit] {
+        font-size: 26px;
+    }
+}
+
+/*pagcashsale.aspx*/
+.page-cash-sell-button-segment {
+
+}
+
+@media (max-width: 999px) {
+    .page-cash-sell-button-segment div:first-child {
+        margin-bottom: 10px;
+    }
+
+    .page-cash-sell-button-segment .custom-button {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .page-cash-sell-button-segment .custom-button {
+        font-size: 18px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-cash-sell-button-segment .custom-button {
+        font-size: 26px;
+        width: 100%;
+    }
+}
+
+/*style smsedit.aspx*/
+.smsedit-container textarea {
+    width: 100%;
+    height: 200px;
+}
+
+@media (max-width: 999px) {
+    .smsedit-container textarea {
+        font-size: 18px;
+    }
+
+    .smsedit-container .custom-button {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .smsedit-container textarea {
+        font-size: 26px;
+    }
+
+    .smsedit-container .custom-button {
+        font-size: 26px;
+    }
+}
+
+.checkbox-container-20 input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+/* subleveladd.aspx */
+.subleveladd-container {
+}
+
+@media (max-width: 999px) {
+    .subleveladd-container {
+        font-size: 20px;
+    }
+
+    .subleveladd-container .custom-button {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .subleveladd-container {
+        font-size: 24px;
+    }
+
+    .subleveladd-container .custom-button {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .subleveladd-container {
+        font-size: 26px;
+    }
+
+    .subleveladd-container .custom-button {
+        font-size: 26px;
+    }
+}
+
+/*typeedit.aspx*/
+.typeedit-container * {
+    font-size: 26px;
+}
+
+.typeedit-container input[type=submit] {
+    font-size: 24px;
+}
+
+/*productadd.aspx*/
+.productadd-container {
+
+}
+
+@media (max-width: 999px) {
+    .productadd-container input[type=submit] {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .productadd-container input[type=submit] {
+        font-size: 26px;
+    }
+}
+
+/*yearsettings.aspx*/
+.yearsettting-container {
+
+}
+
+@media (max-width: 999px) {
+    .yearsettting-container div {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .yearsettting-container {
+        font-size: 18px;
+    }
+
+    .yearsettting-container select {
+        width: 93px;
+    }
+
+    .yearsettting-container input[type=text] {
+        width: 128px;
+    }
+
+    .yearsettting-container .date-container input[type=text] {
+        float: left;
+        width: 95px;
+    }
+
+    .yearsettting-container .date-container input[type=text] + span {
+        float: left;
+        width: 35px;
+        height: 35px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .yearsettting-container .custom-button {
+        font-size: 18px;
+    }
+
+    .yearsettting-container .custom-button-add {
+        width:290px;
+    }
+
+    .yearsettting-container .custom-button-fixed-width {
+        width: 100px;
+    }
+}
+
+@media (min-width:1000px) and (max-width: 1199px) {
+    
+    .yearsettting-container {
+        font-size: 22px;
+    }
+
+    .yearsettting-container select {
+        width: 108px;
+    }
+
+    .yearsettting-container input[type=text] {
+        width: 143px;
+    }
+
+    .yearsettting-container .date-container input[type=text] {
+        float: left;
+        width: 110px;
+    }
+
+    .yearsettting-container .date-container span.icon {
+        padding-top: 5px;
+    }
+
+    .yearsettting-container .date-container input[type=text] + span {
+        float: left;
+        width: 35px;
+        height: 41px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .yearsettting-container .custom-button {
+        font-size: 22px;
+    }
+
+    .yearsettting-container .custom-button-add {
+        width:290px;
+    }
+
+    .yearsettting-container .custom-button-fixed-width {
+        width: 100px;
+    }
+}
+
+@media (min-width:1200px) {
+    
+    .yearsettting-container {
+        font-size: 26px;
+    }
+
+    .yearsettting-container select {
+        width: 138px;
+    }
+
+    .yearsettting-container input[type=text] {
+        width: 185px;
+    }
+
+    .yearsettting-container .date-container input[type=text] {
+        float: left;
+        width: 140px;
+    }
+
+    .yearsettting-container .date-container span.icon {
+        padding-top: 6px;
+        font-size: 18px;
+    }
+
+    .yearsettting-container .date-container input[type=text] + span {
+        float: left;
+        width: 47px;
+        height: 47px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .yearsettting-container .custom-button {
+        font-size: 26px;
+    }
+
+    .yearsettting-container .custom-button-add {
+        width:400px;
+    }
+
+    .yearsettting-container .custom-button-fixed-width {
+        width: 130px;
+    }
+}
+
+@media (max-width: 999px) {
+    .leveladd-container {
+        font-size: 20px;
+    }
+
+    .leveladd-container .custom-button {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .leveladd-container {
+        font-size: 26px;
+    }
+
+    .leveladd-container .custom-button {
+        font-size: 26px;
+    }
+}
+
+/*Useradd.aspx*/
+.useradd-container {
+
+}
+
+@media (max-width: 999px) {
+    .useradd-container {
+        font-size: 20px;
+    }
+
+    .useradd-container input[type=submit] {
+        font-size: 20px;
+    }
+
+    .useradd-bl-container {
+        font-size: 20px;
+    }
+
+    .useradd-bl-container .label-header {
+        font-size: 26px;
+    }
+
+    .useradd-bl-container .img-delete-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .useradd-bl-container .row-search-container div:nth-child(1), .useradd-bl-container .row-search-container div:nth-child(3){
+        padding: 0px;
+    }
+
+    .useradd-bl-container .TProduct {
+        font-size: 20px;
+    }
+
+    .useradd-bl-container div#Type_1 {
+        font-size: 24px;
+    }
+
+    .useradd-bl-container input[type=submit] {
+        font-size: 20px;
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .useradd-container {
+        font-size: 24px;
+    }
+
+    .useradd-container input[type=submit] {
+        font-size: 24px;
+    }
+
+    .useradd-bl-container {
+        font-size: 24px;
+    }
+
+    .useradd-bl-container .label-header {
+        font-size: 28px;
+    }
+
+    .useradd-bl-container .img-delete-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .useradd-bl-container .row-search-container div:nth-child(1), .useradd-bl-container .row-search-container div:nth-child(3){
+        padding: 0px;
+    }
+
+    .useradd-bl-container .TProduct {
+        font-size: 24px;
+    }
+
+    .useradd-bl-container div#Type_1 {
+        font-size: 26px;
+    }
+
+    .useradd-bl-container input[type=submit] {
+        font-size: 24px;
+        width: 120px;
+    }
+}
+
+@media (min-width: 1200px) {
+     .useradd-container {
+        font-size: 26px;
+    }
+
+    .useradd-container input[type=submit] {
+        font-size: 26px;
+    }
+
+    .useradd-bl-container {
+        font-size: 26px;
+    }
+
+    .useradd-bl-container .label-header {
+        font-size: 30px;
+    }
+
+    .useradd-bl-container .img-delete-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    
+
+    .useradd-bl-container .TProduct {
+        font-size: 26px;
+    }
+
+    .useradd-bl-container div#Type_1 {
+        font-size: 28px;
+    }
+
+    .useradd-bl-container input[type=submit] {
+        font-size: 26px;
+        width: 150px;
+    }
+}
+
+/*leavelist.aspx*/
+.leavelist-modal-container {
+    font-size: 22px;
+}
+
+.leavelist-modal-container .modal-footer button {
+    font-size: 22px;
+    min-width: 80px;
+}
+
+.leavelist-container {
+
+}
+
+@media (max-width:999px) {
+    .leavelist-container .cool-table td:nth-child(1) {
+        width: 20%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(2) {
+        width: 20%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(3) {
+        width: 30%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(4) {
+        width: 30%;
+    }
+
+    .leavelist-container .cool-table .btn {
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width:1000px) and (max-width:1199px) {
+    .leavelist-container .cool-table td:nth-child(1) {
+        width: 20%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(2) {
+        width: 20%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(3) {
+        width: 30%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(4) {
+        width: 30%;
+    }
+
+    .leavelist-container .cool-table .btn {
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width:1200px) and (max-width: 1359px) {
+    .leavelist-container .cool-table td:nth-child(1) {
+        width: 15%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(2) {
+        width: 15%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(3) {
+        width: 22%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(4) {
+        width: 48%;
+    }
+}
+
+@media (min-width:1360px) {
+    .leavelist-container .cool-table td:nth-child(1) {
+        width: 16%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(2) {
+        width: 16%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(3) {
+        width: 25%;
+    }
+
+    .leavelist-container .cool-table td:nth-child(4) {
+        width: 43%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+

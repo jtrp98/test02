@@ -1,0 +1,38 @@
+﻿.periodlist-container {
+
+}
+
+.periodlist-container .periodlist-table {
+
+}
+
+.periodlist-container .periodlist-table td {
+    vertical-align: middle;
+}
+
+.periodlist-container .periodlist-table .headerCell td:nth-child(1), .periodlist-container .periodlist-table .headerCell td:nth-child(2) {
+    text-align: center;
+}
+
+ 
+
+@media (max-width: 999px) {
+    .periodlist-container .global-btn {
+        font-size: 20px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .periodlist-container .global-btn {
+        font-size: 22px;
+        width: 120px;
+    }
+}
+
+@media (min-width: 1200px) {
+   .periodlist-container .global-btn {
+        font-size: 26px;
+        width: 130px;
+    }
+}

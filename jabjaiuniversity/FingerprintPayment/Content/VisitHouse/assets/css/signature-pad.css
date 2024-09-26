@@ -1,0 +1,90 @@
+.sign-block{
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  margin-top: 10px;
+}
+
+.signature {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  background: white;
+  top: 0;
+  bottom: 0;
+}
+
+.signature-pad {
+  position: relative;
+  display: flex;
+  font-size: 16px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.signature-pad--header img{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+  color: #FF7A62;
+  z-index: 9999;
+}
+
+.signature-pad--body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.signature-pad--body canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.signature-pad--footer {
+  color: #C3C3C3;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 8px;
+}
+
+.signature-pad--actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.signature-pad--actions .btn{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+#signModal{
+  overflow-y: hidden;
+}
+
+#signModal .modal-dialog{
+  margin: 0;
+}
+
+#signModal .modal-header{
+  border-bottom: 0;
+}
+
+#signModal .modal-content{
+  border: none;
+  border-radius: 0;
+}

@@ -1,0 +1,141 @@
+﻿
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 12pt "Tahoma";
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.page {
+    width: 105mm;
+    min-height: 148mm;
+    padding: 1.0mm 1.2mm 1.0mm 1.6mm;
+    margin: 10mm auto 2mm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /*background: #FFEAEA;*/
+}
+
+.subpage {
+    /*padding: 1cm;*/
+    border: 0px #ccc solid;
+    height: 145mm;
+    /*outline: 2cm #FFEAEA solid;*/
+    background: white;
+    position: relative;
+}
+
+@page {
+    size: A6;
+    margin: 0;
+}
+
+@media print {
+
+    @page {
+        size: A6;
+        margin: 0;
+    }
+
+    html, body {
+        width: 105mm;
+        height: 148mm;
+    }
+
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+
+    .no-print-me {
+        display: none;
+    }
+
+    .table-fixed {
+        table-layout: fixed;
+    }
+
+        .table-fixed td {
+            white-space: nowrap;
+        }
+}
+
+.school-logo {
+    float: left;
+    /*position: absolute;*/
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-label {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.header-title {
+    font-size: 15px;
+    font-weight: bold;
+    /*line-height: 1;*/
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.no-border table, .no-border th, .no-border td {
+    border: 0px solid black;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+    table tr th {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    table tr td {
+        font-size: 12px;
+    }
+
+.tab-2 {
+    padding-left: 30px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 115.5%;
+    height: 14rem;
+    margin: 0px 0px 0px -60px;
+}

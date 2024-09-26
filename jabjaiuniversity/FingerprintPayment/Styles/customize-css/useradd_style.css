@@ -1,0 +1,77 @@
+﻿.useradd-container {
+
+}
+
+@media (max-width: 999px) {
+
+    .useradd-container {
+        font-size: 20px;
+    }
+
+    .useradd-container .label-header {
+        font-size: 22px;
+    }
+
+    .useradd-container div[id^="Type_"] {
+        font-size: 20px;
+    }
+
+    .useradd-container div[id^="Type_"] div {
+        font-size: 20px;
+    }
+
+    .useradd-container .global-btn {
+        font-size: 20px;
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .useradd-container {
+        font-size: 22px;
+    }
+
+    .useradd-container .label-header {
+        font-size: 24px;
+    }
+
+    .useradd-container div[id^="Type_"] {
+        font-size: 22px;
+    }
+
+    .useradd-container div[id^="Type_"] div {
+        font-size: 22px;
+    }
+
+    .useradd-container .global-btn {
+        font-size: 22px;
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .useradd-container {
+        font-size: 26px;
+    }
+
+    .useradd-container .label-header {
+        font-size: 28px;
+    }
+
+    .useradd-container div[id^="Type_"] {
+        font-size: 26px;
+    }
+
+    .useradd-container div[id^="Type_"] div {
+        font-size: 26px;
+    }
+
+    .useradd-container .global-btn {
+        font-size: 26px;
+        width: 120px;
+    }
+}

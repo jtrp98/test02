@@ -1,0 +1,284 @@
+﻿
+.empProfile h4, .modal h4.modal-title {
+    font-family: THSarabunNew;
+}
+
+.empProfile .dropdown.bootstrap-select.col-sm-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.empProfile .dropdown-toggle:after {
+    margin-right: -12px;
+}
+
+.empProfile .dropdown-menu.dropdown-menu-right.show li:hover {
+    color: white;
+}
+
+.empProfile .dropdown-toggle.bs-placeholder .filter-option-inner-inner {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.empProfile .dropdown-toggle .filter-option-inner-inner {
+    font-size: 14px;
+}
+
+.empProfile .el-switch .el-switch-style {
+    height: 1.6em;
+    left: 0;
+    background: #ff514b;
+    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 3em;
+    cursor: pointer;
+}
+
+.empProfile .modal-footer .btn.btn-default, .empProfile .modal-footer .btn.btn-primary, .empProfile .modal-footer .btn.btn-danger, .empProfile .modal-footer .btn.btn-success,
+.modal .modal-footer .btn.btn-default, .modal .modal-footer .btn.btn-primary, .modal .modal-footer .btn.btn-danger, .modal .modal-footer .btn.btn-success {
+    width: 95px !important;
+}
+
+.modal .modal-footer button {
+    margin-left: 7px;
+}
+
+.empProfile .row.text-center {
+    display: block;
+}
+
+.empProfile .panel {
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+    .empProfile .panel.with-nav-tabs .panel-heading {
+        padding: 10px 5px 10px 5px;
+        background-color: #fff;
+        border-color: transparent;
+    }
+
+.empProfile .card .tab-content .form-check {
+    margin-top: 17px;
+}
+
+.empProfile .card .card-body .col-form-label, .empProfile .card .card-body .label-on-right {
+    padding: 17px 20px 0 20px;
+}
+
+.empProfile .div-datepicker {
+    margin: 2px 0 0;
+}
+
+.empProfile p.bg-primary {
+    padding: 10px 5px 10px 10px;
+    margin: 0px 0px -7px 0px;
+    color: #fff;
+}
+
+.empProfile .col-form-label label {
+    color: black;
+}
+
+/* +Placeholder Style */
+.empProfile .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    padding: 5px;
+    color: #aaaaaa;
+}
+
+.empProfile .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding: 5px;
+    color: #aaaaaa;
+}
+
+.empProfile .form-control::-ms-input-placeholder { /* Microsoft Edge */
+    padding: 5px;
+    color: #aaaaaa;
+}
+/* -Placeholder Style */
+
+.empProfile form .checkbox-radios {
+    margin-top: 0px;
+}
+
+.empProfile form .form-check-inline {
+    margin-top: 16px !important;
+}
+
+.empProfile form .div-text-input {
+    margin: 8px 0px 0px 0px;
+}
+
+.empProfile form .div-select-input {
+    margin-top: 2px;
+}
+
+.empProfile form .div-check-input {
+    margin: 10px 0px 0px 0px !important;
+}
+
+.empProfile .toggle.btn {
+    border-radius: 4px;
+}
+
+.empProfile .toggle-handle.btn {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    padding: 6px 12px;
+}
+
+.empProfile .toggle-on.btn {
+    padding-right: 35px !important;
+}
+
+.empProfile .toggle-off.btn {
+    padding-left: 40px !important;
+}
+
+.empProfile form .bmd-form-group .error, .empProfile form .dropdown.bootstrap-select + .error, .empProfile .checkbox-radios.drop-out .error, .empProfile form .bmd-form-group + .text-danger + .error {
+    font-size: .875rem;
+    color: #f44336;
+}
+
+#employeeTabs .nav-item a.nav-link {
+    font-size: 1rem;
+}
+
+.material-datatables.data-table {
+    padding: 15px;
+}
+
+    .material-datatables.data-table .table thead tr th {
+        font-weight: bold;
+    }
+
+.popup-form {
+    padding: 0px 15px 1px 15px;
+}
+
+    .popup-form .col-form-label.text-right {
+        margin-bottom: 0px !important;
+    }
+
+    .popup-form .dropdown-toggle.bs-placeholder .filter-option-inner-inner {
+        color: #aaaaaa;
+        font-size: 14px;
+    }
+
+    .popup-form .dropdown-toggle .filter-option-inner-inner {
+        font-size: 14px;
+    }
+
+    .popup-form .dropdown-toggle {
+        padding: 4px 0px 0px 0px;
+    }
+
+    .popup-form .dropdown.bootstrap-select.col-sm-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .popup-form .bmd-form-group input::placeholder {
+        line-height: 2;
+    }
+
+    .popup-form form .form-group {
+        margin: 0px 0 0;
+    }
+
+    .popup-form form .bmd-form-group .error, .popup-form form .dropdown.bootstrap-select + .error, .popup-form .checkbox-radios.drop-out .error, .popup-form form .bmd-form-group + .text-danger + .error {
+        font-size: 0.8rem;
+        color: #f44336;
+    }
+
+    .popup-form .toggle.btn {
+        border-radius: 4px;
+    }
+
+    .popup-form .toggle-handle.btn {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+        padding: 6px 12px;
+    }
+
+    .popup-form .toggle-on.btn {
+        padding-right: 35px !important;
+    }
+
+    .popup-form .toggle-off.btn {
+        padding-left: 40px !important;
+    }
+
+    .popup-form .toggle.toggle-switch {
+        width: 100px !important;
+        height: 40px !important;
+        border-radius: 5px !important;
+        border: 1px solid transparent;
+    }
+
+        .popup-form .toggle.toggle-switch .toggle-handle {
+            height: 89%;
+            left: 0px;
+            top: 5%;
+            padding: 0 10px;
+        }
+
+        .popup-form .toggle.toggle-switch .toggle-on.btn {
+            padding-right: 35px !important;
+            padding-top: 12px;
+        }
+
+        .popup-form .toggle.toggle-switch .toggle-off.btn {
+            padding-left: 35px !important;
+            padding-top: 12px;
+        }
+
+        .popup-form .toggle.toggle-switch.btn-success {
+            color: #ffffff;
+            background-color: var(--green);
+            border-color: var(--green);
+            box-shadow: none;
+        }
+
+        .popup-form .toggle.toggle-switch.btn-default {
+            color: #ffffff;
+            background-color: var(--gray);
+            border-color: var(--gray);
+            box-shadow: none;
+        }
+
+    .popup-form .col-form-label label {
+        color: black;
+        font-weight: normal;
+    }
+
+    .input-group-addon {
+        display: flex;
+    }
+
+    .input-group-addon span.input-group-text {
+        font-size: 14px;
+    }
+
+.empProfile .toggle.toggle-switch {
+    width: 100px !important;
+    height: 40px !important;
+    border-radius: 5px !important;
+    border: 1px solid transparent;
+}
+
+    .empProfile .toggle.toggle-switch .toggle-handle {
+        height: 89%;
+        left: 0px;
+        top: 5%;
+        padding: 0 10px;
+    }

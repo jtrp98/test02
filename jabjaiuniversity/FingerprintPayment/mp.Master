@@ -1,0 +1,1446 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/mp.master.cs" Inherits="FingerprintPayment.mp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" id="Header1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="icon" href="images/School Bright logo only.png" sizes="16x16 32x32" type="image/png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1">--%>
+    <meta name="viewport" content="width=1024">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>School Bright</title>
+    <script src="/Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <%--<script src="/Scripts/jquery-1.10-2.min.js" type="text/javascript"></script>--%>
+    <script src="/Scripts/jscommon.js" type="text/javascript"></script>
+
+    <%--JQuery Calendar--%>
+    <link href="/Scripts/ui-1.8.10_V1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Scripts/jquery.ui.1.8.10.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.bpopup.min.js"></script>
+    <script src="/javascript/shortcut.js" type="text/javascript"></script>
+    <link href="/Styles/style.css" rel="stylesheet" type="text/css" />
+    <%-- End Clock Picker --%>
+    <%--<link rel="stylesheet" type="text/css" href="Styles/style_mobile.css" />--%>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/bootstrap SB2/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <!-- MetisMenu CSS -->
+    <link href="/bootstrap SB2/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet" />
+    <!-- Timeline CSS -->
+    <link href="/bootstrap SB2/dist/css/timeline.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="/bootstrap SB2/dist/css/sb-admin-2.css" rel="stylesheet" />
+    <!-- Morris Charts CSS -->
+    <link href="/bootstrap SB2/bower_components/morrisjs/morris.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link href="/Content/font-awesome.css" rel="stylesheet" />
+    <link href="/bootstrap SB2/bower_components/morrisjs/morris.css" rel="stylesheet" />
+
+    <!-- Custom CSS Style Sheet To Fixed Responsive Problem -->
+    <link href="/Styles/customize-css/global_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/admin_main_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/product_detail_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/stock_add_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/user_add_money_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/pagesellproduct_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/pagecashsales_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/pageeditsellproduct_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/report08_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/yearsetting_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/holidaysettings_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/timeiosettings_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/levelsetting_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/leveladd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/sublevelsetting_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/subleveladdtable_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/roomadd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/planelist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/planeadd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/periodlist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/periodadd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans-term_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans-room_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans_schedule_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans_schedule_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/plans-scheduledetail_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/report01_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/employeeslist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/employeesadd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/userlist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/useradd_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/leavelist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/maclist_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/companyedit_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/smssettings_style.css" rel="Stylesheet" type="text/css" />
+    <link href="/Styles/customize-css/smsadd_style.css" rel="Stylesheet" type="text/css" />
+    <!-- jQuery -->
+    <script src="/bootstrap SB2/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/bootstrap SB2/bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/bootstrap SB2/bower_components/metisMenu/dist/metisMenu.js" type="text/javascript"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="/bootstrap SB2/bower_components/raphael/raphael-min.js" type="text/javascript"></script>
+    <script src="/bootstrap SB2/bower_components/morrisjs/morris.js" type="text/javascript"></script>
+
+    <link href="/bootstrap/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+    <script src="/bootstrap/js/bootstrap-clockpicker.min.js" type="text/javascript"></script>
+    <link href="/bootstrap/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="/bootstrap/js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+    <script src="/bootstrap SB2/dist/js/sb-admin-2.js" type="text/javascript"></script>
+    <script src="/Scripts/mustache.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+    <script language="Javascript" type="text/javascript">
+
+        $(document).unbind('keydown').bind('keydown', function (event) {
+            var doPrevent = false;
+            if (event.keyCode === 8) {
+                var d = event.srcElement || event.target;
+                if ((d.tagName.toUpperCase() === 'INPUT' &&
+                    (
+                        d.type.toUpperCase() === 'TEXT' ||
+                        d.type.toUpperCase() === 'PASSWORD' ||
+                        d.type.toUpperCase() === 'FILE' ||
+                        d.type.toUpperCase() === 'SEARCH' ||
+                        d.type.toUpperCase() === 'EMAIL' ||
+                        d.type.toUpperCase() === 'NUMBER' ||
+                        d.type.toUpperCase() === 'DATE')
+                ) ||
+                    d.tagName.toUpperCase() === 'TEXTAREA') {
+                    doPrevent = d.readOnly || d.disabled;
+                }
+                else {
+                    doPrevent = true;
+                }
+            }
+
+            if (doPrevent) {
+                event.preventDefault();
+            }
+        });
+
+        var tmpFuncSuccess = null;
+        var tmpFuncCancel = null;
+
+        function clearTmpFunc() {
+            console.log("call clear");
+            tmpFuncSuccess = null;
+            tmpFuncCancel = null;
+        }
+        function closeModalOnKey(e) {
+            if (e.which == 27 || e.which == 13) {
+                if (!$('#modalAlert').hasClass('in'))
+                    return;
+                e.preventDefault();
+                e.stopPropagation();
+                document.removeEventListener("keydown", closeModalOnKey);
+                if (typeof tmpFuncCancel !== "function") {
+                    tmpFuncSuccess = "";
+                }
+                else {
+                    tmpFuncCancel();
+                }
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            }
+        }
+
+        //window.history.forward();
+        //function noBack() {
+        //    window.history.forward();
+        //}
+
+        var _ctrname;
+        function formatDate(obj) {
+            return obj.getDate() + '/' + (obj.getMonth() + 1) + '/' + obj.getFullYear();
+        }
+        function notification_count() {
+            $.ajax({
+                type: "POST",
+                url: "/App_Logic/dataReportGeneric.ashx?mode=NotificationLsit_count&status=0",
+                cache: false,
+                contentType: 'application/json;',
+                success: function (obj) {
+
+                }
+            }).done(function (obj) {
+                $('#notification_count').html(obj);
+            });
+        }
+
+        $(document).ready(function () {
+            $('#side-menu').metisMenu({ doubleTapToGo: true });
+            $('[data-toggle="tooltip"]').tooltip();
+            var dt = new Date();
+            var date = dt.getDate() + "/" + dt.getMonth() + "/" + dt.getFullYear();
+
+            $("#tasks").click(function () {
+                $("#TasksContainer").fadeToggle(300);
+                //$("#notification_count").fadeOut("slow");
+            })
+
+            //Document Click
+            $(document).click(function () {
+                //$("#notificationContainer").hide();
+                //$('#notification_count').css("display", "");
+                //$("#TasksContainer").hide();
+                //$('#notification_count').css("display", "");
+            });
+            //Popup Click
+            $("#notificationContainer").click(function () {
+                //return false;
+            });
+
+            // Message System
+            $("#bell").click(function () {
+                UpdateLastNotification();
+            });
+
+            $(".notification-li a.dropdown-item").click(function () {
+                GetMessageSystem($(this).attr('data-id'));
+                return false;
+            });
+
+            $('#modalconfirm-confirm').click(function () {
+                javascript: __doPostBack(_ctrname, '')
+            });
+
+            $('#modalAlert #modal-confirm').on('click', function (e) {
+                if (typeof tmpFuncSuccess === "function")
+                    tmpFuncSuccess = "";
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            });
+            $('#modalAlert #modal-cancel').on('click', function (e) {
+                if (typeof tmpFuncCancel !== "function") {
+                    tmpFuncSuccess = "";
+                }
+                else {
+                    tmpFuncCancel();
+                }
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            });
+            $('#modalAlert #modal-close').on('click', function (e) {
+                if (typeof tmpFuncCancel !== "function") {
+                    tmpFuncSuccess = "";
+                }
+                else {
+                    tmpFuncCancel();
+                }
+                clearTmpFunc();
+                $('#modalAlert').modal('hide');
+            });
+            SetMenu();
+
+            LoadMessageSystem();
+        });
+
+        /*  ********** Online / Offline Detection **********  */
+
+        // Request a small image at an interval to determine status
+        // ** Get a 1x1 pixel image here: http://www.1x1px.me/
+        // ** Use this code with an HTML element with id="status"
+
+        const checkOnlineStatus = async () => {
+            let statusDisplay = $("#network-status");
+            try {
+                let date = new Date();
+                const online = await fetch("/1pixel.png?d=" + date.getTime());
+                // either true or false
+                if (online.status >= 200 && online.status < 300) {
+                    statusDisplay.html("Online").css("color", "green");
+                    $("#network-circle").css("background-color", "green");
+                    return true;
+                }
+                else {
+                    statusDisplay.html("Offline").css("color", "red");
+                    $("#network-circle").css("background-color", "red");
+                    return false;
+                }
+            } catch (err) {
+                statusDisplay.html("Offline").css("color", "red");
+                $("#network-circle").css("background-color", "red");
+                return false; // definitely offline
+            }
+        };
+
+        setInterval(async () => {
+            let result = await checkOnlineStatus();
+            const statusDisplay = document.getElementById("network-status");
+            //statusDisplay.html(result ? "Online" : "OFFline");
+        }, 30000); // probably too often, try 30000 for every 30 seconds
+
+        // forgot to include async load event listener in the video! 
+        window.addEventListener("load", async (event) => {
+            let statusDisplay = document.getElementById("network-status");
+            const result = await checkOnlineStatus();
+            //statusDisplay.html((await checkOnlineStatus())
+            //    ? "Online"
+            //    : "OFFline");
+        });
+
+        function LoadMessageSystem() {
+            // Initialize the object, before adding data to it.
+            //  { } is declarative shorthand for new Object()
+            var obj = {};
+            obj.method = 'list';
+
+            //In order to proper pass a json string, you have to use function JSON.stringfy
+            var jsonData = JSON.stringify(obj);
+
+            $.ajax({
+                type: "POST",
+                url: "/App_Logic/MessageSystemHandler.ashx",
+                data: jsonData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+
+                    var notiCountAll = 0;
+
+                    if (response.listData.length > 0) {
+                        var newNotiCount = 0;
+                        $(response.listData).each(function () {
+                            $("#notitab1").append(`
+<a class="dropdown-item d-flex align-items-center" href="#" data-id="`+ this.id + `">
+    <div class="dropdown-list-image mr-3">
+        <img class="rounded-circle" src="/images/School Bright logo only.png" style="width: 48px;" alt="">
+        `+ (this.flag ? '<div class="status-indicator bg-danger"></div>' : '') + `
+    </div>
+    <div class="font-weight-bold">
+        <div class="text-truncate">`+ this.title + `</div>
+        <div class="small text-gray-500">Administrator · `+ this.timeAgo + `</div>
+    </div>
+</a>`);
+                            if (this.flag) newNotiCount++;
+                        });
+
+                        if (newNotiCount > 0) {
+                            $('#noti1-badge').text(newNotiCount);
+                            $('#noti1-badge').show();
+                        }
+
+                        notiCountAll += newNotiCount;
+                        $("#notitab1").append('<a class="dropdown-item text-center small text-gray-500" href="UpdateLog.aspx">ดูทั้งหมด</a>');
+
+                        $(".notification-li .dropdown-list a.dropdown-item").on("click", function () {
+                            GetMessageSystem($(this).attr('data-id'));
+                        });
+                    }
+                    else {
+                        $("#notitab1").append('<a class="dropdown-item text-center small text-gray-500" href="#">ไม่พบข่าวสารประกาศจากโรงเรียน</a>');
+                    }
+
+
+                    if (response.WorklistData.length > 0) {
+                        var newNotiCount = 0;
+                        $(response.WorklistData).each(function () {
+                            $("#notitab2").append(`
+<a class="dropdown-item d-flex align-items-center gotoclassonline" href="<%= Page.ResolveUrl("~/ClassOnline/OnlineReport.aspx") %>?id=`+ this.id + `" data-id="` + this.id + `">
+    <div class="dropdown-list-image mr-3">
+        <img class="rounded-circle" src="/images/School Bright logo only.png" style="width: 48px;" alt="">
+        `+ (this.flag ? '<div class="status-indicator bg-danger"></div>' : '') + `
+    </div>
+    <div class="font-weight-bold">
+        <div class="text-truncate">วิชา `+ this.subject + ' ' + this.code + `</div>
+        <div class="text-truncate">`+ this.group + ' ' + this.homework + `</div>
+        <div class="text-truncate">มีนักเรียน `+ this.count + ' คน ' + (this.type == 1 ? "ส่งการบ้าน" : "ส่งข้อความ") + `</div>
+        <div class="small text-gray-500">Administrator · `+ this.timeAgo + `</div>
+    </div>
+</a>`);
+                            if (this.flag) newNotiCount++;
+                        });
+
+                        if (newNotiCount > 0) {
+                            $('#noti2-badge').text(newNotiCount);
+                            $('#noti2-badge').show();
+                        }
+
+                        notiCountAll += newNotiCount;
+
+                        // $("#notitab2").append('<a class="dropdown-item text-center small text-gray-500" href="UpdateLog.aspx">ดูทั้งหมด</a>');                                              
+                    }
+                    else {
+                        $("#notitab2").append('<a class="dropdown-item text-center small text-gray-500" href="#">ไม่มีรายการแจ้งเตือน</a>');
+                    }
+
+                    if (notiCountAll > 0) {
+                        $('#notification_count').text(notiCountAll);
+                        $('#notification_count').show();
+                    }
+                },
+                failure: function (response) {
+                    console.log(response.d);
+                },
+                error: function (response) {
+                    console.log(response.d);
+                }
+            });
+        }
+
+        function GetMessageSystem(id) {
+            if (!id) return false;
+            // Initialize the object, before adding data to it.
+            //  { } is declarative shorthand for new Object()
+            var obj = {};
+            obj.method = 'get';
+            obj.id = id;
+
+            //In order to proper pass a json string, you have to use function JSON.stringfy
+            var jsonData = JSON.stringify(obj);
+
+            $.ajax({
+                type: "POST",
+                url: "/App_Logic/MessageSystemHandler.ashx",
+                data: jsonData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    $("#modalNotifyOnlyClose").find('.modal-title').text('ข่าวสาร');
+                    if (response.success) {
+                        $("#modalNotifyOnlyClose").find('.modal-body').html(`
+<div class="row">
+    <div class="col-md-2 mb-2">
+        <b>หัวข้อ:</b>
+    </div>
+    <div class="col-md-10 mb-10">
+        `+ response.getData.title + `
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 mb-12">
+        <b>ข้อความ:</b>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 mb-12">
+        `+ response.getData.message.replace(/\n/g, "<br />") + `
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 mb-2">
+        <b style="width: 88px; float: left;">วันที่บันทึก:</b>
+    </div>
+    <div class="col-md-10 mb-10">
+        `+ response.getData.date + `
+    </div>
+</div>`);
+                    }
+                    else {
+                        $("#modalNotifyOnlyClose").find('.modal-body').text('โหลดข้อมูลรายการนี้ไม่สำเร็จ [' + response.message + ']');
+                    }
+                    $("#modalNotifyOnlyClose").modal('show');
+                },
+                failure: function (response) {
+                    console.log(response.d);
+                },
+                error: function (response) {
+                    console.log(response.d);
+                }
+            });
+        }
+
+        function UpdateLastNotification() {
+            // Initialize the object, before adding data to it.
+            //  { } is declarative shorthand for new Object()
+            var obj = {};
+            obj.method = 'update-last-noti';
+
+            //In order to proper pass a json string, you have to use function JSON.stringfy
+            var jsonData = JSON.stringify(obj);
+
+            $.ajax({
+                type: "POST",
+                url: "/App_Logic/MessageSystemHandler.ashx",
+                data: jsonData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    $('#notification_count').text('0');
+                    $('#notification_count').hide();
+                },
+                failure: function (response) {
+                    console.log(response.d);
+                },
+                error: function (response) {
+                    console.log(response.d);
+                }
+            });
+        }
+
+        function SetMenu() {
+            var menulv1 = $("#side-menu li");
+            $.each(menulv1, function (indexlv1, objlv1) {
+                var checkmenu = false;
+                var menulv2 = $(menulv1).children("li");
+                //$.each(menulv2, function (indexlv2, objlv2) {
+                if ($(objlv1).attr('class') === "active") {
+                    $(objlv1).children('a').attr('class', 'doubleTapToGo');
+                    $(objlv1).attr('class', 'active');
+                    console.log(objlv1);
+                }
+            });
+        }
+
+        var emptFunc = function () { };
+        function showModal() {
+            var header = arguments[0];
+            var msg = arguments[1];
+            if (typeof arguments[2] === "boolean") {
+                //show confirm footer
+                tmpFuncSuccess = arguments[3];
+                document.getElementsByClassName("modal-footer")[0].style.display = "block";
+                if (typeof arguments[4] === "function")
+                    tmpFuncCancel = arguments[4];
+                else
+                    tmpFuncCancel = emptFunc;
+            }
+            else if (typeof arguments[2] === "function") {
+                document.getElementsByClassName("modal-footer")[0].style.display = "none";
+                tmpFuncSuccess = arguments[2];
+            }
+            else {
+                document.getElementsByClassName("modal-footer")[0].style.display = "none";
+            }
+
+            $('#modalAlert #modal-header').text(header);
+            $('#modalAlert #modal-content').html(msg);
+            document.addEventListener("keydown", closeModalOnKey);
+            $('#modalAlert').modal('show');
+        }
+        function showModalConfirm() {
+            var header = arguments[0];
+            var msg = arguments[1];
+            _ctrname = arguments[2];
+
+            $('#modalconfirm #modal-header').text(header);
+            $('#modalconfirm #modalconfirm-content').html(msg);
+            document.addEventListener("keydown", closeModalOnKey);
+            $('#modalconfirm').modal('show');
+        }
+
+        /*showModal("test",fucntion(){
+                
+        });*/
+        var aaa = 0;
+        function blockUI() {
+            $.blockUI({ message: '<h1 ><img src="Scripts/blockUI/searching_progress.gif" /><div style="font-size: 45px !important; font-family: THSarabun;">กำลังบันทึกข้อมูล</div></h1>' });
+        }
+        function blockUImessage(_message) {
+            $.blockUI({ message: _message });
+        }
+        function blockPage() {
+            $.blockUI({
+                message: '<img src="Scripts/blockUI/searching_progress.gif" /><h1> Loading...</h1>',
+                css: {
+                    border: 'none',
+                    padding: '15px',
+                    '-webkit-border-radius': '10px',
+                    '-moz-border-radius': '10px',
+                    'border-radius': '10px',
+                    opacity: .9
+                }
+            });
+            return false;
+        }
+        //function to unblock the page  
+        function unblockPage() {
+            $.unblockUI();
+        }
+    </script>
+    <script>
+        $(function () {
+            $("#topnotify.nav-tabs a").click(function () {
+                $(this).tab('show');
+                return false;
+            });
+        });
+    </script>
+    <%= Permission_Page.permission == "0" ? 
+            string.Empty: 
+            "<style type=\"text/css\" runat=\"server\">"+
+                ".btnpermission{display:none !important;}"+
+            "</style>" %>
+    <style type="text/css" runat="server">
+        .menulink {
+            padding-left: 15px;
+        }
+
+        #nav {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+            #nav li {
+                margin-right: 20px;
+                font-size: 14px;
+                font-weight: bold;
+                display: inline;
+            }
+
+        @media (max-width: 1023px) {
+            #nav li a {
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #nav li a {
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+            }
+        }
+
+
+        #nav li a:hover {
+            color: #006699;
+            text-decoration: none;
+        }
+
+        #notification_li {
+            position: relative;
+        }
+
+        #notificationContainer {
+            border: 1px solid rgba(100, 100, 100, .4);
+            -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+            overflow: visible;
+            position: absolute;
+            width: 384px;
+            top: 45px;
+            margin-left: -175px;
+            /*width: 400px;*/
+            z-index: 1000;
+            /*display: none;*/
+        }
+
+            #notificationContainer:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                color: transparent;
+                border: 10px solid black;
+                border-color: transparent transparent white;
+                margin-top: -20px;
+                margin-right: 15px;
+                right: 0px;
+                z-index: 1000;
+            }
+
+        #notificationTitle {
+            z-index: 1000;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 13px;
+            background-color: #ffffff;
+            /*width: 384px;*/
+            border-bottom: 1px solid #dddddd;
+            color: #000;
+            font-size: 25px;
+        }
+
+        #notificationsBody {
+            padding: 0px 0px 0px 0px !important;
+            max-height: 400px;
+            font-size: 20px;
+            color: #000;
+            vertical-align: text-top;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            margin: 10px 10px;
+        }
+
+        #notificationFooter {
+            text-align: center;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 12px;
+            border-top: 1px solid #dddddd;
+        }
+
+        #Tasks_li {
+            position: relative;
+        }
+
+        #TasksContainer {
+            background-color: #fff;
+            border: 1px solid rgba(100, 100, 100, .4);
+            -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+            overflow: visible;
+            position: absolute;
+            width: 384px;
+            top: 45px;
+            margin-left: -175px;
+            z-index: 1000;
+            display: none;
+        }
+
+            #TasksContainer:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                color: transparent;
+                border: 10px solid black;
+                border-color: transparent transparent white;
+                margin-top: -20px;
+                margin-left: 188px;
+                z-index: 1000;
+            }
+
+        #TasksTitle {
+            z-index: 1000;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 13px;
+            background-color: #ffffff;
+            width: 384px;
+            border-bottom: 1px solid #dddddd;
+            color: #000;
+            font-size: 25px;
+        }
+
+        #TasksBody {
+            padding: 0px 0px 0px 0px !important;
+            max-height: 400px;
+            font-size: 20px;
+            color: #000;
+            vertical-align: text-top;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        #TasksFooter {
+            background-color: #cc0000;
+            text-align: center;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 12px;
+            border-top: 1px solid #dddddd;
+            color: #fff;
+        }
+
+        #notification_count {
+            padding: 5px;
+            behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+            background: #FFF;
+            color: #d31e1e;
+            font: 14px QuarkNew, sans-serif;
+            border-radius: 50%;
+            text-align: center;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            margin-top: -11px;
+            font-size: 11px;
+            z-index: 10;
+        }
+
+        .notification {
+            padding: 3px;
+            behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+            background: #FFF;
+            color: #d31e1e;
+            font: 14px QuarkNew, sans-serif;
+            border-radius: 50%;
+            text-align: center;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            font-size: 11px;
+            z-index: 10;
+            width: 50px;
+            height: 20px;
+            margin-left: 5px;
+        }
+
+        .notificationsrow:hover {
+            background-color: #e9eaed;
+            /*border-bottom-width: thick;*/
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .notificationsrow {
+            border-bottom-color: black;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .numberCircle {
+            border-radius: 50%;
+            behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+            width: 22px;
+            height: 22px;
+            padding: 3px;
+            background: #FFF;
+            border: 0px solid #666;
+            color: #d31e1e;
+            text-align: center;
+            font: 14px QuarkNew, sans-serif;
+            position: absolute;
+            display: block;
+            float: right;
+            z-index: 10;
+            margin-left: 25px;
+        }
+
+        .wrap_content-body {
+            padding: 0 0;
+            background-color: #F9F9F9;
+            width: 100%;
+            position: relative;
+        }
+
+        .manuicon {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 7px;
+            color: #fff;
+            border: 1px solid white;
+            border-radius: 100%;
+            z-index: 0;
+            font-size: 20px;
+        }
+
+            .manuicon:hover {
+                background-color: white;
+                color: #23527c;
+                display: inline-block;
+                margin: 0 5px;
+                padding: 7px;
+                border-radius: 100%;
+                border: 1px solid white;
+                z-index: 0;
+            }
+
+        .progress-nav {
+            width: 20%;
+            font-size: 28px;
+        }
+
+        /** +Message Notification **/
+        .notification-li .dropdown .dropdown-menu {
+            width: calc(100% - 1.5rem);
+            right: .75rem;
+        }
+
+        .notification-li .navbar-expand .navbar-nav .dropdown-menu {
+            position: absolute;
+        }
+
+        .notification-li .dropdown-list .dropdown-item {
+            white-space: normal;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            border-left: 1px solid #e3e6f0;
+            border-right: 1px solid #e3e6f0;
+            border-bottom: 1px solid #e3e6f0;
+            /*line-height: 1.3rem;*/
+        }
+
+            .notification-li .dropdown-list .dropdown-item:hover {
+                color: #337ab7;
+            }
+
+        .notification-li .dropdown-list {
+            padding: 0px;
+        }
+
+        .notification-li .dropdown-item {
+            display: block;
+            width: 100%;
+            padding: .25rem 1.5rem .25rem 0.8rem;
+            clear: both;
+            font-weight: 400;
+            color: #3a3b45;
+            /*text-align: inherit;*/
+            white-space: nowrap;
+            background-color: transparent;
+            border: 0;
+            text-decoration: none;
+            position: relative;
+        }
+
+            .notification-li .dropdown-item:hover {
+                /*color: #337ab7;*/
+            }
+
+            .notification-li .dropdown-item .dropdown-list-image {
+                position: absolute;
+                top: 5px;
+            }
+
+        .notification-li .align-items-center {
+            align-items: center !important;
+        }
+
+        .notification-li .d-flex {
+            display: flex !important;
+        }
+
+        .notification-li .align-items-center {
+            align-items: center !important;
+        }
+
+        .notification-li .mr-3, .notification-li .mx-3 {
+            margin-right: 1rem !important;
+            margin-left: -3px;
+        }
+
+        .notification-li .font-weight-bold {
+            font-weight: 700 !important;
+        }
+
+        .notification-li .text-truncate {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 34rem;
+        }
+
+        .notification-li .dropdown-list .dropdown-item .text-truncate {
+            max-width: 29rem;
+        }
+
+        .notification-li .dropdown-list .dropdown-item .dropdown-list-image .status-indicator {
+            background-color: red;
+            height: 1.4rem;
+            width: 1.4rem;
+            border-radius: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border: .125rem solid #fff;
+        }
+
+        .notification-li .dropdown-list .dropdown-item .dropdown-list-image img {
+            height: 48px;
+            width: 48px;
+        }
+
+        .notification-li .dropdown-list .dropdown-item .dropdown-list-image {
+            position: relative;
+            height: 48px;
+            width: 48px;
+            top: 0px;
+            margin-left: 3px;
+        }
+
+        #nav li.notification-li .dropdown-list a {
+            color: #3a3b45;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+            #nav li.notification-li .dropdown-list a:hover {
+                color: #337ab7;
+            }
+
+        #modalNotifyOnlyClose .modal-content {
+            width: 100%;
+        }
+
+        #modalNotifyOnlyClose .btn.btn-default {
+            width: 110px;
+            height: 44px;
+        }
+
+        #modalNotifyOnlyClose .modal-title {
+            font-size: 36px;
+        }
+
+        #modalNotifyOnlyClose .modal-body {
+            font-size: 26px;
+        }
+        /** -Message Notification **/
+
+        @media (max-width: 999px) {
+            .main-nav {
+                width: 36%;
+                padding-top: 1px;
+                padding-left: 15px;
+                font-size: 25px !important;
+                font-family: THSarabun;
+            }
+
+            .progress-nav > div {
+                margin-left: 10px;
+            }
+
+            #nav li {
+                margin-right: 0px;
+            }
+
+            #notificationContainer {
+                /*width: 200px;*/
+                margin-left: -26px;
+            }
+
+                #notificationContainer:before {
+                    margin-top: -20px;
+                    margin-left: 90px;
+                }
+
+            #notificationTitle {
+                /*width: 200px;*/
+            }
+        }
+
+        @media (min-width: 1000px) and (max-width: 1199px) {
+            .main-nav {
+                width: 46%;
+                padding-top: 1px;
+                padding-left: 15px;
+                font-size: 25px !important;
+                font-family: THSarabun;
+            }
+
+            .progress-nav > div {
+                margin-left: 10px;
+            }
+
+            #nav li {
+                margin-right: 0px;
+            }
+
+            #notificationContainer {
+                /*width: 200px;*/
+                margin-left: -26px;
+            }
+
+                #notificationContainer:before {
+                    margin-top: -20px;
+                    margin-left: 90px;
+                }
+
+            #notificationTitle {
+                width: 200px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .main-nav {
+                width: 50%;
+                padding-top: 1px;
+                font-size: 25px !important;
+                font-family: THSarabun;
+            }
+        }
+    </style>
+    <script src="/Scripts/less-1.5.1.js" type="text/javascript"></script>
+</head>
+<body id="from2" runat="server" style="background-color: #F9F9F9;">
+    <%--<div id="content-overlay" class="content-overlay">
+        ระบบอยู่ในระหว่างการทดลอง
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="onOverlayCloseClick();"><span aria-hidden="true">×</span></button>
+    </div>--%>
+    <form id="from1" runat="server">
+        <%--<a href="https://docs.google.com/forms/d/e/1FAIpQLSfRQlOEf26LiWyBDakCtlDNEYOyZ84vMDqaUmd_naxj9wYhfQ/viewform" target="_blank">
+            <img src="/images/contact.jpg" style="position: fixed; z-index: 2; top: 20%; right: -100px; border-radius: 5px; -webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -o-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg);"></img>
+            <%--<img id="ribbonbottom" src="images/fbmessage.png"  />
+        </a>--%>
+        <%= ViewState["Permission_Page"].ToString() == "0" ? string.Empty :"<script type=\"text/jscript\">$('.btnpermission').remove(); </script>" %>
+        <div class="content-header hidden">
+            <div class="welcome-msg">
+            </div>
+            <div class="logout-btn">
+                <asp:LinkButton ID="lkbLogout" runat="server" PostBackUrl="/logout.aspx" class="btn btn-danger">ออกจากระบบ</asp:LinkButton>
+            </div>
+            <div class="group--btn--header">
+                <span style="font-size: 25px; color: White;">HOTLINE: 091-8233139 </span>
+                <%--  <img alt="logo_facebook" src="/images/logo_facebook.png" />
+            <!--img alt="logo_image" src="images/youtube_logo.png" /-->
+            <img alt="logo_image" src="/images/logo_email.png" />--%>
+            </div>
+        </div>
+
+        <div class="content-breadcrumb" style="font-size: 25px !important; font-family: THSarabun;">
+            <div class="row" style="margin-right: 0px;">
+                <div class="col-md-2 col-xs-12 left">
+                    <img src="/images/School Bright logo 1 storke222.png" style="width: 100%;" alt="logo" />
+                    <%--    <i class="glyphicon glyphicon-tags" style="margin-right: 15px; vertical-align: middle;"></i>--%>
+                    <asp:Literal ID="Literal1" runat="server" />
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" StartingNodeUrl="~/Web.config" />
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="menulink">
+                    </asp:SiteMapPath>
+                </div>
+                <%--     <div class="col-md-1 col-xs-12"></div>
+                <div class="col-md-1 col-xs-12">
+                
+                </div>--%>
+                <div class="col-md-6 col-xs-12 right">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="progress vertical-mid text-center" style="width: 150px; height: 38px; display: inline-block; margin-right: 0px;">
+                                <%--  <h1><b id="network-status"></b></h1>--%>
+                                <div id="network-circle" style='background-color: green; width: 15px; height: 15px; border-radius: 100%; display: inline-block; vertical-align: middle;' class="text-left">
+                                </div>
+                                <span id="network-status" style='color: green; padding-left: 10px; padding-right: 10px; vertical-align: middle;' class='text-right h2'>Online</span>
+                                <%-- <div class="progress-bar-success progress-bar" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="width: 70%; padding-top: 5px;">
+                            70%
+                        </div>--%>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <ul id="nav" style="list-style: none;">
+                                <li>
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRQlOEf26LiWyBDakCtlDNEYOyZ84vMDqaUmd_naxj9wYhfQ/viewform" target="_blank">
+                                        <img src="/images/contact.jpg" style="border-radius: 5px;"></img>
+                                    </a>
+                                </li>
+                                <li>
+                                    <span class="notification" style="margin-top: -10px; width: 25px;">ใหม่</span>
+                                    <a href="http://m.me/jabjaithailand" target="_blank" id="Message" class="fa fa-comments manuicon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="ติดต่อทีมงานทันที"></a>
+                                </li>
+                                <li id="notification_li" class="notification-li">
+                                    <span id="notification_count" style="display: none;">0</span>
+                                    <a href="#" id="bell" class="glyphicon glyphicon-bell manuicon nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="bell" id="notificationContainer">
+                                        <div class="panel-heading" id="notificationTitle">
+                                            <i class="fa fa-bell fa-fw" style="vertical-align: middle;"></i>รายการแจ้งเตือน
+                                        </div>
+
+                                        <ul id="topnotify" class="nav nav-tabs">
+                                            <li class="active" style="margin: 0 2px">
+                                                <a href="#notitab1" id="notitab1link" data-toggle="tab">แจ้งเตือนระบบ <span id="noti1-badge" style="display: none; font-size: 16px; background-color: #c82333;" class="badge">0</span></a>
+                                            </li>
+                                            <li style="margin: 0 2px">
+                                                <a href="#notitab2" id="notitab2link" data-toggle="tab">แจ้งเตือนเรียนออนไลน์ <span id="noti2-badge" style="display: none; font-size: 16px; background-color: #c82333;" class="badge">0</span></a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content clearfix">
+                                            <div class="tab-pane active" id="notitab1">
+                                            </div>
+                                            <div class="tab-pane" id="notitab2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%--<div id="notificationsBody" class="panel-body">
+                                </div>
+                                <div id="notificationFooter">
+                                    <a href="/Modules/TimeAttendance/leavelist.aspx?lsittoday=1"
+                                        class="btn btn-default btn-block danger" style="color: black;">ดูทั้งหมด</a>
+                                </div>--%>
+             
+                                </li>
+                                <li>
+                                    <a href="/logout.aspx" id="Message" class="glyphicon glyphicon-off manuicon"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <% var q = JabjaiMainClass.menu_sidebar.permission_Menu(sEmpID, schoolID, menudemo);%>
+        <div id="wrapper" style="background-color: #d9534f;">
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <%--      <div style="margin-top: 50%; margin-left: 25%; height: 100%;">
+                        <i class="fa fa-refresh fa-spin fa-5x fa-fw"></i>
+                    </div>--%>
+
+                    <ul class="nav" id="side-menu">
+                        <li></li>
+                        <li>
+                            <a href="/AdminMain.aspx"><i class="fa fa-user fa-fw"></i>
+                                <%= q.emp_name %>
+                            </a>
+                        </li>
+                        <% foreach (var q_group in q.group_Menus)
+                            {
+                                if (q_group.menus.Count() == 0) { }
+                                else if (q_group.menus.Count() == 1)
+                                { %>
+                        <li>
+                            <a href="<%= q_group.menus.Count() == 1 ? q_group.menus.FirstOrDefault().menu_url : "#" %>"><i class="<%= q_group.group_class %>"></i>&nbsp;&nbsp;<%= q_group.group_name %></a>
+                        </li>
+                        <% }
+                            else
+                            { %>
+                        <li>
+                            <a href="#"><i class="<%= q_group.group_class %>"></i>&nbsp;&nbsp;<%= q_group.group_name %>
+                                <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <%foreach (var q_menu in q_group.menus)
+                                    { %>
+                                <li>
+                                    <a data-placement="right" data-toggle="tooltip" data-toggle="modal" href="<%= q_menu.menu_url %>" target="<%= q_menu.menu_target %>" title="<%= q_menu.menu_title %>"><%= q_menu.menu_name %></a>
+                                </li>
+                                <%}%>
+                            </ul>
+                        </li>
+                        <%}%>
+                        <%}%>
+                        <%--  <li>
+                            <a href="#"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;&nbsp;คู่มือ<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/manual/manual.aspx" data-toggle="tooltip" data-placement="right">คู่มือการใช้งานเว็บ</a>
+                                    <a href="/manual/manual3.aspx" data-toggle="tooltip" data-placement="right">คู่มือการใช้งานแอปพลิเคชั่น</a>
+                                    <a href="/manual/manual2.aspx" data-toggle="tooltip" data-placement="right">คู่มือการสมัครสมาชิก</a>
+                                    <a href="/manual/manual4.aspx" data-toggle="tooltip" data-placement="right">วิธีการดาวน์โหลดแอปพลิเคชั่น</a>
+                                    <!-- /.nav-second-level -->
+                                </li>
+                            </ul>
+                        </li>--%>
+                        <li>
+                            <a href="/import/downloadList.aspx"><i class="glyphicon glyphicon-download-alt"></i>&nbsp;&nbsp;ดาวน์โหลดฟอร์ม</a>
+                        </li>
+                        <li>
+                            <a href="#" style="font-size: 18px;">บราวเซอร์ที่แนะนำ</a>
+                        </li>
+                        <li>
+                            <a href="#" style="font-size: 18px;">
+                                <img src="/images/Internet_Explorer.png" width="8%" height="8%" />&nbsp;IE เวอร์ชั่น 9 ขึ้นไป</a>
+                        </li>
+                        <li>
+                            <a href="#" style="font-size: 18px;">
+                                <img src="/images/Google_Chrome.png" width="8%" height="8%" />&nbsp;Google Chrome</a>
+                        </li>
+                        <li>
+                            <a href="#" style="font-size: 18px;">
+                                <img src="/images/firefox.png" width="8%" height="8%" alt="" />&nbsp;Fire Fox</a>
+                        </li>
+                        <li>
+                            <a href="#" style="font-size: 18px;">
+                                <img src="/images/safari-icon.png" width="8%" height="8%" alt="" />&nbsp;Safari</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <div id="page-wrapper">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                <asp:ContentPlaceHolder ID="CPH3" runat="server" />
+            </div>
+            <div class="panel-footer mini-font hidden" style="font-family: THSarabun;">
+                <div class="col-lg-10">
+                    Copyright © 2017 All Rights Reserved by Jabjai Corporation Co.,Ltd.<br />
+                    812/36 Charansanitwong Soi 3, Charansanitwong Road, Wat Thapra, Bangkok Yai, Bangkok Thailand, 10600
+                </div>
+                <div class="col-class right">
+                    เวอร์ชั่นระบบ 
+                    <br />
+                    Jabjai for School 1.0
+                </div>
+            </div>
+        </div>
+
+        <div id="modalNotifyOnlyClose" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            ×</button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-2 mb-2">
+                                หัวข้อ:
+                            </div>
+                            <div class="col-md-10 mb-10">
+                                xxx x x x x x x x
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-12">
+                                ข้อความ:
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-12">
+                                xxx x x x x x x xxxx x x x x x x xxxx x x x x x x xxxx x x x x x x x
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 mb-2">
+                                วันที่บันทึก:
+                            </div>
+                            <div class="col-md-10 mb-10">
+                                xxx x x x x x x x
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="modalClose" type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modalAlert" class="modal fade alertBoxInfo" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog" style="top: 150px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" id="modal-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h2 style="text-align: center; font-weight: bold" class="modal-title" id="modal-header">Modal title</h2>
+                    </div>
+                    <div class="modal-body" id="modal-content" style="padding: 40px 10px; text-align: center; font-size: 25px;">
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                        <button type="button" id="modal-cancel" class="btn btn-default" style="font-size: 16px !important"
+                            data-dismiss="modal">
+                            Cancel</button>
+                        <button type="button" id="modal-confirm" class="btn btn-primary" style="font-size: 16px !important">
+                            Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modalconfirm" class="modal fade alertBoxInfo global-modal-confirm global-dialog" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md" style="top: 150px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" id="modalconfirm-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h3 style="text-align: center; font-weight: bold" class="modal-title" id="modal-header">Modal title</h3>
+                    </div>
+                    <div class="modal-body" id="modalconfirm-content" style="padding: 40px 10px; text-align: center;">
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                        <button type="button" id="modalconfirm-confirm" class="btn btn-primary global-btn">
+                            ตกลง</button>
+                        <button type="button" id="modalconfirm-cancel" class="btn btn-danger global-btn"
+                            data-dismiss="modal">
+                            ยกเลิก</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalconfirm-delete" class="modal fade alertBoxInfo global-modal-confirm global-dialog" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md" style="top: 150px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" id="modalconfirm-delete-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <input type="hidden" value="0" id="deleteid" />
+                        <h3 style="text-align: center; font-weight: bold" class="modal-title" id="modal-delete-header">Modal title</h3>
+                    </div>
+                    <div class="modal-body" id="modalconfirm-delete-content" style="padding: 40px 10px; text-align: center;">
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                        <button type="button" id="modalconfirm-delete-confirm" class="btn btn-primary global-btn">
+                            ตกลง</button>
+                        <button type="button" id="modalconfirm-delete-cancel" class="btn btn-danger global-btn"
+                            data-dismiss="modal">
+                            ยกเลิก</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/javascript/highcharts.js" type="text/javascript"></script>
+        <script src="/javascript/exporting.js" type="text/javascript"></script>
+        <div id="modalpopupdata" class="modal fade alertBoxInfo" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog global-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <%--    <button type="button" id="modalpopupdata-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 style="font-size: 20px; text-align: center; font-weight: bold" class="modal-title"
+                            id="modalpopupdata-header">Modal title</h4>--%>
+                    </div>
+                    <div class="modal-body" id="modalpopupdata-content" style="padding: 40px 10px; text-align: center; font-size: 19px;">
+                        <img src="/images/loader-128x/Preloader_2.gif" />
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modalpopupdatabig" class="modal fade alertBoxInfo" tabindex="-1" role="dialog"
+            aria-hidden="true" style="margin: 0 auto; top: 25%;">
+            <div class="modal-md" style="top: 50px;">
+                <div class="modal-content" style="max-width: 900px;">
+                    <div class="modal-header center" id="modalpopupdatabig-header">
+                    </div>
+                    <div class="modal-body" id="modalpopupdatabig-content" style="padding: 40px 10px; text-align: center; font-size: 19px;">
+                        <img src="/images/loader-128x/Preloader_2.gif" />
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modalpopupsystem" class="modal fade alertBoxInfo" tabindex="-1" role="dialog"
+            aria-hidden="true" style="margin: 0 auto; top: 5%;">
+            <div class="modal-md" style="top: 50px;">
+                <div class="modal-content" style="max-width: 900px;">
+                    <div class="modal-header center">
+                        <h1>ประกาศจากระบบ</h1>
+                    </div>
+                    <div class="modal-body" id="modalpopupdata-content" style="padding: 40px 10px; text-align: center; font-size: 19px;">
+                        <h1>ระบบอยู่ในระหว่างการปรับปรุง</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form id="formpopup">
+        <div id="modalpopup-data" class="modal fade alertBoxInfo" tabindex="-1" role="dialog"
+            aria-hidden="true" style="margin: 0 auto; top: 25%;">
+            <div class="modal-dialog global-modal">
+                <div class="modal-content" style="max-width: 900px;">
+                    <div class="modal-header center" style="padding: 0px; top: 25%;">
+                        <h1>ประกาศจากระบบ</h1>
+                    </div>
+                    <div class="modal-body product-add-container" id="modalpopup-data-content">
+                        <asp:ContentPlaceHolder ID="modalpopup" runat="server" />
+                    </div>
+                    <div class="modal-footer" style="display: block; text-align: center;">
+                        <button type="button" id="modalpopup-data-submit" class="btn btn-primary global-btn">
+                            ตกลง</button>
+                        <button type="button" id="modalpopup-data-cancel" class="btn btn-danger global-btn"
+                            data-dismiss="modal">
+                            ยกเลิก</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

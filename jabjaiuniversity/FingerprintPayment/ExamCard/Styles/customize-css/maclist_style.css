@@ -1,0 +1,70 @@
+﻿.maclist-container {
+
+}
+
+@media (max-width: 999px) {
+
+    .maclist-container .btn-maclist {
+        width: 150px;
+    }
+
+    .maclist-container .btn-del-maclist {
+        width: 150px;
+        margin-top: 5px;
+    }
+
+    .maclist-modal .modal-header {
+        font-size: 26px;
+    }
+
+    
+    .maclist-modal .modal-body {
+        padding-left: 15px;
+        text-align: left;
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .maclist-container .btn-maclist {
+        width: 150px;
+    }
+
+    .maclist-container .btn-del-maclist {
+        width: 100px;
+    }
+
+    .maclist-modal .modal-header {
+        font-size: 28px;
+    }
+
+    .maclist-modal .modal-body {
+        padding-left: 15px;
+        text-align: left;
+        font-size: 24px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .maclist-container .btn-maclist {
+        width: 180px;
+    }
+
+    .maclist-container .btn-del-maclist {
+        width: 180px;
+    }
+
+    .maclist-modal .modal-header {
+        font-size: 32px;
+    }
+
+    .maclist-modal .modal-body {
+        padding-left: 15px;
+        text-align: left;
+        font-size: 28px;
+    }
+}

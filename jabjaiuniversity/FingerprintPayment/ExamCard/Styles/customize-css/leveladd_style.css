@@ -1,0 +1,29 @@
+﻿@media (max-width: 999px) {
+    .leveladd-container {
+        font-size: 20px;
+    }
+
+    .leveladd-container .global-btn {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .leveladd-container {
+        font-size: 22px;
+    }
+
+    .leveladd-container .global-btn {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .leveladd-container {
+        font-size: 26px;
+    }
+
+    .leveladd-container .global-btn {
+        font-size: 26px;
+    }
+}

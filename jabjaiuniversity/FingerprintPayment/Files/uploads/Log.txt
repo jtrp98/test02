@@ -1,0 +1,152 @@
+Page Login : 04/05/2021 14:59:27.+07:00 
+Page Login Result : 04/05/2021 14:59:29.+07:00 
+RESULT DATA : {"Message":"Success","MessageError":"","StatusCode":null,"Result":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyODU3MTgsImVudGl0aWVzIjoiSmFiSmFpRW50aXRpZXMwMzA3IiwidXBkYXRlIjoiMjAyMC0wNy0wOVQxODozMToyOC42OSIsInVzZXJfbmFtZSI6IuC4quC4hOC4ueC4pSDguYTguJrguKPguYzguJciLCJTY2hvb2xEQkNvbm5lY3Rpb25TdHJpbmciOiI5M3JYY1RqenZPZWhscUxnOE9BWjFkZzk3MlQ0WmUrb0VDVFJJOW1jU1J2dmljYUpwaVl4ZHJHeTIwK01pMWRVVVdCYWNQTVBxZUxHbUpqQWRzN0lyZGVJSDU4d05DTU12UThhVytlRVRUTHc1dFZFaGpSYUpqdUZjZEk3d1FSZWhLaE9idkdNVUdMbzQ3Qm1DYklXdVVydFJ3aGZFNUM0NHNrZnRva0w0OW11aTQ1Ymtoa0ZoR3FrYVpBSUFXdFpSTVpMMENPQUdadDJmdFQxRXhXR25ydERDZUFZQkF4dGl1eWhVTUIwM1dLRXZDaFEzWWlwZnIzYzEvQ1JDdlA4bFJmQnJFaHpvNUhXNFVwNWM2U2lBTGpZbFNtVTNLajl6VjNnSSs3MHJvZXA4SDJYUUFTd214TGs0dVhPRjZVcWcyblBiWFdod0wxRFRFNHQyWHh0REE9PSIsIk5Db21wYW55IjozMDd9.5Exaxinr5KYCX9rpb-ndYz1o6ggRK_o5WIV8rnX7S88","ResultCount":0,"Title":null} 
+Page AdminMain Have Session : 04/05/2021 14:59:37.+07:00 
+Page Login : 04/05/2021 15:21:35.PM 
+Page Login Result : 04/05/2021 15:21:37.PM 
+RESULT DATA : {"Message":"Login Fail","MessageError":"{\"Message\": \"Input string was not in a correct format.\" ,\"StackTrace\":\"   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)\r\n   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)\r\n   at System.String.Format(String format, Object arg0, Object arg1)\r\n   at FingerprintPayment._Default.Login(String user_id, String password) in H:\\git\\Jabjai-Corporation\\schoolbright-backend\\jabjaiuniversity\\FingerprintPayment\\Default.aspx.cs:line 117\",\"Source\":\"mscorlib\" }","StatusCode":null,"Result":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyODU3MTgsImVudGl0aWVzIjoiSmFiSmFpRW50aXRpZXMwMzA3IiwidXBkYXRlIjoiMjAyMC0wNy0wOVQxODozMToyOC42OSIsInVzZXJfbmFtZSI6IuC4quC4hOC4ueC4pSDguYTguJrguKPguYzguJciLCJTY2hvb2xEQkNvbm5lY3Rpb25TdHJpbmciOiJZZ3dxWDl6d0VQRklEOG1DSm1sbWZaSWl5TEcrdGIxVVhGWnpkOU1XWThrOUJPYlo5RXdQeGhTVnR1WmZvSTBibUZIRlBzeEpWQ1BsQVkxOUFoQUtxR0dJYUxLRlRRWDRYZDN6RWlUbmUrUWYrcWo5S2pnMnRmKzZQRTFJR1kyUWVuUzFYY0hNUEhkQnhWWUZuUCtvOGJIbmV1NWt3L2o0eW5xWkthNHhvV1ZtRGRlUEs2NGdmRGtIdGtwNlJhOVRJTUZPVG9mTXJ0cElkNkc5RTFJTFluQThtUWZLL0FMZEUxV1NRUkpuZHVhTjQ3cHFtelBqeGowQ2lqcDYrQWJnMGh1alZBVlJwNmduK214aUJOUThmQzFGUm5nQ0RuaXhKV0RyakxXOWs4R1BCaVUrR0RLUWhZV3ppdXNMcFYyenZvVXpwNWVtc3A4d2VwMDJCUW5hUWc9PSIsIk5Db21wYW55IjozMDd9.FHHUY_2qc4v3ikDOqw2khdVTUU0AM6lRZIuvXKBdCqw","ResultCount":0,"Title":null} 
+Page Login : 04/05/2021 15:24:16.PM 
+Page Login Result : 04/05/2021 15:24:18.PM 
+RESULT DATA : {"Message":"Login Fail","MessageError":"{\"Message\": \"Input string was not in a correct format.\" ,\"StackTrace\":\"   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)\r\n   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)\r\n   at System.String.Format(String format, Object arg0, Object arg1)\r\n   at FingerprintPayment._Default.Login(String user_id, String password) in H:\\git\\Jabjai-Corporation\\schoolbright-backend\\jabjaiuniversity\\FingerprintPayment\\Default.aspx.cs:line 117\",\"Source\":\"mscorlib\" }","StatusCode":null,"Result":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyODU3MTgsImVudGl0aWVzIjoiSmFiSmFpRW50aXRpZXMwMzA3IiwidXBkYXRlIjoiMjAyMC0wNy0wOVQxODozMToyOC42OSIsInVzZXJfbmFtZSI6IuC4quC4hOC4ueC4pSDguYTguJrguKPguYzguJciLCJTY2hvb2xEQkNvbm5lY3Rpb25TdHJpbmciOiJ1Rm9BRG5xZHpkMEJlQXpLUWczMEZra2YrNjg2N3dyTGxmWUxUSmFJbkdhTERkd21naENoYVEyUlcxRW5ndEpTdkkxVHZKMUFQY21IOUIvV0tTZDc5clRtYmExNEZJb1o1N1B0WU51bzdOZ0llTXJ0RU8yK3NIMDFqaVlkNWJNcC9DelFUODdLWUxSb3ZGWFBKeC9HRzRXbkVCM0hHNE44SWIvaEdhNDE0WmcwOFhDL2VtbVBaSXV4YjlhYmN2ZDhkQlBCaHdiY24yb1N6eUNyM2F3MTdiRk5QWlBHZmo5M0ZmcngxVHhHQzdiV2t6cEg2VzEyaGYyRFVMMXN4K2hOUU1GNzZram42eFN1U0ZRdTRHL2todjhOTmxSNWlYRDdqRzVuNW1ONVZRaXp4amRVZVQwbHV5L3U1dkE5Y2hFNHhwM1N1TVNwWkd6QXk5ME5mcXdCdWc9PSIsIk5Db21wYW55IjozMDd9.0VVOLEMghrSzhM7JcpRHS-DjAkC183PzC7Tl3lK94p0","ResultCount":0,"Title":null} 
+Page Login : 04/05/2021 15:26:46.PM 
+Page Login Result : 04/05/2021 15:26:48.PM 
+RESULT DATA : {"Message":"Login Fail","MessageError":"{\"Message\": \"Input string was not in a correct format.\" ,\"StackTrace\":\"   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)\r\n   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)\r\n   at System.String.Format(String format, Object arg0, Object arg1)\r\n   at FingerprintPayment._Default.Login(String user_id, String password) in H:\\git\\Jabjai-Corporation\\schoolbright-backend\\jabjaiuniversity\\FingerprintPayment\\Default.aspx.cs:line 117\",\"Source\":\"mscorlib\" }","StatusCode":null,"Result":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyODU3MTgsImVudGl0aWVzIjoiSmFiSmFpRW50aXRpZXMwMzA3IiwidXBkYXRlIjoiMjAyMC0wNy0wOVQxODozMToyOC42OSIsInVzZXJfbmFtZSI6IuC4quC4hOC4ueC4pSDguYTguJrguKPguYzguJciLCJTY2hvb2xEQkNvbm5lY3Rpb25TdHJpbmciOiJIOEZlRktGTU43c0dUdDZQOCtZR0hyb3VHL1hVMHlqSXJMUjZKSkdtbmNpWlJVRVJreGxvWjlYZGNERzFnNDhsWHRRRFgxMjBHYyt3S1BrREZCQXpneDRQZE5mUlBaWjVWWW9xUFZMdzZSZ0hvSnJ1REpnMmVKclE3SkVZOVBMTSt6RTJCQzdjTndINkVudDlMOSs3cFlUc1pwTEE3dkcxTFpHU0lodS9KNkIxdDAwS0g5d1FkbUU4TEkrZGhxSTgzWVRES25SOEZFYXBzaWRPUWhGZHVnclhOOGEzWWJTTGU1dEUzVDUwRmpTdm0vMjFJNXRSK2hFQ1grR2NJa0ltd2RvOGFIVmJrY0Y5eXhWTnJXKzRPdUJ0MlEzaW1KZjdtUWc3MHlrbHcwS2M1QjhUWlpVUHVVRXVtSVBoaklONkVWaml5VzYyQkpDUHhISVlMajY3L1E9PSIsIk5Db21wYW55IjozMDd9.Sg9pKHrc8U7FY42rOwJGrwgx9rIjVh1KxA6LzD54BS4","ResultCount":0,"Title":null} 
+Page Login : 04/05/2021 15:30:33.PM 
+Page Login Result : 04/05/2021 15:30:35.PM 
+RESULT DATA : {"Message":"Success","MessageError":"","StatusCode":null,"Result":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyODU3MTgsImVudGl0aWVzIjoiSmFiSmFpRW50aXRpZXMwMzA3IiwidXBkYXRlIjoiMjAyMC0wNy0wOVQxODozMToyOC42OSIsInVzZXJfbmFtZSI6IuC4quC4hOC4ueC4pSDguYTguJrguKPguYzguJciLCJTY2hvb2xEQkNvbm5lY3Rpb25TdHJpbmciOiJFc1lQUnQvdkdzMDFzbW9HYTNjcm9mcWtZc0NmMURUQWtOczl1aE1Bb2F5NXJnNDhwbjU3Y3ZKTy90MU03S0w5OVBuYklUcmZ5SHlWZC81TkpyYTBpcVR5enFXYmcySGcxeTRsN0srZkloSUNNVXJGRVJZeHFvZjBTb2RYOTk4OSsrVk9uWCttRzFTZk5HWXI4Ym0vTHBHR1VEZStaQVhBQk5BSktPSjc2ak9DQUJHanFBdE1PYnc1c0lxWWVlMVBIK2FxSXpOQTFLU24zTDF6T3BiSytUQXBLV2tMemV1WGRYYlBwRTB4Nk1MZ3FNZDd2TjYxRWhhalVoMzhEeDhFbGVjMklGNzJxMjNzUHVkQ1lLdzVIbTZDSG4xUi9ZV0N5RTROdzBRTHBUNlFOajFLWjJoekVNUWpRUGNGNUZxWUtaMmJxRTdic0hSME1TL2ZCcFlrL1E9PSIsIk5Db21wYW55IjozMDd9.lBe-wZADTf0PDerGNEZxnuoR-SFWuqC_cWaVGmBOaKE","ResultCount":0,"Title":null} 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 15:30:41.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 15:30:42.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:15:05.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 16:15:06.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:16:50.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 16:16:50.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:17:25.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 16:17:26.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:18:22.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 16:18:22.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:19:05.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 16:19:05.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:19:06.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 16:19:07.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:19:31.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 16:19:32.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:20:09.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 16:20:10.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:20:27.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain End Function : 04/05/2021 16:20:27.PM 
+USER DATA : [{"USER ID":285718"USER NAME":สคูล ไบร์ท}]
+
+Page AdminMain Have Session : 04/05/2021 16:38:30.PM 
+USER DATA : [{"USER ID":285718,"USER NAME":"สคูล ไบร์ท"}]
+
+Page AdminMain End Function : 04/05/2021 16:38:30.PM 
+USER DATA : [{"USER ID":285718,"USER NAME":"สคูล ไบร์ท"}]
+
+Page AdminMain Have Session : 04/05/2021 16:38:40.PM 
+USER DATA : [{"USER ID":285718,"USER NAME":"สคูล ไบร์ท"}]
+
+Page AdminMain End Function : 04/05/2021 16:38:40.PM 
+USER DATA : [{"USER ID":285718,"USER NAME":"สคูล ไบร์ท"}]
+
+Page AdminMain Have Session : 04/05/2021 16:39:51.PM 
+USER DATA : [{"USER ID":285718,"USER NAME":"สคูล ไบร์ท"}]
+
+Page AdminMain End Function : 04/05/2021 16:39:51.PM 
+USER DATA : [{"USER ID":285718,"USER NAME":"สคูล ไบร์ท"}]
+
+Page AdminMain Have Session : 04/05/2021 16:46:36.PM 
+USER DATA : [{"USER ID":285718,"USER NAME":"สคูล ไบร์ท"}]
+
+Page AdminMain End Function : 04/05/2021 16:46:36.PM 
+USER DATA : [{"USER ID":285718,"USER NAME":"สคูล ไบร์ท"}]
+
+MasterPage Start : 05/05/2021 13:34:59.PM 
+MasterPage End : 05/05/2021 13:34:59.PM 
+MasterPage Start : 05/05/2021 13:38:24.PM 
+MasterPage End : 05/05/2021 13:38:24.PM 
+MasterPage Start : 05/05/2021 13:47:22.PM 
+MasterPage End : 05/05/2021 13:47:22.PM 
+MasterPage Start : 05/05/2021 13:52:48.PM 
+MasterPage End : 05/05/2021 13:52:48.PM 
+MasterPage Start : 05/05/2021 13:56:12.PM 
+MasterPage End : 05/05/2021 13:56:12.PM 
+MasterPage Start : 05/05/2021 14:05:57.PM 
+MasterPage End : 05/05/2021 14:05:57.PM 
+MasterPage Start : 05/05/2021 14:07:56.PM 
+MasterPage End : 05/05/2021 14:07:56.PM 
+MasterPage Start : 05/05/2021 14:13:32.PM 
+MasterPage End : 05/05/2021 14:13:32.PM 
+MasterPage Start : 05/05/2021 14:24:50.PM 
+MasterPage End : 05/05/2021 14:24:50.PM 
+MasterPage : 05/05/2021 14:24:50.PM 
+ERROR DATA : [{"Message": "The process cannot access the file 'H:\git\Jabjai-Corporation\schoolbright-backend\jabjaiuniversity\FingerprintPayment\Files\uploads\Log.txt' because it is being used by another process." ,"StackTrace":"   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding)
+   at System.IO.File.InternalAppendAllText(String path, String contents, Encoding encoding)
+   at System.IO.File.AppendAllText(String path, String contents)
+   at FingerprintPayment.mp.Page_Load(Object sender, EventArgs e) in H:\git\Jabjai-Corporation\schoolbright-backend\jabjaiuniversity\FingerprintPayment\mp.Master.cs:line 33","Source":"mscorlib" }] 
+
+MasterPage : 05/05/2021 14:24:50.PM 
+ERROR DATA : [{"Message": "The process cannot access the file 'H:\git\Jabjai-Corporation\schoolbright-backend\jabjaiuniversity\FingerprintPayment\Files\uploads\Log.txt' because it is being used by another process." ,"StackTrace":"   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding)
+   at System.IO.File.InternalAppendAllText(String path, String contents, Encoding encoding)
+   at System.IO.File.AppendAllText(String path, String contents)
+   at FingerprintPayment.mp.Page_Load(Object sender, EventArgs e) in H:\git\Jabjai-Corporation\schoolbright-backend\jabjaiuniversity\FingerprintPayment\mp.Master.cs:line 33","Source":"mscorlib" }] 
+
+MasterPage Start : 05/05/2021 14:33:14.PM 
+MasterPage End : 05/05/2021 14:33:14.PM 
+MasterPage Start : 05/05/2021 14:43:09.PM 
+MasterPage End : 05/05/2021 14:43:09.PM 
+MasterPage Start : 05/05/2021 14:44:33.PM 
+MasterPage End : 05/05/2021 14:44:33.PM 
+MasterPage Start : 05/05/2021 14:45:56.PM 
+MasterPage End : 05/05/2021 14:45:56.PM 
+MasterPage Start : 05/05/2021 14:54:23.PM 
+MasterPage End : 05/05/2021 14:54:23.PM 

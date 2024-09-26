@@ -1,0 +1,73 @@
+﻿.employeesadd-container {
+
+}
+
+/*
+.employeesadd-container label {
+    font-weight: normal;
+}
+*/
+
+.employeesadd-container .type-container select {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+@media (max-width: 999px) {
+
+    .employeesadd-container {
+        font-size: 20px;
+    }
+
+    .employeesadd-container .nav li > a {
+        font-size: 20px;
+    }
+
+    .employeesadd-container .btn-permission {
+        font-size: 18px;
+    }
+
+    .employeesadd-container .global-btn {
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .employeesadd-container {
+        font-size: 22px;
+    }
+
+    .employeesadd-container .nav li > a {
+        font-size: 22px;
+    }
+
+    .employeesadd-container .btn-permission {
+        font-size: 22px;
+    }
+
+    .employeesadd-container .global-btn {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .employeesadd-container {
+        font-size: 26px;
+    }
+
+    .employeesadd-container .nav li > a {
+        font-size: 26px;
+    }
+
+    .employeesadd-container .btn-permission {
+        font-size: 26px;
+    }
+
+    .employeesadd-container .global-btn {
+        font-size: 26px;
+    }
+}

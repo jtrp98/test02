@@ -1,0 +1,60 @@
+﻿.roomadd-container {
+
+}
+
+@media (max-width: 999px) {
+
+    .roomadd-container {
+        font-size: 20px;
+    }
+
+    .roomadd-container label {
+        font-size: 20px;
+    }
+
+    .roomadd-container .button-section .global-btn {
+        font-size: 20px;
+    }
+
+    .roomadd-container input[type=text] {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .roomadd-container {
+        font-size: 22px;
+    }
+
+    .roomadd-container label {
+        font-size: 22px;
+    }
+
+    .roomadd-container .button-section .global-btn {
+        font-size: 22px;
+    }
+
+    .roomadd-container input[type=text] {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .roomadd-container {
+        font-size: 26px;
+    }
+
+    .roomadd-container label {
+        font-size: 26px;
+    }
+
+    .roomadd-container .button-section .global-btn {
+        font-size: 26px;
+    }
+
+    .roomadd-container input[type=text] {
+        font-size: 26px;
+    }
+}

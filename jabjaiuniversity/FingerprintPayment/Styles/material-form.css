@@ -1,0 +1,221 @@
+﻿
+.stdProfile h4, .modal h4.modal-title, .material-form h4 {
+    font-family: THSarabunNew;
+}
+
+.modal h3.modal-title {
+    font-family: THSarabunNew;
+}
+
+/*.card-icon {
+    padding-bottom: 6px !important;
+}
+
+    .card-icon .material-icons {
+        font-size: 38px;
+        margin: 0px 1px 0px -1px;
+    }
+*/
+
+.stdProfile .dropdown.bootstrap-select.col-sm-12, .material-form .dropdown.bootstrap-select.col-sm-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.stdProfile .dropdown-toggle:after, .material-form .dropdown-toggle:after {
+    margin-right: -12px;
+}
+
+.stdProfile .dropdown-menu.dropdown-menu-right.show li:hover, .material-form .dropdown-menu.dropdown-menu-right.show li:hover {
+    color: white;
+}
+
+.stdProfile .dropdown-toggle.bs-placeholder .filter-option-inner-inner, .material-form .dropdown-toggle.bs-placeholder .filter-option-inner-inner {
+    color: #aaaaaa;
+    font-size: 14px;
+    padding: 7px 0px 0px 5px;
+    margin-top: -7px;
+}
+
+.stdProfile .dropdown-toggle .filter-option-inner-inner, .material-form .dropdown-toggle .filter-option-inner-inner {
+    font-size: 14px;
+    padding: 7px 0px 0px 5px;
+    margin-top: -7px;
+}
+
+.stdProfile .el-switch .el-switch-style, .material-form .el-switch .el-switch-style {
+    height: 1.6em;
+    left: 0;
+    background: #ff514b;
+    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 3em;
+    cursor: pointer;
+}
+
+.stdProfile .modal-footer .btn.btn-default, .stdProfile .modal-footer .btn.btn-primary, .stdProfile .modal-footer .btn.btn-danger, .stdProfile .modal-footer .btn.btn-success,
+.modal .modal-footer .btn.btn-default, .modal .modal-footer .btn.btn-primary, .modal .modal-footer .btn.btn-danger, .modal .modal-footer .btn.btn-success,
+.material-form .modal-footer .btn.btn-default, .material-form .modal-footer .btn.btn-primary, .material-form .modal-footer .btn.btn-danger, .material-form .modal-footer .btn.btn-success {
+    width: 95px !important;
+}
+
+.view-form .btn.btn-danger {
+    width: 95px !important;
+}
+
+.modal .modal-footer button {
+    margin-left: 7px;
+}
+
+.stdProfile .row.text-center, .material-form .row.text-center {
+    display: block;
+}
+
+.stdProfile .panel, .material-form .panel {
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+    .stdProfile .panel.with-nav-tabs .panel-heading, .material-form .panel.with-nav-tabs .panel-heading {
+        padding: 10px 5px 10px 5px;
+        background-color: #fff;
+        border-color: transparent;
+    }
+
+.stdProfile .card .tab-content .form-check, .material-form .card .tab-content .form-check {
+    margin-top: 17px;
+}
+
+.stdProfile .card .card-body .col-form-label, .stdProfile .card .card-body .label-on-right, .material-form .card .card-body .col-form-label, .material-form .card .card-body .label-on-right {
+    padding: 17px 20px 0 20px;
+}
+
+.stdProfile .div-datepicker, .material-form .div-datepicker {
+    margin: 2px 0 0;
+}
+
+.stdProfile p.bg-primary, .material-form p.bg-primary {
+    padding: 10px 5px 10px 10px;
+    margin: 0px 0px -7px 0px;
+    color: #fff;
+}
+
+.stdProfile .col-form-label label, .material-form .col-form-label label, .material-form .col-form-label span {
+    color: black;
+    font-weight: bold;
+}
+
+.material-form span.required {
+    color: red;
+    font-weight: bold;
+    padding-left: 3px;
+}
+
+/* +Placeholder Style */
+.stdProfile .form-control::placeholder, .material-form .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    padding: 5px;
+    color: #aaaaaa;
+}
+
+.stdProfile .form-control:-ms-input-placeholder, .material-form .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding: 5px;
+    color: #aaaaaa;
+}
+
+.stdProfile .form-control::-ms-input-placeholder, .material-form .form-control::-ms-input-placeholder { /* Microsoft Edge */
+    padding: 5px;
+    color: #aaaaaa;
+}
+
+.material-form .form-control::placeholder {
+    padding: 10px 0px 0px 0px !important;
+}
+
+.material-form .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding: 10px 0px 0px 0px !important;
+}
+
+.material-form .form-control::-ms-input-placeholder { /* Microsoft Edge */
+    padding: 10px 0px 0px 0px !important;
+}
+
+.material-form .form-control {
+    padding: 7px 0px 0px 5px;
+    margin-top: 7px;
+}
+
+.material-form .form-group .form-control {
+    padding: 0px 0px 0px 0px;
+    margin-top: 0px;
+}
+/* -Placeholder Style */
+
+.stdProfile form .checkbox-radios, .material-form form .checkbox-radios {
+    margin-top: 0px;
+}
+
+.stdProfile form .form-check-inline, .material-form form .form-check-inline {
+    margin-top: 16px !important;
+}
+
+.stdProfile form .div-text-input, .material-form form .div-text-input {
+    margin: 8px 0px 0px 0px;
+}
+
+.stdProfile form .div-text-span, .material-form form .div-text-span {
+    margin: 16px 0px 0px 0px !important;
+    color: #777;
+}
+
+.stdProfile form .div-select-input, .material-form form .div-select-input {
+    margin-top: 2px;
+}
+
+.stdProfile form .div-check-input, .material-form form .div-check-input {
+    margin: 10px 0px 0px 0px !important;
+}
+
+.stdProfile .toggle.btn, .material-form .toggle.btn {
+    border-radius: 4px;
+}
+
+.stdProfile .toggle-handle.btn, .material-form .toggle-handle.btn {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    padding: 6px 12px;
+}
+
+.stdProfile .toggle-on.btn, .material-form .toggle-on.btn {
+    padding-right: 35px !important;
+}
+
+.stdProfile .toggle-off.btn, .material-form .toggle-off.btn {
+    padding-left: 40px !important;
+}
+
+.stdProfile form .bmd-form-group .error, .stdProfile form .dropdown.bootstrap-select + .error, .stdProfile .checkbox-radios.drop-out .error, .stdProfile form .bmd-form-group + .text-danger + .error,
+.material-form form .bmd-form-group .error, .material-form form .dropdown.bootstrap-select + .error, .material-form .checkbox-radios.drop-out .error, .material-form form .bmd-form-group + .text-danger + .error {
+    font-size: 0.8rem;
+    color: #f44336;
+}
+
+#iptStudentID-error {
+    display: block;
+    margin-top: 8px;
+}
+
+#studentTabs .nav-item a.nav-link {
+    font-size: 1rem;
+}
+
+#divStudentNote ul a {
+    cursor: pointer;
+}
+

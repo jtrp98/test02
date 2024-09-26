@@ -1,0 +1,174 @@
+﻿using System;
+
+namespace FingerprintPayment.ViewModels
+{
+    public class PlanList2
+    {
+        public int ranking { get; set; }
+        public string scoreRank { get; set; }
+        public int studentnumber { get; set; }
+
+        public int nStudentStatus { get; set; }
+        public int sId { get; set; }
+        public string studentcode { get; set; }
+        public int number { get; set; }
+        public string name { get; set; }
+        public string totalPlan { get; set; }
+        public string registerPlan { get; set; }
+        public string term1score1 { get; set; }
+        public string term1score2 { get; set; }
+        public string term1score3 { get; set; }
+        public string term1score4 { get; set; }
+        public string term1score5 { get; set; }
+        public string term1score6 { get; set; }
+        public string term1score7 { get; set; }
+        public string term1score8 { get; set; }
+        public string term1score9 { get; set; }
+        public string term1score10 { get; set; }
+        public string term1score11 { get; set; }
+        public string term1score12 { get; set; }
+        public string term1score13 { get; set; }
+        public string term1score14 { get; set; }
+        public string term1score15 { get; set; }
+        public string term1score16 { get; set; }
+        public string term1score17 { get; set; }
+        public string term1score18 { get; set; }
+        public string term1score19 { get; set; }
+        public string term1score20 { get; set; }
+        public string term1score21 { get; set; }
+        public string term1score22 { get; set; }
+        public string term1score23 { get; set; }
+        public string term1score24 { get; set; }
+        public string term1score25 { get; set; }
+        public string term1score26 { get; set; }
+        public string term2score1 { get; set; }
+        public string term2score2 { get; set; }
+        public string term2score3 { get; set; }
+        public string term2score4 { get; set; }
+        public string term2score5 { get; set; }
+        public string term2score6 { get; set; }
+        public string term2score7 { get; set; }
+        public string term2score8 { get; set; }
+        public string term2score9 { get; set; }
+        public string term2score10 { get; set; }
+        public string term2score11 { get; set; }
+        public string term2score12 { get; set; }
+        public string term2score13 { get; set; }
+        public string term2score14 { get; set; }
+        public string term2score15 { get; set; }
+        public string term2score16 { get; set; }
+        public string term2score17 { get; set; }
+        public string term2score18 { get; set; }
+        public string term2score19 { get; set; }
+        public string term2score20 { get; set; }
+        public string term2score21 { get; set; }
+        public string term2score22 { get; set; }
+        public string term2score23 { get; set; }
+        public string term2score24 { get; set; }
+        public string term2score25 { get; set; }
+        public string term2score26 { get; set; }
+
+        public int sort1int { get; set; }
+        public string sort1txt { get; set; }
+        public int? sort2 { get; set; }
+
+        public int scoreall { get; set; }
+        public double scoreget { get; set; }
+        public double? maxweight { get; set; }
+        public double? sumweight { get; set; }
+        public double grade { get; set; }
+        public string sum1 { get; set; }
+        public string sum2 { get; set; }
+        public string sum3 { get; set; }
+        public string sum4 { get; set; }
+        public string sum5 { get; set; }
+        public string sum6 { get; set; }
+        public string sum7 { get; set; }
+        public string sum8 { get; set; }
+        public string sum9 { get; set; }
+        public string sum10 { get; set; }
+        public string sum11 { get; set; }
+        public string sum12 { get; set; }
+        public string sum13 { get; set; }
+        public string sum14 { get; set; }
+        public string sum15 { get; set; }
+        public string sum16 { get; set; }
+        public string sum17 { get; set; }
+        public string sum18 { get; set; }
+        public string sum19 { get; set; }
+        public string sum20 { get; set; }
+        public string sum21 { get; set; }
+        public string sum22 { get; set; }
+        public string sum23 { get; set; }
+        public string sum24 { get; set; }
+        public string sum25 { get; set; }
+        public string sum26 { get; set; }
+
+        public string max1 { get; set; }
+        public string max2 { get; set; }
+        public string max3 { get; set; }
+        public string max4 { get; set; }
+        public string max5 { get; set; }
+        public string max6 { get; set; }
+        public string max7 { get; set; }
+        public string max8 { get; set; }
+        public string max9 { get; set; }
+        public string max10 { get; set; }
+        public string max11 { get; set; }
+        public string max12 { get; set; }
+        public string max13 { get; set; }
+        public string max14 { get; set; }
+        public string max15 { get; set; }
+        public string max16 { get; set; }
+        public string max17 { get; set; }
+        public string max18 { get; set; }
+        public string max19 { get; set; }
+        public string max20 { get; set; }
+        public string max21 { get; set; }
+        public string max22 { get; set; }
+        public string max23 { get; set; }
+        public string max24 { get; set; }
+        public string max25 { get; set; }
+        public string max26 { get; set; }
+
+        public string grade1 { get; set; }
+        public string grade2 { get; set; }
+        public string grade3 { get; set; }
+        public string grade4 { get; set; }
+        public string grade5 { get; set; }
+        public string grade6 { get; set; }
+        public string grade7 { get; set; }
+        public string grade8 { get; set; }
+        public string grade9 { get; set; }
+        public string grade10 { get; set; }
+        public string grade11 { get; set; }
+        public string grade12 { get; set; }
+        public string grade13 { get; set; }
+        public string grade14 { get; set; }
+        public string grade15 { get; set; }
+        public string grade16 { get; set; }
+        public string grade17 { get; set; }
+        public string grade18 { get; set; }
+        public string grade19 { get; set; }
+        public string grade20 { get; set; }
+        public string grade21 { get; set; }
+        public string grade22 { get; set; }
+        public string grade23 { get; set; }
+        public string grade24 { get; set; }
+        public string grade25 { get; set; }
+        public string grade26 { get; set; }
+        public string sumall { get; set; }
+        public string score100get { get; set; }
+        public string gradeget { get; set; }
+        public double gradegetdouble { get; set; }
+        public double gradegetdouble2 { get; set; }
+        public int? sortnumberType { get; set; }
+        public int? sortnumberGroup { get; set; }
+
+        public DateTime? DayQuit { get; set; }
+
+        public bool IsStudentResigned { get; set; }
+
+        public double GPAdouble { get; set; }
+    }
+}

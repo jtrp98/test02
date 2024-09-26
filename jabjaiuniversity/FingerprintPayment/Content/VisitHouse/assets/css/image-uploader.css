@@ -1,0 +1,100 @@
+/*! Image Uploader - v1.0.0 - 15/07/2019
+ * Copyright (c) 2019 Christian Bayer; Licensed MIT */
+
+/* Base style */
+.image-uploader {
+    min-height: 3rem;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    margin-top: 10px;
+}
+
+/* Style on hover */
+.image-uploader.drag-over {
+    background-color: #f3f3f3;
+}
+
+/* Hide the file input */
+.image-uploader input[type="file"] {
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Text container */
+.image-uploader .upload-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-uploader .upload-text i {
+    font-size: 22px;
+    margin-bottom: 0;
+    margin-right: 5px;
+    color: #FF7A62;
+    transform: rotate(45deg);
+}
+
+.image-uploader .upload-text span {
+    display: block;
+}
+
+/* Hide the text if there is at least one uploaded image */
+.image-uploader.has-files .upload-text {
+    display: none;
+}
+
+/* Uploaded images container */
+.image-uploader .uploaded {
+    padding: .5rem;
+    line-height: 0;
+}
+
+.image-uploader .uploaded .uploaded-image {
+    display: inline-block;
+    width: calc(25% - 1rem);
+    padding-bottom: calc(25% - 1rem);
+    height: 0;
+    position: relative;
+    margin: .5rem;
+    background: #f3f3f3;
+    cursor: default;
+}
+
+.image-uploader .uploaded .uploaded-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* Delete image button */
+.image-uploader .uploaded .uploaded-image .delete-image {
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    border-radius: 50%;
+    padding: 1px;
+    background-color: white;
+    -webkit-appearance: none;
+    border: none;
+}
+
+.image-uploader .uploaded .uploaded-image:hover .delete-image {
+    display: block;
+}
+
+.image-uploader .uploaded .uploaded-image .delete-image i {
+    color: #FF7A62;
+    font-size: 20px;
+}

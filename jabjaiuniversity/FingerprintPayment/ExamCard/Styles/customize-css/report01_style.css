@@ -1,0 +1,36 @@
+﻿.report01-container {
+
+}
+
+@media (max-width: 999px) {
+
+    .report01-container {
+        font-size: 20px;
+    }
+
+    .report01-container .global-btn {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .report01-container {
+        font-size: 22px;
+    }
+
+    .report01-container .global-btn {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .report01-container {
+        font-size: 26px;
+    }
+
+    .report01-container .global-btn {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,56 @@
+﻿.companyedit-container {
+
+}
+
+@media (max-width: 999px) {
+
+    .companyedit-container {
+        font-size: 20px;
+    }
+
+    .companyedit-container .global-btn {
+        font-size: 20px;
+        width: 120px;
+    }
+
+    .companyedit-container input[type=file] {
+        font-size: 18px;
+        font-family: thaifont;
+    }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .companyedit-container {
+        font-size: 22px;
+    }
+
+    .companyedit-container .global-btn {
+        font-size: 22px;
+        width: 120px;
+    }
+
+    .companyedit-container input[type=file] {
+        font-size: 18px;
+        font-family: thaifont;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .companyedit-container {
+        font-size: 26px;
+    }
+
+    .companyedit-container .global-btn {
+        font-size: 26px;
+        width: 120px;
+    }
+
+    .companyedit-container input[type=file] {
+        font-size: 18px;
+        font-family: thaifont;
+    }
+}

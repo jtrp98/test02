@@ -1,0 +1,62 @@
+﻿.sublevelsetting-container {
+}
+
+@media (max-width: 999px) {
+
+    .sublevelsetting-container {
+        font-size: 20px;
+    }
+
+        .sublevelsetting-container .nav > li > a {
+            font-size: 20px;
+        }
+
+        .sublevelsetting-container .glyphicon {
+            font-size: 12px;
+        }
+
+            .sublevelsetting-container .glyphicon span.text-sublevel {
+                font-size: 20px;
+                font-family: 'THSarabun';
+            }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .sublevelsetting-container {
+        font-size: 22px;
+    }
+
+        .sublevelsetting-container .nav > li > a {
+            font-size: 22px;
+        }
+
+        .sublevelsetting-container .glyphicon {
+            font-size: 14px;
+        }
+
+            .sublevelsetting-container .glyphicon span.text-sublevel {
+                font-size: 22px;
+                font-family: 'THSarabun';
+            }
+}
+
+@media (min-width: 1200px) {
+
+    .sublevelsetting-container {
+        font-size: 26px;
+    }
+
+        .sublevelsetting-container .nav > li > a {
+            font-size: 26px;
+        }
+
+        .sublevelsetting-container .glyphicon {
+            font-size: 16px;
+        }
+
+            .sublevelsetting-container .glyphicon span.text-sublevel {
+                font-size: 26px;
+                font-family: 'THSarabun';
+            }
+}

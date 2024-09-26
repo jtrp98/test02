@@ -1,0 +1,121 @@
+﻿.table > tbody > tr > td.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.table > thead > tr > th.vertical-align-middle {
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.modal-body {
+    font-size: 26px;
+}
+
+.dropdown-menu {
+    font-size: 22px;
+}
+
+.ui-menu {
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    display: block;
+    float: left;
+}
+
+    .ui-menu .ui-menu {
+        margin-top: -3px;
+    }
+
+    .ui-menu .ui-menu-item {
+        margin: 0;
+        padding: 0;
+        zoom: 1;
+        float: left;
+        clear: left;
+        width: 100%;
+    }
+
+        .ui-menu .ui-menu-item a {
+            text-decoration: none;
+            display: block;
+            padding: .2em .4em;
+            line-height: 1.5;
+            zoom: 1;
+            cursor: pointer;
+        }
+
+            .ui-menu .ui-menu-item a strong {
+                color: orange;
+            }
+
+            .ui-menu .ui-menu-item a.ui-state-hover,
+            .ui-menu .ui-menu-item a.ui-state-active {
+                font-weight: normal;
+                margin: -1px;
+            }
+
+.btn.btn-success, .btn.btn-cancel, .btn.btn-danger, .btn.btn-primary {
+    width: 110px;
+    height: 44px;
+}
+
+#modalSortStudentNo input[type=checkbox], #modalSortStudentNo input[type=radio],
+#modalManageStudentTitle input[type=checkbox], #modalManageStudentTitle input[type=radio] {
+    -ms-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal {
+}
+
+.vertical-alignment-helper {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width: inherit;
+    height: inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+}
+
+/*.none-finger {
+            background-color: #fd7a7a;
+            color: white;
+        }*/
+
+#tableData tbody tr.none-finger.even:hover, #tableData tbody tr.none-finger.odd:hover {
+    background-color: #fd7a7a;
+    color: white;
+}
+
+table#dtGridViewSetting.dataTable tbody tr:hover {
+    background-color: white;
+}
+
+    table#dtGridViewSetting.dataTable tbody tr:hover > .sorting_1 {
+        background-color: white;
+    }
+
+.btn-red {
+    font-size: 24px !important;
+}
+
+.btn-blue {
+    font-size: 24px !important;
+}

@@ -1,0 +1,39 @@
+﻿.levelsetting-container {
+    font-size: 26px;
+}
+
+.levelsetting-container .nav > li > a {
+    font-size: 26px;
+}
+
+@media (max-width: 999px) {
+    .levelsetting-container {
+        font-size: 20px;
+    }
+
+    .levelsetting-container .nav > li > a {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .levelsetting-container {
+        font-size: 22px;
+    }
+
+    .levelsetting-container .nav > li > a {
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .levelsetting-container {
+        font-size: 26px;
+    }
+
+    .levelsetting-container .nav > li > a {
+        font-size: 26px;
+    }
+}

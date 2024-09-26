@@ -1,0 +1,122 @@
+﻿body input[type=text] {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.global-dialog {
+}
+
+/*
+#modalpopupdata .global-modal {
+    margin-top: 170px;
+    margin-left: 280px;
+}
+*/
+
+@media (max-width: 999px) {
+
+    .global-dialog {
+        font-size: 20px;
+    }
+
+        .global-dialog .global-label {
+            font-size: 20px;
+        }
+
+        .global-dialog .global-btn {
+            font-size: 20px;
+        }
+
+    .global-modal-confirm {
+        font-size: 20px;
+    }
+
+        .global-modal-confirm .modal-title {
+            font-size: 20px;
+        }
+
+        .global-modal-confirm .modal-body {
+            font-size: 20px;
+        }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+    .global-dialog {
+        font-size: 22px;
+    }
+
+        .global-dialog .global-label {
+            font-size: 22px;
+        }
+
+        .global-dialog .global-btn {
+            font-size: 22px;
+        }
+
+    .global-modal-confirm {
+        font-size: 22px;
+    }
+
+        .global-modal-confirm .modal-title {
+            font-size: 22px;
+        }
+
+        .global-modal-confirm .modal-body {
+            font-size: 22px;
+        }
+}
+
+@media (min-width: 1200px) {
+
+    .global-dialog {
+        font-size: 26px;
+    }
+
+        .global-dialog .global-label {
+            font-size: 26px;
+        }
+
+        .global-dialog .global-btn {
+            font-size: 26px;
+        }
+
+    .global-modal-confirm {
+        font-size: 26px;
+    }
+
+        .global-modal-confirm .modal-title {
+            font-size: 26px;
+        }
+
+        .global-modal-confirm .modal-body {
+            font-size: 26px;
+        }
+}
+
+
+/* Modal dialog*/
+/**
+@media (max-width: 899px) {
+    #modalpopupdata .global-modal {
+        margin-top: 200px;
+        margin-left: 100px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1099px) {
+    #modalpopupdata .global-modal {
+        margin-top: 190px;
+        margin-left: 200px;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+    #modalpopupdata .global-modal {
+        margin-top: 210px;
+        margin-left: 280px;
+    }
+}
+*/
+
+

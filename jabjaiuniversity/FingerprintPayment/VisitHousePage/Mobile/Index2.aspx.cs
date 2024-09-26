@@ -1,0 +1,126 @@
+﻿using JabjaiEntity.DB;
+using JabjaiMainClass;
+using MasterEntity;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace FingerprintPayment.VisitHousePage.Mobile
+{
+    public partial class Index2 : System.Web.UI.Page
+    {
+        protected string StudentPicture = "/Content/VisitHouse/assets/img/user.png";
+        protected string StudentCode = "";
+        protected string StudentName = "";
+        protected string StudentClass = "";
+
+        protected string StudentSDQRecordDate = "";
+        protected string ParentsSDQRecordDate = "";
+        protected string HomeVisitRecordDate = "";
+        protected string StudentEQRecordDate = "";
+        protected string StudentScreeningRecordDate = "";
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            InitialPage();
+        }
+
+        private void InitialPage()
+        {
+            int.TryParse((string)Request.QueryString["schoolid"], out int schoolID);
+            int.TryParse((string)Request.QueryString["sid"], out int studentID);
+
+            using (JabJaiMasterEntities mctx = Connection.MasterEntities(ConnectionDB.Read))
+            using (JabJaiEntities dbSchool = new JabJaiEntities(Connection.StringConnectionSchool(schoolID,ConnectionDB.Read)))
+            {
+                StudentLogic studentLogic = new StudentLogic(dbSchool);
+                string currentTermID = studentLogic.GetTermId(new JWTToken.userData { CompanyID = schoolID });
+
+                int? currentYearID = null;
+                var termObj = dbSchool.TTerms.Where(w => w.nTerm == currentTermID).FirstOrDefault();
+                if (termObj != null)
+                {
+                    currentYearID = termObj.nYear;
+                }
+
+                string query = string.Format(@"
+SELECT u.sStudentID 'StudentID', u.sName 'Name', u.sLastname 'Lastname', u.sStudentPicture 'StudentPicture', sv.SubLevel 'Level', sv.nTSubLevel2 'Classroom'
+FROM TUser u LEFT JOIN TB_StudentViews sv ON u.SchoolID = sv.SchoolID AND u.sID = sv.sID 
+WHERE u.SchoolID = {0} AND u.sID = {1} AND sv.nTerm = '{2}'", schoolID, studentID, currentTermID);
+                var studentData = dbSchool.Database.SqlQuery<StudentData>(query).FirstOrDefault();
+                if (studentData != null)
+                {
+                    if (!string.IsNullOrEmpty(studentData.StudentPicture)) StudentPicture = studentData.StudentPicture;
+
+                    StudentCode = studentData.StudentID;
+                    StudentName = studentData.Name + " " + studentData.Lastname;
+                    var schoolData = mctx.TCompanies.Where(w => w.nCompany == schoolID).FirstOrDefault();
+                    if (schoolData.ClassNameDisable ?? false)
+                    {
+                        // Hide room
+                        StudentClass = studentData.Level;
+                    }
+                    else
+                    {
+                        StudentClass = studentData.Level + " / " + studentData.Classroom;
+                    }
+                }
+
+                List<TQuestionnaireSDQ> questionnaireSDQs = dbSchool.TQuestionnaireSDQs.Where(w => w.SchoolID == schoolID && w.sID == studentID && w.YearID == currentYearID && w.TermID == currentTermID && w.cDel == false).ToList();
+                var RecordDate = questionnaireSDQs.Where(w => w.SDQType == 1).OrderByDescending(c => c.UpdatedDate).Select(c => c.UpdatedDate).FirstOrDefault();
+                if (RecordDate == null) RecordDate = questionnaireSDQs.Where(w => w.SDQType == 1).OrderByDescending(c => c.CreatedDate).Select(c => c.CreatedDate).FirstOrDefault();
+                if (RecordDate != null)
+                {
+                    StudentSDQRecordDate = RecordDate?.ToString("บันทึกสำเร็จ d MMMM yyyy", new CultureInfo("th-TH"));
+                }
+
+                RecordDate = questionnaireSDQs.Where(w => w.SDQType == 3).OrderByDescending(c => c.UpdatedDate).Select(c => c.UpdatedDate).FirstOrDefault();
+                if (RecordDate == null) RecordDate = questionnaireSDQs.Where(w => w.SDQType == 3).OrderByDescending(c => c.CreatedDate).Select(c => c.CreatedDate).FirstOrDefault();
+                if (RecordDate != null)
+                {
+                    ParentsSDQRecordDate = RecordDate?.ToString("บันทึกสำเร็จ d MMMM yyyy", new CultureInfo("th-TH"));
+                }
+
+                List<THomeVisit> homeVisits = dbSchool.THomeVisit.Where(w => w.SchoolID == schoolID && w.StudentID == studentID && w.YearID == currentYearID && w.TermID == currentTermID && w.IsDel == false).ToList();
+                RecordDate = homeVisits.OrderByDescending(c => c.UpdatedDate).Select(c => c.UpdatedDate).FirstOrDefault();
+                if (RecordDate == null) RecordDate = homeVisits.OrderByDescending(c => c.CreatedDate).Select(c => c.CreatedDate).FirstOrDefault();
+                if (RecordDate != null)
+                {
+                    HomeVisitRecordDate = RecordDate?.ToString("บันทึกสำเร็จ d MMMM yyyy", new CultureInfo("th-TH"));
+                }
+
+                List<TQuestionnaireEQ> questionnaireEQs = dbSchool.TQuestionnaireEQ.Where(w => w.SchoolID == schoolID && w.sID == studentID && w.YearID == currentYearID && w.TermID == currentTermID && w.cDel == false && w.EQType == 1).ToList();
+                RecordDate = questionnaireEQs.OrderByDescending(c => c.UpdatedDate).Select(c => c.UpdatedDate).FirstOrDefault();
+                if (RecordDate == null) RecordDate = questionnaireEQs.OrderByDescending(c => c.CreatedDate).Select(c => c.CreatedDate).FirstOrDefault();
+                if (RecordDate != null)
+                {
+                    StudentEQRecordDate = RecordDate?.ToString("บันทึกสำเร็จ d MMMM yyyy", new CultureInfo("th-TH"));
+                }
+
+                List<TQuestionnaireScreening> questionnaireScreenings = dbSchool.TQuestionnaireScreenings.Where(w => w.SchoolID == schoolID && w.StudentID == studentID && w.Status == 1 && w.IsDel == false).ToList();
+                RecordDate = questionnaireScreenings.OrderByDescending(c => c.UpdatedDate).Select(c => c.UpdatedDate).FirstOrDefault();
+                if (RecordDate == null) RecordDate = questionnaireScreenings.OrderByDescending(c => c.CreatedDate).Select(c => c.CreatedDate).FirstOrDefault();
+                if (RecordDate != null)
+                {
+                    StudentScreeningRecordDate = RecordDate?.ToString("บันทึกสำเร็จ d MMMM yyyy", new CultureInfo("th-TH"));
+                }
+
+            }
+        }
+
+        public class StudentData
+        {
+            public string StudentID { get; set; }
+            public string Name { get; set; }
+            public string Lastname { get; set; }
+            public string StudentPicture { get; set; }
+            public string Level { get; set; }
+            public string Classroom { get; set; }
+        }
+
+    }
+}

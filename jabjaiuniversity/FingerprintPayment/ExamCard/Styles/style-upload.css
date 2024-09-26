@@ -1,0 +1,25 @@
+﻿
+.picture-frame {
+    position: relative;
+    /*background-image:url(/Assets/images/background-image-r.gif);*/
+}
+
+.div-browse {
+    position: absolute;
+    cursor: pointer;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.7;
+    font-size: xx-large;
+}
+
+/* Progress Style */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 1.5s linear infinite; /* Safari */
+    animation: spin 1.5s linear infinite;
+}
